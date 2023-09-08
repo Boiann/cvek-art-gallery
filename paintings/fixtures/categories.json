@@ -1,0 +1,82 @@
+[
+    {
+        "pk": 1,
+        "model": "paintings.category",
+        "fields": {
+            "name": "animals",
+            "friendly_name": "Animals"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "paintings.category",
+        "fields": {
+            "name": "buildings",
+            "friendly_name": "Buildings"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "paintings.category",
+        "fields": {
+            "name": "flowers",
+            "friendly_name": "Flowers"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "paintings.category",
+        "fields": {
+            "name": "forest",
+            "friendly_name": "Forest"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "paintings.category",
+        "fields": {
+            "name": "landscapes",
+            "friendly_name": "Landscapes"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "paintings.category",
+        "fields": {
+            "name": "people",
+            "friendly_name": "People"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "paintings.category",
+        "fields": {
+            "name": "sea",
+            "friendly_name": "Sea"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "paintings.category",
+        "fields": {
+            "name": "new_paintings",
+            "friendly_name": "New Paintings"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "paintings.category",
+        "fields": {
+            "name": "deals",
+            "friendly_name": "Deals"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "paintings.category",
+        "fields": {
+            "name": "clearance",
+            "friendly_name": "Clearance"
+        }
+    }
+]
