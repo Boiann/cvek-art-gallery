@@ -1,0 +1,1 @@
+web: gunicorn cvek_art_gallery.wsgi:application
