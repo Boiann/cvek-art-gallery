@@ -21,14 +21,14 @@
             "name": "Glowing Scorpion Tribal",
             "description": "A mesmerizing tribal painting featuring a glowing scorpion motif.",
             "price": 59.99,
-            "year": "Unknown",
+            "year": 2007,
             "size": "S",
             "category": 1,
             "image": "glowing-scorpion-tribal-painting.webp"
         }
     },
     {
-        "pk": 2,
+        "pk": 3,
         "model": "paintings.painting",
         "fields": {
             "sku": "p003",
