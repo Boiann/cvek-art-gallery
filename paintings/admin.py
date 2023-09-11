@@ -2,5 +2,26 @@ from django.contrib import admin
 from .models import Painting, Category
 
 
-admin.site.register(Painting)
-admin.site.register(Category)
+class PaintingAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'category',
+        'sku',
+        'price',
+        'size',
+        'year',
+        'image',
+    )
+
+    ordering = ('sku',)
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
+admin.site.register(Painting, PaintingAdmin)
+admin.site.register(Category, CategoryAdmin)
