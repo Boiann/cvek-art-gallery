@@ -3,7 +3,7 @@
         "pk": 1,
         "model": "paintings.painting",
         "fields": {
-            "sku": "p0000001",
+            "sku": "p001",
             "name": "Black Panther In High Grass",
             "description": "Beautiful slim black panther moving through golden high grass",
             "price": 199.99,
@@ -17,7 +17,7 @@
         "pk": 2,
         "model": "paintings.painting",
         "fields": {
-            "sku": "p0000002",
+            "sku": "p002",
             "name": "Glowing Scorpion Tribal",
             "description": "A mesmerizing tribal painting featuring a glowing scorpion motif.",
             "price": 59.99,
@@ -28,16 +28,16 @@
         }
     },
     {
-        "pk": 3,
+        "pk": 2,
         "model": "paintings.painting",
         "fields": {
-            "sku": "p0000003",
+            "sku": "p003",
             "name": "Propped Brown Horse",
             "description": "A stunning painting featuring a majestic brown horse",
             "price": 259.99,
             "year": 2004,
             "size": "L",
-            "category": 1,
+            "category": 2,
             "image": "propped-brown-horse-painting.webp"
         }
     }
