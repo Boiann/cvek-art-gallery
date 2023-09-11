@@ -60,6 +60,27 @@ body {
     background: #000 !important;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+img {
+    border-style: double;
+    border-color: #000;
+    border-width: thick;
+}
+
+.card-img, .card-img-top, .card-img-bottom {
+    height: 40vh;
+    object-fit: cover;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
