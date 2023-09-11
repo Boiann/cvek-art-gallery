@@ -26,18 +26,18 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if painting.image %}
-                        <a href="">
+                        <a href="{% url 'painting_detail' painting.id %}">
                             <img class="card-img-top img-fluid" src="{{ painting.image.url }}"
                                 alt="{{ painting.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'painting_detail' painting.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                 alt="{{ painting.name }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
-                            <a href="">
+                            <a href="{% url 'painting_detail' painting.id %}">
                                 <p class="mb-0">{{ painting.name }}</p>
                             </a>
                         </div>

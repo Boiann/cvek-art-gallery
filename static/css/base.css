@@ -81,6 +81,11 @@ img {
     object-fit: cover;
 }
 
+.img-adjusted {
+    width: auto;
+    height: 600px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -102,5 +107,15 @@ img {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
