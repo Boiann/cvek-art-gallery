@@ -1,0 +1,128 @@
+[
+    {
+        "model": "paintings.subcategory",
+        "pk": 1,
+        "fields": {
+            "category": 1,
+            "name": "horses",
+            "friendly_name": "Horses"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 2,
+        "fields": {
+            "category": 2,
+            "name": "orchids",
+            "friendly_name": "Orchids"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 3,
+        "fields": {
+            "category": 2,
+            "name": "roses",
+            "friendly_name": "Roses"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 4,
+        "fields": {
+            "category": 2,
+            "name": "sunflowers",
+            "friendly_name": "Sunflowers"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 5,
+        "fields": {
+            "category": 3,
+            "name": "huts",
+            "friendly_name": "Huts"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 6,
+        "fields": {
+            "category": 4,
+            "name": "birches",
+            "friendly_name": "Birches"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 7,
+        "fields": {
+            "category": 4,
+            "name": "waterfalls",
+            "friendly_name": "Waterfalls"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 8,
+        "fields": {
+            "category": 5,
+            "name": "sunrise_sundown",
+            "friendly_name": "Sunrise & Sundown"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 9,
+        "fields": {
+            "category": 5,
+            "name": "wheat_fields",
+            "friendly_name": "Wheat Fields"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 10,
+        "fields": {
+            "category": 6,
+            "name": "nude",
+            "friendly_name": "Nude"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 11,
+        "fields": {
+            "category": 7,
+            "name": "large_ships",
+            "friendly_name": "Large Ships"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 12,
+        "fields": {
+            "category": 8,
+            "name": "new_paintings",
+            "friendly_name": "New Paintings"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 13,
+        "fields": {
+            "category": 8,
+            "name": "deals",
+            "friendly_name": "Deals"
+        }
+    },
+    {
+        "model": "paintings.subcategory",
+        "pk": 14,
+        "fields": {
+            "category": 8,
+            "name": "clearance",
+            "friendly_name": "Clearance"
+        }
+    }
+]
