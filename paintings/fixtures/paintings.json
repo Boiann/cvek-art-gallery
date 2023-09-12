@@ -5,7 +5,7 @@
         "fields": {
             "sku": "p001",
             "name": "Black Panther In High Grass",
-            "description": "Beautiful slim black panther moving through golden high grass",
+            "description": "Beautiful slim black panther moving through golden high grass.",
             "price": 199.99,
             "year": 2008,
             "size": "L",
@@ -33,12 +33,1440 @@
         "fields": {
             "sku": "p003",
             "name": "Propped Brown Horse",
-            "description": "A stunning painting featuring a majestic brown horse",
+            "description": "A stunning painting featuring a majestic brown horse.",
             "price": 259.99,
             "year": 2004,
             "size": "L",
             "category": 2,
             "image": "propped-brown-horse-painting.webp"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p004",
+            "name": "Two Horses in Embrace",
+            "description": "A beautiful depiction of two horses in an embrace, capturing a moment of harmony and connection.",
+            "price": 169.99,
+            "year": 2011,
+            "size": "M",
+            "category": 2,
+            "image": "two-horses-in-embrace-painting.webp"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p005",
+            "name": "White Horse in Winter",
+            "description": "A serene painting capturing the beauty of a white horse in a winter landscape.",
+            "price": 159.99,
+            "year": 2005,
+            "size": "M",
+            "category": 2,
+            "image": "white-horse-in-winter-painting.webp"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p006",
+            "name": "White Horse",
+            "description": "A serene painting capturing the beauty of a white horse.",
+            "price": 149.99,
+            "year": 2005,
+            "size": "M",
+            "category": 2,
+            "image": "white-horse-painting.webp"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p007",
+            "name": "White Horse Portrait",
+            "description": "A beautiful portrait painting featuring a white horse, capturing its unique character and elegance.",
+            "price": 79.99,
+            "year": 2003,
+            "size": "S",
+            "category": 2,
+            "image": "white-horse-portrait-painting.webp"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p008",
+            "name": "Basket Full of Wildflowers",
+            "description": "A vibrant painting capturing a basket filled with a colorful assortment of wildflowers.",
+            "price": 99.99,
+            "year": 2020,
+            "size": "M",
+            "category": 3,
+            "image": "basket-full-of-wildflowers-painting.webp"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p009",
+            "name": "Basket Full of Wild Flowers",
+            "description": "A vibrant painting capturing a basket filled with a colorful assortment of wild flowers.",
+            "price": 99.99,
+            "year": 2006,
+            "size": "M",
+            "category": 3,
+            "image": "basket-full-of-wild-flowers-painting.webp"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p010",
+            "name": "Flowers in a Vase Over White Background",
+            "description": "A contemporary painting featuring a vase of beautiful flowers set against a pristine white background.",
+            "price": 89.99,
+            "year": 2021,
+            "size": "M",
+            "category": 3,
+            "image": "flowers-in-a-vase-over-white-background-painting.webp"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p011",
+            "name": "Flowers Opening",
+            "description": "An exquisite painting capturing the beauty of flowers in the process of opening up to reveal their vibrant colors.",
+            "price": 189.99,
+            "year": 2019,
+            "size": "L",
+            "category": 3,
+            "image": "flowers-opening-painting.webp"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p012",
+            "name": "Fruits in Bowl and Basket",
+            "description": "A delightful painting featuring a collection of fresh fruits arranged in a bowl and basket.",
+            "price": 79.99,
+            "year": 2007,
+            "size": "M",
+            "category": 3,
+            "image": "fruits-in-bowl-and-basket-painting.webp"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p013",
+            "name": "Large White Flowers Opening",
+            "description": "A stunning large-format painting capturing the elegance of white flowers as they open up to reveal their beauty.",
+            "price": 219.99,
+            "year": 2018,
+            "size": "L",
+            "category": 3,
+            "image": "large-white-flowers-opening-painting.webp"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p014",
+            "name": "Large Yellow Flower",
+            "description": "A magnificent extra-large painting showcasing the vibrant beauty of a yellow flower.",
+            "price": 249.99,
+            "year": 2011,
+            "size": "XL",
+            "category": 3,
+            "image": "large-yellow-flower-painting.webp"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p015",
+            "name": "Large Yellow Flowers Close-Up",
+            "description": "An impressive extra-large painting offering a close-up view of beautiful yellow flowers in exquisite detail.",
+            "price": 249.99,
+            "year": 2007,
+            "size": "XL",
+            "category": 3,
+            "image": "large-yellow-flowers-close-up-painting.webp"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p016",
+            "name": "Red Flowers on Vine",
+            "description": "A captivating painting featuring vibrant red flowers gracefully entwined on a vine.",
+            "price": 109.99,
+            "year": 2006,
+            "size": "M",
+            "category": 3,
+            "image": "red-flowers-on-vine-painting.webp"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p017",
+            "name": "Spring Flowers",
+            "description": "A charming extra-small painting capturing the freshness and beauty of spring flowers.",
+            "price": 39.99,
+            "year": 2002,
+            "size": "XS",
+            "category": 3,
+            "image": "spring-flowers-painting.webp"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p018",
+            "name": "Dry Flowers and Fruit",
+            "description": "A beautifully detailed painting featuring a composition of dried flowers and fruit, capturing the essence of nature's artistry.",
+            "price": 139.99,
+            "year": 2008,
+            "size": "M",
+            "category": 3,
+            "image": "dry-flowers-and-fruit-painting.webp"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p019",
+            "name": "Still Nature White Tulips",
+            "description": "A captivating painting showcasing the timeless elegance of white tulips in a still nature composition.",
+            "price": 129.99,
+            "year": 2003,
+            "size": "M",
+            "category": 3,
+            "image": "still-nature-white-tulips-painting.webp"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p020",
+            "name": "Summer Meadow Flowers",
+            "description": "A vibrant painting capturing the beauty of wildflowers in a sunlit summer meadow.",
+            "price": 89.99,
+            "year": 2010,
+            "size": "M",
+            "category": 3,
+            "image": "summer-meadow-flowers-painting.webp"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p021",
+            "name": "Tulips on White Background",
+            "description": "A charming painting featuring white tulips set against a clean white background, creating a striking contrast.",
+            "price": 69.99,
+            "year": 2011,
+            "size": "S",
+            "category": 3,
+            "image": "tulips-white-background-painting.webp"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p022",
+            "name": "White Flowers Glowing",
+            "description": "A captivating painting featuring white flowers with a soft glowing effect, creating a serene and enchanting atmosphere.",
+            "price": 59.99,
+            "year": 2005,
+            "size": "S",
+            "category": 3,
+            "image": "white-flowers-glowing-painting.webp"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p023",
+            "name": "White Flowers in Basket",
+            "description": "A delightful painting showcasing a bouquet of white flowers arranged beautifully in a basket.",
+            "price": 149.99,
+            "year": 2003,
+            "size": "M",
+            "category": 3,
+            "image": "white-flowers-in-basket-painting.webp"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p024",
+            "name": "White Wildflowers",
+            "description": "A charming painting capturing the beauty of white wildflowers in full bloom, evoking a sense of serenity and tranquility.",
+            "price": 119.99,
+            "year": 2017,
+            "size": "M",
+            "category": 3,
+            "image": "white-wildflowers-painting.webp"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p025",
+            "name": "Yellow Tulips Growing",
+            "description": "A vibrant painting capturing the growth and beauty of yellow tulips in a lush garden.",
+            "price": 109.99,
+            "year": 2020,
+            "size": "M",
+            "category": 3,
+            "image": "yellow-tulips-growing-painting.webp"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p026",
+            "name": "Orchid in Grass",
+            "description": "A beautiful painting featuring an orchid nestled in lush green grass, creating a harmonious and tranquil scene.",
+            "price": 99.99,
+            "year": 2006,
+            "size": "M",
+            "category": 4,
+            "image": "orchid-in-grass-painting.webp"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p027",
+            "name": "Orchids on White Background",
+            "description": "A captivating painting featuring delicate orchids set against a clean white background, highlighting their elegance and beauty.",
+            "price": 99.99,
+            "year": 2007,
+            "size": "M",
+            "category": 4,
+            "image": "orchids-on-white-background-painting.webp"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p028",
+            "name": "Orchids Over White Background",
+            "description": "An elegant painting featuring graceful orchids against a pure white background, creating a sense of purity and simplicity.",
+            "price": 79.99,
+            "year": 2004,
+            "size": "S",
+            "category": 4,
+            "image": "orchids-over-white-background-painting.webp"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p029",
+            "name": "Three Orchids White Back",
+            "description": "A mesmerizing painting featuring three delicate orchids against a pristine white background, exuding grace and elegance.",
+            "price": 109.99,
+            "year": 2004,
+            "size": "M",
+            "category": 4,
+            "image": "three-orchids-white-back-painting.webp"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p030",
+            "name": "Yellow Orchid",
+            "description": "A charming painting featuring a vibrant yellow orchid, adding a touch of warmth and beauty to any space.",
+            "price": 89.99,
+            "year": 2006,
+            "size": "S",
+            "category": 4,
+            "image": "yellow-orchid-painting.webp"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p031",
+            "name": "Abstract Bunch of Roses",
+            "description": "An artistic and abstract interpretation of a bunch of roses, conveying a sense of creativity and emotion.",
+            "price": 39.99,
+            "year": 2005,
+            "size": "S",
+            "category": 5,
+            "image": "abstract-bunch-of-roses-painting.webp"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p032",
+            "name": "Basket Full of Roses",
+            "description": "A stunning painting featuring a basket overflowing with beautiful roses, symbolizing love and passion.",
+            "price": 139.99,
+            "year": 2016,
+            "size": "M",
+            "category": 5,
+            "image": "basket-full-of-roses-painting.webp"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p033",
+            "name": "Glowing Roses",
+            "description": "A mesmerizing and larger-than-life painting showcasing radiant roses, emanating a sense of warmth and allure.",
+            "price": 299.99,
+            "year": 2004,
+            "size": "XL",
+            "category": 5,
+            "image": "glowing-roses-painting.webp"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p034",
+            "name": "Red Roses in Bloom",
+            "description": "A delightful painting capturing the vibrant beauty of red roses in full bloom, radiating passion and love.",
+            "price": 69.99,
+            "year": 2017,
+            "size": "S",
+            "category": 5,
+            "image": "red-roses-in-bloom-painting.webp"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p035",
+            "name": "Roses Bouquet",
+            "description": "A charming painting featuring a beautiful bouquet of roses, perfect for expressing love and affection.",
+            "price": 69.99,
+            "year": 2017,
+            "size": "S",
+            "category": 5,
+            "image": "roses-bouquet-painting.webp"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p036",
+            "name": "Roses Next to a Pitcher",
+            "description": "A lovely painting featuring a vase of roses placed next to a pitcher, creating a charming and inviting scene.",
+            "price": 129.99,
+            "year": 2005,
+            "size": "M",
+            "category": 5,
+            "image": "roses-next-to-a-pitcher-painting.webp"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p037",
+            "name": "Vertical Growing Roses",
+            "description": "An elegant painting featuring vertical growth of vibrant roses, creating a sense of upward beauty and grace.",
+            "price": 119.99,
+            "year": 2004,
+            "size": "M",
+            "category": 5,
+            "image": "vertical-growing-roses-painting.webp"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p038",
+            "name": "Vertical Multicolored Roses",
+            "description": "A captivating painting featuring a vertical arrangement of multicolored roses, symbolizing diversity and beauty.",
+            "price": 99.99,
+            "year": 2004,
+            "size": "M",
+            "category": 5,
+            "image": "vertical-multicolored-roses-painting.webp"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p039",
+            "name": "White Roses in Vase",
+            "description": "A timeless painting featuring white roses elegantly arranged in a vase, exuding purity and grace.",
+            "price": 109.99,
+            "year": 2006,
+            "size": "M",
+            "category": 5,
+            "image": "white-roses-in-vase-painting.webp"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p040",
+            "name": "Yellow Roses in a Vase",
+            "description": "A stunning painting featuring a bouquet of yellow roses elegantly arranged in a vase, radiating warmth and beauty.",
+            "price": 199.99,
+            "year": 2002,
+            "size": "L",
+            "category": 5,
+            "image": "yellow-roses-in-a-vase-painting.webp"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p041",
+            "name": "Large Sunflower",
+            "description": "A vibrant painting showcasing a large and radiant sunflower, evoking feelings of joy and positivity.",
+            "price": 59.99,
+            "year": 2015,
+            "size": "S",
+            "category": 6,
+            "image": "large-sunflower-painting.webp"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p042",
+            "name": "Sunflowers on White Background",
+            "description": "A captivating painting featuring vibrant sunflowers against a clean white background, creating a sense of purity and beauty.",
+            "price": 159.99,
+            "year": 2003,
+            "size": "L",
+            "category": 6,
+            "image": "sunflowers-white-background-painting.webp"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p043",
+            "name": "Two Sunflowers",
+            "description": "A charming painting featuring two beautiful sunflowers, symbolizing friendship and happiness.",
+            "price": 59.99,
+            "year": 2011,
+            "size": "S",
+            "category": 6,
+            "image": "two-sunflowers-painting.webp"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p044",
+            "name": "Yellow Sunflowers in Vase",
+            "description": "A stunning painting featuring a vase filled with vibrant yellow sunflowers, radiating warmth and positivity.",
+            "price": 199.99,
+            "year": 2001,
+            "size": "L",
+            "category": 6,
+            "image": "yellow-sunflowers-in-vase-painting.webp"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p045",
+            "name": "Ancient Roman Building in Daruvar",
+            "description": "A captivating painting depicting an ancient Roman building in the charming town of Daruvar, evoking a sense of history and culture.",
+            "price": 169.99,
+            "year": 2014,
+            "size": "L",
+            "category": 7,
+            "image": "ancient-roman-building-in-daruvar-painting.webp"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p046",
+            "name": "Bridge in Forest Autumn",
+            "description": "A scenic painting capturing a picturesque bridge in a vibrant autumn forest, reflecting the beauty of nature.",
+            "price": 89.99,
+            "year": 2016,
+            "size": "S",
+            "category": 7,
+            "image": "bridge-in-forest-autumn-painting.webp"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p047",
+            "name": "Roman Building Daruvar",
+            "description": "A captivating painting depicting a historic Roman building in the enchanting town of Daruvar, evoking a sense of ancient beauty.",
+            "price": 129.99,
+            "year": 2016,
+            "size": "M",
+            "category": 7,
+            "image": "roman-building-daruvar-painting.webp"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p048",
+            "name": "Bridge and Hut Wintertime",
+            "description": "A serene painting capturing the charm of a wintertime scene with a bridge and hut nestled in a snowy landscape.",
+            "price": 129.99,
+            "year": 2018,
+            "size": "M",
+            "category": 8,
+            "image": "bridge-and-hut-wintertime-painting.webp"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p049",
+            "name": "Early Winter Morning And Hut",
+            "description": "A picturesque painting capturing the serene beauty of an early winter morning with a charming hut amidst the snowy landscape.",
+            "price": 149.99,
+            "year": 2004,
+            "size": "M",
+            "category": 8,
+            "image": "early-winter-morning-and-hut-painting.webp"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p050",
+            "name": "Lonely Winter Hut",
+            "description": "A tranquil painting capturing the solitude of a winter landscape with a solitary hut amid the snow-covered scenery.",
+            "price": 79.99,
+            "year": 2018,
+            "size": "S",
+            "category": 8,
+            "image": "lonely-winter-hut-painting.webp"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p051",
+            "name": "Old Water Mill in Winter",
+            "description": "A nostalgic painting capturing the beauty of an old water mill amidst a serene winter landscape, evoking a sense of history.",
+            "price": 179.99,
+            "year": 2016,
+            "size": "M",
+            "category": 8,
+            "image": "old-water-mill-in-winter-painting.webp"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p052",
+            "name": "Old Water Mill Winter Sundown",
+            "description": "A captivating painting capturing the serene beauty of an old water mill at sunset during a winter evening.",
+            "price": 79.99,
+            "year": 2016,
+            "size": "S",
+            "category": 8,
+            "image": "old-water-mill-winter-sundown-painting.webp"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p053",
+            "name": "Snow-Covered Houses",
+            "description": "A charming painting showcasing quaint houses covered in a blanket of snow, creating a cozy winter scene.",
+            "price": 129.99,
+            "year": 2007,
+            "size": "M",
+            "category": 8,
+            "image": "snow-covered-houses-painting.webp"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p054",
+            "name": "Winter Midday Mountain",
+            "description": "A serene painting capturing the beauty of a snowy mountain landscape during a calm winter midday.",
+            "price": 129.99,
+            "year": 2019,
+            "size": "M",
+            "category": 8,
+            "image": "winter-midday-mountain-painting.webp"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p055",
+            "name": "Winter Water Mill Landscape",
+            "description": "A captivating painting capturing the enchanting beauty of a water mill in a winter landscape.",
+            "price": 119.99,
+            "year": 2018,
+            "size": "M",
+            "category": 8,
+            "image": "winter-water-mill-landscape-painting.webp"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p056",
+            "name": "Early Spring in Forest",
+            "description": "A refreshing painting capturing the essence of early spring in a vibrant forest, with new life and colors emerging.",
+            "price": 109.99,
+            "year": 2005,
+            "size": "M",
+            "category": 9,
+            "image": "early-spring-in-forest-painting.webp"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p057",
+            "name": "Early Winter Forest",
+            "description": "A tranquil painting capturing the beauty of an early winter forest landscape, where nature transitions gracefully.",
+            "price": 129.99,
+            "year": 2020,
+            "size": "M",
+            "category": 9,
+            "image": "early-winter-forest-painting.webp"
+        }
+    },
+    {
+        "pk": 58,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p058",
+            "name": "Forest Tunnel in Winter",
+            "description": "A captivating painting capturing the enchanting beauty of a forest tunnel covered in winter's tranquil snow.",
+            "price": 109.99,
+            "year": 2014,
+            "size": "M",
+            "category": 9,
+            "image": "forest-tunnel-in-winter-painting.webp"
+        }
+    },
+    {
+        "pk": 59,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p059",
+            "name": "Misty Morning in Winter Forest",
+            "description": "A mesmerizing painting capturing the serene beauty of a misty winter morning in a forest, where nature meets mystery.",
+            "price": 189.99,
+            "year": 2006,
+            "size": "L",
+            "category": 9,
+            "image": "misty-morning-in-winter-forest-painting.webp"
+        }
+    },
+    {
+        "pk": 60,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p060",
+            "name": "Snow-Covered Forest and Mountain",
+            "description": "A picturesque painting capturing the tranquil beauty of a snowy forest landscape against the backdrop of majestic mountains.",
+            "price": 139.99,
+            "year": 2004,
+            "size": "M",
+            "category": 9,
+            "image": "snow-covered-forest-and-mountain-painting.webp"
+        }
+    },
+    {
+        "pk": 61,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p061",
+            "name": "Sunny Forest",
+            "description": "A radiant painting capturing the vibrant beauty of a sunlit forest, where nature basks in the warmth of sunlight.",
+            "price": 59.99,
+            "year": 2018,
+            "size": "S",
+            "category": 9,
+            "image": "sunny-forest-painting.webp"
+        }
+    },
+    {
+        "pk": 62,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p062",
+            "name": "Winter Morning in Forest",
+            "description": "A tranquil painting capturing the serene beauty of a winter morning in a forest, where nature rests under a blanket of snow.",
+            "price": 99.99,
+            "year": 2005,
+            "size": "M",
+            "category": 9,
+            "image": "winter-morning-in-forest-painting.webp"
+        }
+    },
+    {
+        "pk": 63,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p063",
+            "name": "Birch and Lake in Summer",
+            "description": "A picturesque painting capturing the serene beauty of a tranquil lake surrounded by birch trees in the warmth of summer.",
+            "price": 89.99,
+            "year": 2016,
+            "size": "M",
+            "category": 10,
+            "image": "birch-and-lake-in-summer-painting.webp"
+        }
+    },
+    {
+        "pk": 64,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p064",
+            "name": "Birch Forest in Autumn",
+            "description": "A breathtaking painting capturing the vibrant colors of a birch forest during the enchanting season of autumn.",
+            "price": 129.99,
+            "year": 2011,
+            "size": "L",
+            "category": 10,
+            "image": "birch-forest-in-autumn-painting.webp"
+        }
+    },
+    {
+        "pk": 65,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p065",
+            "name": "Summertime Birch",
+            "description": "A delightful painting capturing the beauty of birch trees in the full bloom of summer, where nature thrives.",
+            "price": 119.99,
+            "year": 2017,
+            "size": "M",
+            "category": 10,
+            "image": "summertime-birch-painting.webp"
+        }
+    },
+    {
+        "pk": 66,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p066",
+            "name": "Vertical Birch Forest",
+            "description": "A captivating vertical painting capturing the serene beauty of a dense birch forest in the lush colors of nature.",
+            "price": 159.99,
+            "year": 2005,
+            "size": "L",
+            "category": 10,
+            "image": "vertical-birch-forest-painting.webp"
+        }
+    },
+    {
+        "pk": 67,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p067",
+            "name": "Forest Waterfall",
+            "description": "A mesmerizing painting capturing the serene beauty of a hidden waterfall in the heart of a lush forest.",
+            "price": 139.99,
+            "year": 2004,
+            "size": "M",
+            "category": 11,
+            "image": "forest-waterfall-painting.webp"
+        }
+    },
+    {
+        "pk": 68,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p068",
+            "name": "Springtime Waterfall in Forest",
+            "description": "A captivating painting capturing the vibrant beauty of a waterfall in a lush forest during the lively season of spring.",
+            "price": 189.99,
+            "year": 2016,
+            "size": "L",
+            "category": 11,
+            "image": "springtime-waterfall-in-forest-painting.webp"
+        }
+    },
+    {
+        "pk": 69,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p069",
+            "name": "Summer Waterfall in the Forest",
+            "description": "A serene painting capturing the tranquility of a waterfall in a lush forest during the warm and sunny season of summer.",
+            "price": 149.99,
+            "year": 2017,
+            "size": "M",
+            "category": 11,
+            "image": "summer-waterfall-in-the-forest-painting.webp"
+        }
+    },
+    {
+        "pk": 70,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p070",
+            "name": "Waterfall in Forest",
+            "description": "A captivating painting capturing the natural beauty of a serene waterfall surrounded by the lush greenery of a forest.",
+            "price": 169.99,
+            "year": 2011,
+            "size": "M",
+            "category": 11,
+            "image": "waterfall-in-forest-painting.webp"
+        }
+    },
+    {
+        "pk": 71,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p071",
+            "name": "Golden Desert",
+            "description": "A mesmerizing painting capturing the enchanting beauty of a golden desert landscape under the vast open sky.",
+            "price": 199.99,
+            "year": 2010,
+            "size": "L",
+            "category": 12,
+            "image": "golden-desert-painting.webp"
+        }
+    },
+    {
+        "pk": 72,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p072",
+            "name": "Golden Evening in Park",
+            "description": "A serene painting capturing the tranquil beauty of a park bathed in golden evening light, where nature and peace converge.",
+            "price": 199.99,
+            "year": 2009,
+            "size": "L",
+            "category": 12,
+            "image": "golden-evening-in-park-painting.webp"
+        }
+    },
+    {
+        "pk": 73,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p073",
+            "name": "Morning Over Forest and Lake",
+            "description": "A breathtaking painting capturing the serene beauty of a morning scene over a peaceful forest and tranquil lake.",
+            "price": 229.99,
+            "year": 2006,
+            "size": "M",
+            "category": 12,
+            "image": "morning-over-forest-and-lake-painting.webp"
+        }
+    },
+    {
+        "pk": 74,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p074",
+            "name": "Orchard Landscape",
+            "description": "A picturesque painting capturing the natural beauty of an orchard landscape in full bloom.",
+            "price": 129.99,
+            "year": 2009,
+            "size": "M",
+            "category": 12,
+            "image": "orchard-landscape-painting.webp"
+        }
+    },
+    {
+        "pk": 75,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p075",
+            "name": "Oval Landscape",
+            "description": "A captivating painting capturing the natural beauty of a serene landscape, framed within an elegant oval composition.",
+            "price": 119.99,
+            "year": 2005,
+            "size": "M",
+            "category": 12,
+            "image": "oval-landscape-painting.webp"
+        }
+    },
+    {
+        "pk": 76,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p076",
+            "name": "Rose Dusk Winter Landscape",
+            "description": "A serene painting capturing the enchanting beauty of a winter landscape under the soft hues of a rose-tinted dusk.",
+            "price": 89.99,
+            "year": 2003,
+            "size": "S",
+            "category": 12,
+            "image": "rose-dusk-winter-landscape-painting.webp"
+        }
+    },
+    {
+        "pk": 77,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p077",
+            "name": "Summer Mountain and Forest",
+            "description": "A breathtaking painting capturing the vibrant beauty of a summer landscape, where mountains meet lush forests.",
+            "price": 199.99,
+            "year": 2006,
+            "size": "L",
+            "category": 12,
+            "image": "summer-mountain-and-forest-painting.webp"
+        }
+    },
+    {
+        "pk": 78,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p078",
+            "name": "Red Sunset",
+            "description": "A mesmerizing painting capturing the fiery beauty of a red sunset, where the sky is ablaze with colors.",
+            "price": 299.99,
+            "year": 2011,
+            "size": "L",
+            "category": 13,
+            "image": "red-sunset-painting.webp"
+        }
+    },
+    {
+        "pk": 79,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p079",
+            "name": "Sundown Over Lake and Pier",
+            "description": "A serene painting capturing the tranquil beauty of a sundown over a calm lake with a charming pier.",
+            "price": 159.99,
+            "year": 2017,
+            "size": "M",
+            "category": 13,
+            "image": "sundown-over-lake-and-pier-painting.webp"
+        }
+    },
+    {
+        "pk": 80,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p080",
+            "name": "Sundown Over Water and Field",
+            "description": "A captivating painting capturing the serene beauty of a sundown over calm water and a vast open field.",
+            "price": 149.99,
+            "year": 2006,
+            "size": "M",
+            "category": 13,
+            "image": "sundown-over-water-and-field-painting.webp"
+        }
+    },
+    {
+        "pk": 81,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p081",
+            "name": "Vertical Sundown Over Lake",
+            "description": "A mesmerizing vertical painting capturing the tranquil beauty of a sundown over a serene lake.",
+            "price": 139.99,
+            "year": 2011,
+            "size": "M",
+            "category": 13,
+            "image": "vertical-sundown-over-lake-painting.webp"
+        }
+    },
+    {
+        "pk": 82,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p082",
+            "name": "Yellow Dusk Sunset Over Water",
+            "description": "A serene painting capturing the enchanting beauty of a yellow dusk sunset over calm waters.",
+            "price": 129.99,
+            "year": 2008,
+            "size": "M",
+            "category": 13,
+            "image": "yellow-dusk-sunset-over-water-painting.webp"
+        }
+    },
+    {
+        "pk": 83,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p083",
+            "name": "Croatia in Summer Landscape",
+            "description": "A picturesque painting capturing the natural beauty of Croatia in the vibrant season of summer.",
+            "price": 99.99,
+            "year": 2020,
+            "size": "S",
+            "category": 14,
+            "image": "croatia-in-summer-landscape-painting.webp"
+        }
+    },
+    {
+        "pk": 84,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p084",
+            "name": "Early Wheat Field Landscape",
+            "description": "A captivating painting capturing the tranquil beauty of an early wheat field landscape in the warm hues of dawn.",
+            "price": 99.99,
+            "year": 2019,
+            "size": "S",
+            "category": 14,
+            "image": "early-wheat-field-landscape-painting.webp"
+        }
+    },
+    {
+        "pk": 85,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p085",
+            "name": "Summer Wheat Landscape",
+            "description": "A serene painting capturing the vibrant beauty of a summer wheat field landscape under the golden sun.",
+            "price": 89.99,
+            "year": 2018,
+            "size": "S",
+            "category": 14,
+            "image": "summer-wheat-landscape-painting.webp"
+        }
+    },
+    {
+        "pk": 86,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p086",
+            "name": "Wheat Fields in Summer with Lady",
+            "description": "A captivating painting capturing the serene beauty of wheat fields in summer, with a graceful lady amidst the golden crops.",
+            "price": 199.99,
+            "year": 2017,
+            "size": "M",
+            "category": 14,
+            "image": "wheat-fields-in-summer-with-lady-painting.webp"
+        }
+    },
+    {
+        "pk": 87,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p087",
+            "name": "Act Red Lady",
+            "description": "A captivating painting featuring a lady in a striking red dress, capturing the essence of elegance and drama.",
+            "price": 179.99,
+            "year": 2015,
+            "size": "M",
+            "category": 15,
+            "image": "act-red-lady-painting.webp"
+        }
+    },
+    {
+        "pk": 88,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p088",
+            "name": "Lady Walking in Rain",
+            "description": "A captivating painting capturing the poignant beauty of a lady gracefully walking in the rain.",
+            "price": 149.99,
+            "year": 2017,
+            "size": "M",
+            "category": 15,
+            "image": "lady-walking-in-rain-painting.webp"
+        }
+    },
+    {
+        "pk": 89,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p089",
+            "name": "Mother and Child",
+            "description": "A touching painting depicting the bond between a mother and her child, capturing the essence of love and warmth.",
+            "price": 199.99,
+            "year": 2006,
+            "size": "L",
+            "category": 15,
+            "image": "mother-and-child-painting.webp"
+        }
+    },
+    {
+        "pk": 90,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p090",
+            "name": "Large Nude Act Blue",
+            "description": "A captivating large-scale painting featuring a nude figure in striking shades of blue, capturing the essence of artistry and beauty.",
+            "price": 259.99,
+            "year": 2009,
+            "size": "XL",
+            "category": 16,
+            "image": "large-nude-act-blue-painting.webp"
+        }
+    },
+    {
+        "pk": 91,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p091",
+            "name": "Nude Act Blue Lady",
+            "description": "A captivating painting featuring a nude lady in elegant shades of blue, embodying the art of sensuality and grace.",
+            "price": 199.99,
+            "year": 2016,
+            "size": "L",
+            "category": 16,
+            "image": "nude-act-blue-lady-painting.webp"
+        }
+    },
+    {
+        "pk": 92,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p092",
+            "name": "Nude Act Grey",
+            "description": "A captivating painting featuring a nude figure in elegant shades of grey, evoking a sense of beauty and simplicity.",
+            "price": 199.99,
+            "year": 2018,
+            "size": "L",
+            "category": 16,
+            "image": "nude-act-grey-painting.webp"
+        }
+    },
+    {
+        "pk": 93,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p093",
+            "name": "Nude Act Horizontal",
+            "description": "A captivating painting featuring a horizontal composition of a nude figure, beautifully crafted with artistic elegance.",
+            "price": 159.99,
+            "year": 2015,
+            "size": "M",
+            "category": 16,
+            "image": "nude-act-horizontal-painting.webp"
+        }
+    },
+    {
+        "pk": 94,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p094",
+            "name": "Nude Act Red Towel",
+            "description": "A captivating painting featuring a nude figure draped in a vibrant red towel, symbolizing sensuality and warmth.",
+            "price": 219.99,
+            "year": 2018,
+            "size": "L",
+            "category": 16,
+            "image": "nude-act-red-towel-painting.webp"
+        }
+    },
+    {
+        "pk": 95,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p095",
+            "name": "Nude Act Side",
+            "description": "A captivating painting featuring a side view of a nude figure, portraying beauty and grace from a unique angle.",
+            "price": 209.99,
+            "year": 2017,
+            "size": "L",
+            "category": 16,
+            "image": "nude-act-side-painting.webp"
+        }
+    },
+    {
+        "pk": 96,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p096",
+            "name": "Nude Act Siren Blue",
+            "description": "A captivating painting featuring a nude figure adorned in siren-like blue, captivating the viewer with its allure.",
+            "price": 159.99,
+            "year": 2011,
+            "size": "M",
+            "category": 16,
+            "image": "nude-act-siren-blue-painting.webp"
+        }
+    },
+    {
+        "pk": 97,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p097",
+            "name": "Nude Act Swimming with Sun",
+            "description": "A mesmerizing painting featuring a nude figure gracefully swimming under the warm embrace of the sun's rays.",
+            "price": 99.99,
+            "year": 2006,
+            "size": "S",
+            "category": 16,
+            "image": "nude-act-swimming-with-sun-painting.webp"
+        }
+    },
+    {
+        "pk": 98,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p098",
+            "name": "Giant Sea Wave",
+            "description": "An awe-inspiring painting capturing the sheer power and beauty of a giant sea wave crashing against the shore.",
+            "price": 129.99,
+            "year": 2017,
+            "size": "M",
+            "category": 17,
+            "image": "giant-sea-wave-painting.webp"
+        }
+    },
+    {
+        "pk": 99,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p099",
+            "name": "Seashell Framed Calm Sea",
+            "description": "A serene painting featuring a calm sea framed by delicate seashells, evoking a sense of tranquility and beauty.",
+            "price": 149.99,
+            "year": 2001,
+            "size": "S",
+            "category": 17,
+            "image": "seashell-framed-calm-sea-painting.webp"
+        }
+    },
+    {
+        "pk": 100,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p100",
+            "name": "Small Boat in Blue",
+            "description": "A captivating painting featuring a small boat peacefully adrift in a sea of calming blues, invoking a sense of serenity.",
+            "price": 119.99,
+            "year": 2019,
+            "size": "M",
+            "category": 17,
+            "image": "small-boat-in-blue-painting.webp"
+        }
+    },
+    {
+        "pk": 101,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p101",
+            "name": "Three Sails in Ocean",
+            "description": "A stunning painting capturing the elegance of three sails against the vast expanse of the ocean, celebrating the beauty of nature and adventure.",
+            "price": 159.99,
+            "year": 2019,
+            "size": "M",
+            "category": 17,
+            "image": "three-sails-in-ocean-painting.webp"
+        }
+    },
+    {
+        "pk": 101,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p101",
+            "name": "Three Sails in Ocean",
+            "description": "A stunning painting capturing the elegance of three sails against the vast expanse of the ocean, celebrating the beauty of nature and adventure.",
+            "price": 159.99,
+            "year": 2019,
+            "size": "M",
+            "category": 17,
+            "image": "three-sails-in-ocean-painting.webp"
+        }
+    },
+    {
+        "pk": 102,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p102",
+            "name": "Large Ship in Choppy Waters",
+            "description": "An impressive painting capturing a large ship navigating through the turbulent and choppy waters, symbolizing resilience and determination.",
+            "price": 139.99,
+            "year": 2017,
+            "size": "M",
+            "category": 18,
+            "image": "large-ship-in-choppy-waters-painting.webp"
+        }
+    },
+    {
+        "pk": 103,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p103",
+            "name": "Large Ship on the Sea",
+            "description": "A majestic painting featuring a large ship gracefully sailing on the tranquil sea, showcasing the beauty of maritime adventure.",
+            "price": 199.99,
+            "year": 2002,
+            "size": "L",
+            "category": 18,
+            "image": "large-ship-on-the-sea-painting.webp"
+        }
+    },
+    {
+        "pk": 104,
+        "model": "paintings.painting",
+        "fields": {
+            "sku": "p104",
+            "name": "Old Ship During Storm",
+            "description": "A dramatic painting capturing the resilience of an old ship battling the fury of a stormy sea, symbolizing strength and determination.",
+            "price": 219.99,
+            "year": 2019,
+            "size": "L",
+            "category": 18,
+            "image": "old-ship-during-storm-painting.webp"
         }
     }
 ]
