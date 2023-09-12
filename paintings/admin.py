@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Painting, Category
+from .models import Painting, Category, SubCategory
 
 
 class PaintingAdmin(admin.ModelAdmin):
@@ -23,5 +23,13 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
+class SubCategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
 admin.site.register(Painting, PaintingAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(SubCategory, SubCategoryAdmin)
