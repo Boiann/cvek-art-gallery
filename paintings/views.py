@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Painting
+from .models import Painting, Category
 
 
 def all_paintings(request):
@@ -9,8 +9,14 @@ def all_paintings(request):
 
     paintings = Painting.objects.all()
     query = None
+    categories = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            paintings = paintings.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -23,6 +29,7 @@ def all_paintings(request):
     context = {
         'paintings': paintings,
         'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, 'paintings/paintings.html', context)
