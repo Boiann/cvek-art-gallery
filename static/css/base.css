@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/large-white-flowers-opening-painting.webp.webp') no-repeat center center fixed;
+    background: url('/media/large-white-flowers-opening-painting.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;

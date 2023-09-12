@@ -24,6 +24,7 @@
             "year": 2007,
             "size": "S",
             "category": 1,
+            "subcategory": [13],
             "image": "glowing-scorpion-tribal-painting.webp"
         }
     },
@@ -37,7 +38,8 @@
             "price": 259.99,
             "year": 2004,
             "size": "L",
-            "category": 2,
+            "category": 1,
+            "subcategory": [1, 13],
             "image": "propped-brown-horse-painting.webp"
         }
     },
@@ -51,7 +53,8 @@
             "price": 169.99,
             "year": 2011,
             "size": "M",
-            "category": 2,
+            "category": 1,
+            "subcategory": [1],
             "image": "two-horses-in-embrace-painting.webp"
         }
     },
@@ -65,7 +68,8 @@
             "price": 159.99,
             "year": 2005,
             "size": "M",
-            "category": 2,
+            "category": 1,
+            "subcategory": [1],
             "image": "white-horse-in-winter-painting.webp"
         }
     },
@@ -79,7 +83,8 @@
             "price": 149.99,
             "year": 2005,
             "size": "M",
-            "category": 2,
+            "category": 1,
+            "subcategory": [1],
             "image": "white-horse-painting.webp"
         }
     },
@@ -93,7 +98,8 @@
             "price": 79.99,
             "year": 2003,
             "size": "S",
-            "category": 2,
+            "category": 1,
+            "subcategory": [1],
             "image": "white-horse-portrait-painting.webp"
         }
     },
@@ -107,7 +113,8 @@
             "price": 99.99,
             "year": 2020,
             "size": "M",
-            "category": 3,
+            "category": 2,
+            "subcategory": [12],
             "image": "basket-full-of-wildflowers-painting.webp"
         }
     },
@@ -121,7 +128,7 @@
             "price": 99.99,
             "year": 2006,
             "size": "M",
-            "category": 3,
+            "category": 2,
             "image": "basket-full-of-wild-flowers-painting.webp"
         }
     },
@@ -135,7 +142,8 @@
             "price": 89.99,
             "year": 2021,
             "size": "M",
-            "category": 3,
+            "category": 2,
+            "subcategory": [12],
             "image": "flowers-in-a-vase-over-white-background-painting.webp"
         }
     },
@@ -149,7 +157,7 @@
             "price": 189.99,
             "year": 2019,
             "size": "L",
-            "category": 3,
+            "category": 2,
             "image": "flowers-opening-painting.webp"
         }
     },
@@ -163,7 +171,7 @@
             "price": 79.99,
             "year": 2007,
             "size": "M",
-            "category": 3,
+            "category": 2,
             "image": "fruits-in-bowl-and-basket-painting.webp"
         }
     },
@@ -177,7 +185,7 @@
             "price": 219.99,
             "year": 2018,
             "size": "L",
-            "category": 3,
+            "category": 2,
             "image": "large-white-flowers-opening-painting.webp"
         }
     },
@@ -191,7 +199,8 @@
             "price": 249.99,
             "year": 2011,
             "size": "XL",
-            "category": 3,
+            "category": 2,
+            "subcategory": [14],
             "image": "large-yellow-flower-painting.webp"
         }
     },
@@ -205,7 +214,7 @@
             "price": 249.99,
             "year": 2007,
             "size": "XL",
-            "category": 3,
+            "category": 2,
             "image": "large-yellow-flowers-close-up-painting.webp"
         }
     },
@@ -219,7 +228,7 @@
             "price": 109.99,
             "year": 2006,
             "size": "M",
-            "category": 3,
+            "category": 2,
             "image": "red-flowers-on-vine-painting.webp"
         }
     },
@@ -233,7 +242,7 @@
             "price": 39.99,
             "year": 2002,
             "size": "XS",
-            "category": 3,
+            "category": 2,
             "image": "spring-flowers-painting.webp"
         }
     },
@@ -247,7 +256,7 @@
             "price": 139.99,
             "year": 2008,
             "size": "M",
-            "category": 3,
+            "category": 2,
             "image": "dry-flowers-and-fruit-painting.webp"
         }
     },
@@ -261,7 +270,7 @@
             "price": 129.99,
             "year": 2003,
             "size": "M",
-            "category": 3,
+            "category": 2,
             "image": "still-nature-white-tulips-painting.webp"
         }
     },
@@ -275,7 +284,7 @@
             "price": 89.99,
             "year": 2010,
             "size": "M",
-            "category": 3,
+            "category": 2,
             "image": "summer-meadow-flowers-painting.webp"
         }
     },
@@ -289,7 +298,7 @@
             "price": 69.99,
             "year": 2011,
             "size": "S",
-            "category": 3,
+            "category": 2,
             "image": "tulips-white-background-painting.webp"
         }
     },
@@ -303,7 +312,7 @@
             "price": 59.99,
             "year": 2005,
             "size": "S",
-            "category": 3,
+            "category": 2,
             "image": "white-flowers-glowing-painting.webp"
         }
     },
@@ -317,7 +326,7 @@
             "price": 149.99,
             "year": 2003,
             "size": "M",
-            "category": 3,
+            "category": 2,
             "image": "white-flowers-in-basket-painting.webp"
         }
     },
@@ -331,7 +340,7 @@
             "price": 119.99,
             "year": 2017,
             "size": "M",
-            "category": 3,
+            "category": 2,
             "image": "white-wildflowers-painting.webp"
         }
     },
@@ -345,7 +354,8 @@
             "price": 109.99,
             "year": 2020,
             "size": "M",
-            "category": 3,
+            "category": 2,
+            "subcategory": [12],
             "image": "yellow-tulips-growing-painting.webp"
         }
     },
@@ -359,7 +369,8 @@
             "price": 99.99,
             "year": 2006,
             "size": "M",
-            "category": 4,
+            "category": 2,
+            "subcategory": [2],
             "image": "orchid-in-grass-painting.webp"
         }
     },
@@ -373,7 +384,8 @@
             "price": 99.99,
             "year": 2007,
             "size": "M",
-            "category": 4,
+            "category": 2,
+            "subcategory": [2],
             "image": "orchids-on-white-background-painting.webp"
         }
     },
@@ -387,7 +399,8 @@
             "price": 79.99,
             "year": 2004,
             "size": "S",
-            "category": 4,
+            "category": 2,
+            "subcategory": [2],
             "image": "orchids-over-white-background-painting.webp"
         }
     },
@@ -401,7 +414,8 @@
             "price": 109.99,
             "year": 2004,
             "size": "M",
-            "category": 4,
+            "category": 2,
+            "subcategory": [2],
             "image": "three-orchids-white-back-painting.webp"
         }
     },
@@ -415,7 +429,8 @@
             "price": 89.99,
             "year": 2006,
             "size": "S",
-            "category": 4,
+            "category": 2,
+            "subcategory": [2],
             "image": "yellow-orchid-painting.webp"
         }
     },
@@ -429,7 +444,8 @@
             "price": 39.99,
             "year": 2005,
             "size": "S",
-            "category": 5,
+            "category": 2,
+            "subcategory": [3],
             "image": "abstract-bunch-of-roses-painting.webp"
         }
     },
@@ -443,7 +459,8 @@
             "price": 139.99,
             "year": 2016,
             "size": "M",
-            "category": 5,
+            "category": 2,
+            "subcategory": [3],
             "image": "basket-full-of-roses-painting.webp"
         }
     },
@@ -457,7 +474,8 @@
             "price": 299.99,
             "year": 2004,
             "size": "XL",
-            "category": 5,
+            "category": 2,
+            "subcategory": [3],
             "image": "glowing-roses-painting.webp"
         }
     },
@@ -471,7 +489,8 @@
             "price": 69.99,
             "year": 2017,
             "size": "S",
-            "category": 5,
+            "category": 2,
+            "subcategory": [3],
             "image": "red-roses-in-bloom-painting.webp"
         }
     },
@@ -485,7 +504,8 @@
             "price": 69.99,
             "year": 2017,
             "size": "S",
-            "category": 5,
+            "category": 2,
+            "subcategory": [3],
             "image": "roses-bouquet-painting.webp"
         }
     },
@@ -499,7 +519,8 @@
             "price": 129.99,
             "year": 2005,
             "size": "M",
-            "category": 5,
+            "category": 2,
+            "subcategory": [3],
             "image": "roses-next-to-a-pitcher-painting.webp"
         }
     },
@@ -513,7 +534,8 @@
             "price": 119.99,
             "year": 2004,
             "size": "M",
-            "category": 5,
+            "category": 2,
+            "subcategory": [3],
             "image": "vertical-growing-roses-painting.webp"
         }
     },
@@ -527,7 +549,8 @@
             "price": 99.99,
             "year": 2004,
             "size": "M",
-            "category": 5,
+            "category": 2,
+            "subcategory": [3],
             "image": "vertical-multicolored-roses-painting.webp"
         }
     },
@@ -541,7 +564,8 @@
             "price": 109.99,
             "year": 2006,
             "size": "M",
-            "category": 5,
+            "category": 2,
+            "subcategory": [3],
             "image": "white-roses-in-vase-painting.webp"
         }
     },
@@ -555,7 +579,8 @@
             "price": 199.99,
             "year": 2002,
             "size": "L",
-            "category": 5,
+            "category": 2,
+            "subcategory": [3],
             "image": "yellow-roses-in-a-vase-painting.webp"
         }
     },
@@ -569,7 +594,8 @@
             "price": 59.99,
             "year": 2015,
             "size": "S",
-            "category": 6,
+            "category": 2,
+            "subcategory": [4],
             "image": "large-sunflower-painting.webp"
         }
     },
@@ -583,7 +609,8 @@
             "price": 159.99,
             "year": 2003,
             "size": "L",
-            "category": 6,
+            "category": 2,
+            "subcategory": [4],
             "image": "sunflowers-white-background-painting.webp"
         }
     },
@@ -597,7 +624,8 @@
             "price": 59.99,
             "year": 2011,
             "size": "S",
-            "category": 6,
+            "category": 2,
+            "subcategory": [4],
             "image": "two-sunflowers-painting.webp"
         }
     },
@@ -611,7 +639,8 @@
             "price": 199.99,
             "year": 2001,
             "size": "L",
-            "category": 6,
+            "category": 2,
+            "subcategory": [4],
             "image": "yellow-sunflowers-in-vase-painting.webp"
         }
     },
@@ -625,7 +654,7 @@
             "price": 169.99,
             "year": 2014,
             "size": "L",
-            "category": 7,
+            "category": 3,
             "image": "ancient-roman-building-in-daruvar-painting.webp"
         }
     },
@@ -639,7 +668,7 @@
             "price": 89.99,
             "year": 2016,
             "size": "S",
-            "category": 7,
+            "category": 3,
             "image": "bridge-in-forest-autumn-painting.webp"
         }
     },
@@ -653,7 +682,7 @@
             "price": 129.99,
             "year": 2016,
             "size": "M",
-            "category": 7,
+            "category": 3,
             "image": "roman-building-daruvar-painting.webp"
         }
     },
@@ -667,7 +696,8 @@
             "price": 129.99,
             "year": 2018,
             "size": "M",
-            "category": 8,
+            "category": 3,
+            "subcategory": [5],
             "image": "bridge-and-hut-wintertime-painting.webp"
         }
     },
@@ -681,7 +711,8 @@
             "price": 149.99,
             "year": 2004,
             "size": "M",
-            "category": 8,
+            "category": 3,
+            "subcategory": [5],
             "image": "early-winter-morning-and-hut-painting.webp"
         }
     },
@@ -695,7 +726,8 @@
             "price": 79.99,
             "year": 2018,
             "size": "S",
-            "category": 8,
+            "category": 3,
+            "subcategory": [5],
             "image": "lonely-winter-hut-painting.webp"
         }
     },
@@ -709,7 +741,8 @@
             "price": 179.99,
             "year": 2016,
             "size": "M",
-            "category": 8,
+            "category": 3,
+            "subcategory": [5],
             "image": "old-water-mill-in-winter-painting.webp"
         }
     },
@@ -723,7 +756,8 @@
             "price": 79.99,
             "year": 2016,
             "size": "S",
-            "category": 8,
+            "category": 3,
+            "subcategory": [5],
             "image": "old-water-mill-winter-sundown-painting.webp"
         }
     },
@@ -737,7 +771,8 @@
             "price": 129.99,
             "year": 2007,
             "size": "M",
-            "category": 8,
+            "category": 3,
+            "subcategory": [5],
             "image": "snow-covered-houses-painting.webp"
         }
     },
@@ -751,7 +786,7 @@
             "price": 129.99,
             "year": 2019,
             "size": "M",
-            "category": 8,
+            "category": 3,"subcategory": [5],
             "image": "winter-midday-mountain-painting.webp"
         }
     },
@@ -765,7 +800,8 @@
             "price": 119.99,
             "year": 2018,
             "size": "M",
-            "category": 8,
+            "category": 3,
+            "subcategory": [5],
             "image": "winter-water-mill-landscape-painting.webp"
         }
     },
@@ -779,7 +815,7 @@
             "price": 109.99,
             "year": 2005,
             "size": "M",
-            "category": 9,
+            "category": 4,
             "image": "early-spring-in-forest-painting.webp"
         }
     },
@@ -793,7 +829,8 @@
             "price": 129.99,
             "year": 2020,
             "size": "M",
-            "category": 9,
+            "category": 4,
+            "subcategory": [12],
             "image": "early-winter-forest-painting.webp"
         }
     },
@@ -807,7 +844,7 @@
             "price": 109.99,
             "year": 2014,
             "size": "M",
-            "category": 9,
+            "category": 4,
             "image": "forest-tunnel-in-winter-painting.webp"
         }
     },
@@ -821,7 +858,7 @@
             "price": 189.99,
             "year": 2006,
             "size": "L",
-            "category": 9,
+            "category": 4,
             "image": "misty-morning-in-winter-forest-painting.webp"
         }
     },
@@ -835,7 +872,7 @@
             "price": 139.99,
             "year": 2004,
             "size": "M",
-            "category": 9,
+            "category": 4,
             "image": "snow-covered-forest-and-mountain-painting.webp"
         }
     },
@@ -849,7 +886,7 @@
             "price": 59.99,
             "year": 2018,
             "size": "S",
-            "category": 9,
+            "category": 4,
             "image": "sunny-forest-painting.webp"
         }
     },
@@ -863,7 +900,7 @@
             "price": 99.99,
             "year": 2005,
             "size": "M",
-            "category": 9,
+            "category": 4,
             "image": "winter-morning-in-forest-painting.webp"
         }
     },
@@ -877,7 +914,8 @@
             "price": 89.99,
             "year": 2016,
             "size": "M",
-            "category": 10,
+            "category": 4,
+            "subcategory": [6],
             "image": "birch-and-lake-in-summer-painting.webp"
         }
     },
@@ -891,7 +929,8 @@
             "price": 129.99,
             "year": 2011,
             "size": "L",
-            "category": 10,
+            "category": 4,
+            "subcategory": [6],
             "image": "birch-forest-in-autumn-painting.webp"
         }
     },
@@ -905,7 +944,8 @@
             "price": 119.99,
             "year": 2017,
             "size": "M",
-            "category": 10,
+            "category": 4,
+            "subcategory": [6],
             "image": "summertime-birch-painting.webp"
         }
     },
@@ -919,7 +959,8 @@
             "price": 159.99,
             "year": 2005,
             "size": "L",
-            "category": 10,
+            "category": 4,
+            "subcategory": [6],
             "image": "vertical-birch-forest-painting.webp"
         }
     },
@@ -933,7 +974,8 @@
             "price": 139.99,
             "year": 2004,
             "size": "M",
-            "category": 11,
+            "category": 4,
+            "subcategory": [7],
             "image": "forest-waterfall-painting.webp"
         }
     },
@@ -947,7 +989,8 @@
             "price": 189.99,
             "year": 2016,
             "size": "L",
-            "category": 11,
+            "category": 4,
+            "subcategory": [7],
             "image": "springtime-waterfall-in-forest-painting.webp"
         }
     },
@@ -961,7 +1004,8 @@
             "price": 149.99,
             "year": 2017,
             "size": "M",
-            "category": 11,
+            "category": 4,
+            "subcategory": [7],
             "image": "summer-waterfall-in-the-forest-painting.webp"
         }
     },
@@ -975,7 +1019,8 @@
             "price": 169.99,
             "year": 2011,
             "size": "M",
-            "category": 11,
+            "category": 4,
+            "subcategory": [7],
             "image": "waterfall-in-forest-painting.webp"
         }
     },
@@ -989,7 +1034,7 @@
             "price": 199.99,
             "year": 2010,
             "size": "L",
-            "category": 12,
+            "category": 5,
             "image": "golden-desert-painting.webp"
         }
     },
@@ -1003,7 +1048,7 @@
             "price": 199.99,
             "year": 2009,
             "size": "L",
-            "category": 12,
+            "category": 5,
             "image": "golden-evening-in-park-painting.webp"
         }
     },
@@ -1017,7 +1062,7 @@
             "price": 229.99,
             "year": 2006,
             "size": "M",
-            "category": 12,
+            "category": 5,
             "image": "morning-over-forest-and-lake-painting.webp"
         }
     },
@@ -1031,7 +1076,7 @@
             "price": 129.99,
             "year": 2009,
             "size": "M",
-            "category": 12,
+            "category": 5,
             "image": "orchard-landscape-painting.webp"
         }
     },
@@ -1045,7 +1090,7 @@
             "price": 119.99,
             "year": 2005,
             "size": "M",
-            "category": 12,
+            "category": 5,
             "image": "oval-landscape-painting.webp"
         }
     },
@@ -1059,7 +1104,7 @@
             "price": 89.99,
             "year": 2003,
             "size": "S",
-            "category": 12,
+            "category": 5,
             "image": "rose-dusk-winter-landscape-painting.webp"
         }
     },
@@ -1073,7 +1118,7 @@
             "price": 199.99,
             "year": 2006,
             "size": "L",
-            "category": 12,
+            "category": 5,
             "image": "summer-mountain-and-forest-painting.webp"
         }
     },
@@ -1087,7 +1132,8 @@
             "price": 299.99,
             "year": 2011,
             "size": "L",
-            "category": 13,
+            "category": 5,
+            "subcategory": [8],
             "image": "red-sunset-painting.webp"
         }
     },
@@ -1101,7 +1147,8 @@
             "price": 159.99,
             "year": 2017,
             "size": "M",
-            "category": 13,
+            "category": 5,
+            "subcategory": [8],
             "image": "sundown-over-lake-and-pier-painting.webp"
         }
     },
@@ -1115,7 +1162,8 @@
             "price": 149.99,
             "year": 2006,
             "size": "M",
-            "category": 13,
+            "category": 5,
+            "subcategory": [8],
             "image": "sundown-over-water-and-field-painting.webp"
         }
     },
@@ -1129,7 +1177,8 @@
             "price": 139.99,
             "year": 2011,
             "size": "M",
-            "category": 13,
+            "category": 5,
+            "subcategory": [8],
             "image": "vertical-sundown-over-lake-painting.webp"
         }
     },
@@ -1143,7 +1192,8 @@
             "price": 129.99,
             "year": 2008,
             "size": "M",
-            "category": 13,
+            "category": 5,
+            "subcategory": [8],
             "image": "yellow-dusk-sunset-over-water-painting.webp"
         }
     },
@@ -1157,7 +1207,8 @@
             "price": 99.99,
             "year": 2020,
             "size": "S",
-            "category": 14,
+            "category": 5,
+            "subcategory": [9, 12],
             "image": "croatia-in-summer-landscape-painting.webp"
         }
     },
@@ -1171,7 +1222,8 @@
             "price": 99.99,
             "year": 2019,
             "size": "S",
-            "category": 14,
+            "category": 5,
+            "subcategory": [9],
             "image": "early-wheat-field-landscape-painting.webp"
         }
     },
@@ -1185,7 +1237,8 @@
             "price": 89.99,
             "year": 2018,
             "size": "S",
-            "category": 14,
+            "category": 5,
+            "subcategory": [9],
             "image": "summer-wheat-landscape-painting.webp"
         }
     },
@@ -1199,7 +1252,8 @@
             "price": 199.99,
             "year": 2017,
             "size": "M",
-            "category": 14,
+            "category": 5,
+            "subcategory": [9],
             "image": "wheat-fields-in-summer-with-lady-painting.webp"
         }
     },
@@ -1213,7 +1267,7 @@
             "price": 179.99,
             "year": 2015,
             "size": "M",
-            "category": 15,
+            "category": 6,
             "image": "act-red-lady-painting.webp"
         }
     },
@@ -1227,7 +1281,7 @@
             "price": 149.99,
             "year": 2017,
             "size": "M",
-            "category": 15,
+            "category": 6,
             "image": "lady-walking-in-rain-painting.webp"
         }
     },
@@ -1241,7 +1295,7 @@
             "price": 199.99,
             "year": 2006,
             "size": "L",
-            "category": 15,
+            "category": 6,
             "image": "mother-and-child-painting.webp"
         }
     },
@@ -1255,7 +1309,8 @@
             "price": 259.99,
             "year": 2009,
             "size": "XL",
-            "category": 16,
+            "category": 6,
+            "subcategory": [10],
             "image": "large-nude-act-blue-painting.webp"
         }
     },
@@ -1269,7 +1324,8 @@
             "price": 199.99,
             "year": 2016,
             "size": "L",
-            "category": 16,
+            "category": 6,
+            "subcategory": [10],
             "image": "nude-act-blue-lady-painting.webp"
         }
     },
@@ -1283,7 +1339,8 @@
             "price": 199.99,
             "year": 2018,
             "size": "L",
-            "category": 16,
+            "category": 6,
+            "subcategory": [10],
             "image": "nude-act-grey-painting.webp"
         }
     },
@@ -1297,7 +1354,8 @@
             "price": 159.99,
             "year": 2015,
             "size": "M",
-            "category": 16,
+            "category": 6,
+            "subcategory": [10],
             "image": "nude-act-horizontal-painting.webp"
         }
     },
@@ -1311,7 +1369,8 @@
             "price": 219.99,
             "year": 2018,
             "size": "L",
-            "category": 16,
+            "category": 6,
+            "subcategory": [10],
             "image": "nude-act-red-towel-painting.webp"
         }
     },
@@ -1325,7 +1384,8 @@
             "price": 209.99,
             "year": 2017,
             "size": "L",
-            "category": 16,
+            "category": 6,
+            "subcategory": [10],
             "image": "nude-act-side-painting.webp"
         }
     },
@@ -1339,7 +1399,8 @@
             "price": 159.99,
             "year": 2011,
             "size": "M",
-            "category": 16,
+            "category": 6,
+            "subcategory": [10],
             "image": "nude-act-siren-blue-painting.webp"
         }
     },
@@ -1353,7 +1414,8 @@
             "price": 99.99,
             "year": 2006,
             "size": "S",
-            "category": 16,
+            "category": 6,
+            "subcategory": [10],
             "image": "nude-act-swimming-with-sun-painting.webp"
         }
     },
@@ -1367,7 +1429,7 @@
             "price": 129.99,
             "year": 2017,
             "size": "M",
-            "category": 17,
+            "category": 7,
             "image": "giant-sea-wave-painting.webp"
         }
     },
@@ -1381,7 +1443,7 @@
             "price": 149.99,
             "year": 2001,
             "size": "S",
-            "category": 17,
+            "category": 7,
             "image": "seashell-framed-calm-sea-painting.webp"
         }
     },
@@ -1395,7 +1457,7 @@
             "price": 119.99,
             "year": 2019,
             "size": "M",
-            "category": 17,
+            "category": 7,
             "image": "small-boat-in-blue-painting.webp"
         }
     },
@@ -1407,9 +1469,10 @@
             "name": "Three Sails in Ocean",
             "description": "A stunning painting capturing the elegance of three sails against the vast expanse of the ocean, celebrating the beauty of nature and adventure.",
             "price": 159.99,
-            "year": 2019,
+            "year": 2020,
             "size": "M",
-            "category": 17,
+            "category": 7,
+            "subcategory": [12],
             "image": "three-sails-in-ocean-painting.webp"
         }
     },
@@ -1423,7 +1486,7 @@
             "price": 159.99,
             "year": 2019,
             "size": "M",
-            "category": 17,
+            "category": 7,
             "image": "three-sails-in-ocean-painting.webp"
         }
     },
@@ -1437,7 +1500,8 @@
             "price": 139.99,
             "year": 2017,
             "size": "M",
-            "category": 18,
+            "category": 7,
+            "subcategory": [11],
             "image": "large-ship-in-choppy-waters-painting.webp"
         }
     },
@@ -1451,7 +1515,8 @@
             "price": 199.99,
             "year": 2002,
             "size": "L",
-            "category": 18,
+            "category": 7,
+            "subcategory": [11],
             "image": "large-ship-on-the-sea-painting.webp"
         }
     },
@@ -1463,9 +1528,10 @@
             "name": "Old Ship During Storm",
             "description": "A dramatic painting capturing the resilience of an old ship battling the fury of a stormy sea, symbolizing strength and determination.",
             "price": 219.99,
-            "year": 2019,
+            "year": 2020,
             "size": "L",
-            "category": 18,
+            "category": 7,
+            "subcategory": [11, 12],
             "image": "old-ship-during-storm-painting.webp"
         }
     }

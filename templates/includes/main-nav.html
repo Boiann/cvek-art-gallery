@@ -19,8 +19,8 @@
                 Animals
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="animals-link">
-                <a href="" class="dropdown-item">Horses</a>
-                <a href="" class="dropdown-item">All Animals</a>
+                <a href="{% url 'paintings' %}?subcategory=horses" class="dropdown-item">Horses</a>
+                <a href="{% url 'paintings' %}?category=animals" class="dropdown-item">All Animals</a>
             </div>
         </li>
 
@@ -30,9 +30,10 @@
                 Flowers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="flowers-link">
-                <a href="" class="dropdown-item">Orchids</a>
-                <a href="" class="dropdown-item">Roses</a>
-                <a href="" class="dropdown-item">All Flowers</a>
+                <a href="{% url 'paintings' %}?subcategory=orchids" class="dropdown-item">Orchids</a>
+                <a href="{% url 'paintings' %}?subcategory=roses" class="dropdown-item">Roses</a>
+                <a href="{% url 'paintings' %}?subcategory=sunflowers" class="dropdown-item">Sunflowers</a>
+                <a href="{% url 'paintings' %}?category=flowers" class="dropdown-item">All Flowers</a>
             </div>
         </li>
 
@@ -42,8 +43,8 @@
                 Buildings
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="buildings-link">
-                <a href="" class="dropdown-item">Huts</a>
-                <a href="" class="dropdown-item">All Buildings</a>
+                <a href="{% url 'paintings' %}?subcategory=huts" class="dropdown-item">Huts</a>
+                <a href="{% url 'paintings' %}?category=buildings" class="dropdown-item">All Buildings</a>
             </div>
         </li>
 
@@ -53,9 +54,9 @@
                 Forest
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="forest-link">
-                <a href="" class="dropdown-item">Birches</a>
-                <a href="" class="dropdown-item">Waterfalls</a>
-                <a href="" class="dropdown-item">All Forest</a>
+                <a href="{% url 'paintings' %}?subcategory=birches" class="dropdown-item">Birches</a>
+                <a href="{% url 'paintings' %}?subcategory=waterfalls" class="dropdown-item">Waterfalls</a>
+                <a href="{% url 'paintings' %}?category=forest" class="dropdown-item">All Forest</a>
             </div>
         </li>
 
@@ -65,9 +66,9 @@
                 Landscapes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="landscapes-link">
-                <a href="" class="dropdown-item">Sunrise & Sundown</a>
-                <a href="" class="dropdown-item">Wheat Fields</a>
-                <a href="" class="dropdown-item">All Landscapes</a>
+                <a href="{% url 'paintings' %}?subcategory=sunrise_sundown" class="dropdown-item">Sunrise & Sundown</a>
+                <a href="{% url 'paintings' %}?subcategory=wheat_fields" class="dropdown-item">Wheat Fields</a>
+                <a href="{% url 'paintings' %}?category=landscapes" class="dropdown-item">All Landscapes</a>
             </div>
         </li>
 
@@ -77,8 +78,8 @@
                 Women
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="women-link">
-                <a href="" class="dropdown-item">Nude Acts</a>
-                <a href="" class="dropdown-item">All Women</a>
+                <a href="{% url 'paintings' %}?subcategory=nude" class="dropdown-item">Nude Acts</a>
+                <a href="{% url 'paintings' %}?category=women" class="dropdown-item">All Women</a>
             </div>
         </li>
 
@@ -88,8 +89,8 @@
                 Sea
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sea-link">
-                <a href="" class="dropdown-item">Large Ships</a>
-                <a href="" class="dropdown-item">All Sea</a>
+                <a href="{% url 'paintings' %}?subcategory=large_ships" class="dropdown-item">Large Ships</a>
+                <a href="{% url 'paintings' %}?category=sea" class="dropdown-item">All Sea</a>
             </div>
         </li>
 
@@ -99,10 +100,10 @@
                 Specials
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Paintings</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'paintings' %}?subcategory=new_paintings" class="dropdown-item">New Paintings</a>
+                <a href="{% url 'paintings' %}?subcategory=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'paintings' %}?subcategory=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'paintings' %}?subcategory=new_paintings,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
