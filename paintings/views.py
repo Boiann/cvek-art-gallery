@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Painting, Category, SubCategory
 
 
@@ -11,8 +12,25 @@ def all_paintings(request):
     query = None
     categories = None
     subcategories = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                paintings = paintings.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            paintings = paintings.order_by(sortkey)
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             paintings = paintings.filter(category__name__in=categories)
@@ -35,11 +53,14 @@ def all_paintings(request):
     # Get all subcategories
     subcategories = SubCategory.objects.all()
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'paintings': paintings,
         'search_term': query,
         'current_categories': categories,
         'subcategories': subcategories,  # Include subcategories in the context
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'paintings/paintings.html', context)
