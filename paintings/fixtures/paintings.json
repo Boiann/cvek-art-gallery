@@ -24,7 +24,7 @@
             "year": 2007,
             "size": "S",
             "category": 1,
-            "subcategory": [8],
+            "subcategory": [13],
             "image": "glowing-scorpion-tribal-painting.webp"
         }
     },
@@ -200,6 +200,7 @@
             "year": 2011,
             "size": "XL",
             "category": 2,
+            "subcategory": [14],
             "image": "large-yellow-flower-painting.webp"
         }
     },

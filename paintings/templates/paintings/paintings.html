@@ -44,10 +44,10 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">${{ painting.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold"><i class="fa-solid fa-euro-sign"></i>{{ painting.price }}</p>
                                     {% if painting.year %}
                                     <small class="text-muted"><i
-                                            class="fas fa-star mr-1"></i>{{ painting.year }}</small>
+                                            class="fa-solid fa-calendar-days"></i>{{ painting.year }}</small>
                                     {% else %}
                                     <small class="text-muted">Year unknown</small>
                                     {% endif %}
