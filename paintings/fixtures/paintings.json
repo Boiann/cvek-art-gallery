@@ -24,6 +24,7 @@
             "year": 2007,
             "size": "S",
             "category": 1,
+            "subcategory": [8],
             "image": "glowing-scorpion-tribal-painting.webp"
         }
     },
@@ -37,7 +38,7 @@
             "price": 259.99,
             "year": 2004,
             "size": "L",
-            "category": 2,
+            "category": 1,
             "subcategory": [1, 13],
             "image": "propped-brown-horse-painting.webp"
         }
@@ -53,6 +54,7 @@
             "year": 2011,
             "size": "M",
             "category": 1,
+            "subcategory": [1],
             "image": "two-horses-in-embrace-painting.webp"
         }
     },
@@ -67,6 +69,7 @@
             "year": 2005,
             "size": "M",
             "category": 1,
+            "subcategory": [1],
             "image": "white-horse-in-winter-painting.webp"
         }
     },
@@ -81,6 +84,7 @@
             "year": 2005,
             "size": "M",
             "category": 1,
+            "subcategory": [1],
             "image": "white-horse-painting.webp"
         }
     },
@@ -95,6 +99,7 @@
             "year": 2003,
             "size": "S",
             "category": 1,
+            "subcategory": [1],
             "image": "white-horse-portrait-painting.webp"
         }
     },
@@ -109,6 +114,7 @@
             "year": 2020,
             "size": "M",
             "category": 2,
+            "subcategory": [12],
             "image": "basket-full-of-wildflowers-painting.webp"
         }
     },
@@ -137,6 +143,7 @@
             "year": 2021,
             "size": "M",
             "category": 2,
+            "subcategory": [12],
             "image": "flowers-in-a-vase-over-white-background-painting.webp"
         }
     },
@@ -347,6 +354,7 @@
             "year": 2020,
             "size": "M",
             "category": 2,
+            "subcategory": [12],
             "image": "yellow-tulips-growing-painting.webp"
         }
     },
@@ -361,6 +369,7 @@
             "year": 2006,
             "size": "M",
             "category": 2,
+            "subcategory": [2],
             "image": "orchid-in-grass-painting.webp"
         }
     },
@@ -375,6 +384,7 @@
             "year": 2007,
             "size": "M",
             "category": 2,
+            "subcategory": [2],
             "image": "orchids-on-white-background-painting.webp"
         }
     },
@@ -389,6 +399,7 @@
             "year": 2004,
             "size": "S",
             "category": 2,
+            "subcategory": [2],
             "image": "orchids-over-white-background-painting.webp"
         }
     },
@@ -403,6 +414,7 @@
             "year": 2004,
             "size": "M",
             "category": 2,
+            "subcategory": [2],
             "image": "three-orchids-white-back-painting.webp"
         }
     },
@@ -417,6 +429,7 @@
             "year": 2006,
             "size": "S",
             "category": 2,
+            "subcategory": [2],
             "image": "yellow-orchid-painting.webp"
         }
     },
@@ -431,6 +444,7 @@
             "year": 2005,
             "size": "S",
             "category": 2,
+            "subcategory": [3],
             "image": "abstract-bunch-of-roses-painting.webp"
         }
     },
@@ -445,6 +459,7 @@
             "year": 2016,
             "size": "M",
             "category": 2,
+            "subcategory": [3],
             "image": "basket-full-of-roses-painting.webp"
         }
     },
@@ -459,6 +474,7 @@
             "year": 2004,
             "size": "XL",
             "category": 2,
+            "subcategory": [3],
             "image": "glowing-roses-painting.webp"
         }
     },
@@ -473,6 +489,7 @@
             "year": 2017,
             "size": "S",
             "category": 2,
+            "subcategory": [3],
             "image": "red-roses-in-bloom-painting.webp"
         }
     },
@@ -487,6 +504,7 @@
             "year": 2017,
             "size": "S",
             "category": 2,
+            "subcategory": [3],
             "image": "roses-bouquet-painting.webp"
         }
     },
@@ -501,6 +519,7 @@
             "year": 2005,
             "size": "M",
             "category": 2,
+            "subcategory": [3],
             "image": "roses-next-to-a-pitcher-painting.webp"
         }
     },
@@ -515,6 +534,7 @@
             "year": 2004,
             "size": "M",
             "category": 2,
+            "subcategory": [3],
             "image": "vertical-growing-roses-painting.webp"
         }
     },
@@ -529,6 +549,7 @@
             "year": 2004,
             "size": "M",
             "category": 2,
+            "subcategory": [3],
             "image": "vertical-multicolored-roses-painting.webp"
         }
     },
@@ -543,6 +564,7 @@
             "year": 2006,
             "size": "M",
             "category": 2,
+            "subcategory": [3],
             "image": "white-roses-in-vase-painting.webp"
         }
     },
@@ -557,6 +579,7 @@
             "year": 2002,
             "size": "L",
             "category": 2,
+            "subcategory": [3],
             "image": "yellow-roses-in-a-vase-painting.webp"
         }
     },
@@ -571,6 +594,7 @@
             "year": 2015,
             "size": "S",
             "category": 2,
+            "subcategory": [4],
             "image": "large-sunflower-painting.webp"
         }
     },
@@ -585,6 +609,7 @@
             "year": 2003,
             "size": "L",
             "category": 2,
+            "subcategory": [4],
             "image": "sunflowers-white-background-painting.webp"
         }
     },
@@ -599,6 +624,7 @@
             "year": 2011,
             "size": "S",
             "category": 2,
+            "subcategory": [4],
             "image": "two-sunflowers-painting.webp"
         }
     },
@@ -613,6 +639,7 @@
             "year": 2001,
             "size": "L",
             "category": 2,
+            "subcategory": [4],
             "image": "yellow-sunflowers-in-vase-painting.webp"
         }
     },
@@ -669,6 +696,7 @@
             "year": 2018,
             "size": "M",
             "category": 3,
+            "subcategory": [5],
             "image": "bridge-and-hut-wintertime-painting.webp"
         }
     },
@@ -683,6 +711,7 @@
             "year": 2004,
             "size": "M",
             "category": 3,
+            "subcategory": [5],
             "image": "early-winter-morning-and-hut-painting.webp"
         }
     },
@@ -697,6 +726,7 @@
             "year": 2018,
             "size": "S",
             "category": 3,
+            "subcategory": [5],
             "image": "lonely-winter-hut-painting.webp"
         }
     },
@@ -711,6 +741,7 @@
             "year": 2016,
             "size": "M",
             "category": 3,
+            "subcategory": [5],
             "image": "old-water-mill-in-winter-painting.webp"
         }
     },
@@ -725,6 +756,7 @@
             "year": 2016,
             "size": "S",
             "category": 3,
+            "subcategory": [5],
             "image": "old-water-mill-winter-sundown-painting.webp"
         }
     },
@@ -739,6 +771,7 @@
             "year": 2007,
             "size": "M",
             "category": 3,
+            "subcategory": [5],
             "image": "snow-covered-houses-painting.webp"
         }
     },
@@ -752,7 +785,7 @@
             "price": 129.99,
             "year": 2019,
             "size": "M",
-            "category": 3,
+            "category": 3,"subcategory": [5],
             "image": "winter-midday-mountain-painting.webp"
         }
     },
@@ -767,6 +800,7 @@
             "year": 2018,
             "size": "M",
             "category": 3,
+            "subcategory": [5],
             "image": "winter-water-mill-landscape-painting.webp"
         }
     },
@@ -795,6 +829,7 @@
             "year": 2020,
             "size": "M",
             "category": 4,
+            "subcategory": [12],
             "image": "early-winter-forest-painting.webp"
         }
     },
@@ -879,6 +914,7 @@
             "year": 2016,
             "size": "M",
             "category": 4,
+            "subcategory": [6],
             "image": "birch-and-lake-in-summer-painting.webp"
         }
     },
@@ -893,6 +929,7 @@
             "year": 2011,
             "size": "L",
             "category": 4,
+            "subcategory": [6],
             "image": "birch-forest-in-autumn-painting.webp"
         }
     },
@@ -907,6 +944,7 @@
             "year": 2017,
             "size": "M",
             "category": 4,
+            "subcategory": [6],
             "image": "summertime-birch-painting.webp"
         }
     },
@@ -921,6 +959,7 @@
             "year": 2005,
             "size": "L",
             "category": 4,
+            "subcategory": [6],
             "image": "vertical-birch-forest-painting.webp"
         }
     },
@@ -935,6 +974,7 @@
             "year": 2004,
             "size": "M",
             "category": 4,
+            "subcategory": [7],
             "image": "forest-waterfall-painting.webp"
         }
     },
@@ -949,6 +989,7 @@
             "year": 2016,
             "size": "L",
             "category": 4,
+            "subcategory": [7],
             "image": "springtime-waterfall-in-forest-painting.webp"
         }
     },
@@ -963,6 +1004,7 @@
             "year": 2017,
             "size": "M",
             "category": 4,
+            "subcategory": [7],
             "image": "summer-waterfall-in-the-forest-painting.webp"
         }
     },
@@ -977,6 +1019,7 @@
             "year": 2011,
             "size": "M",
             "category": 4,
+            "subcategory": [7],
             "image": "waterfall-in-forest-painting.webp"
         }
     },
@@ -1089,6 +1132,7 @@
             "year": 2011,
             "size": "L",
             "category": 5,
+            "subcategory": [8],
             "image": "red-sunset-painting.webp"
         }
     },
@@ -1103,6 +1147,7 @@
             "year": 2017,
             "size": "M",
             "category": 5,
+            "subcategory": [8],
             "image": "sundown-over-lake-and-pier-painting.webp"
         }
     },
@@ -1117,6 +1162,7 @@
             "year": 2006,
             "size": "M",
             "category": 5,
+            "subcategory": [8],
             "image": "sundown-over-water-and-field-painting.webp"
         }
     },
@@ -1131,6 +1177,7 @@
             "year": 2011,
             "size": "M",
             "category": 5,
+            "subcategory": [8],
             "image": "vertical-sundown-over-lake-painting.webp"
         }
     },
@@ -1145,6 +1192,7 @@
             "year": 2008,
             "size": "M",
             "category": 5,
+            "subcategory": [8],
             "image": "yellow-dusk-sunset-over-water-painting.webp"
         }
     },
@@ -1159,6 +1207,7 @@
             "year": 2020,
             "size": "S",
             "category": 5,
+            "subcategory": [9, 12],
             "image": "croatia-in-summer-landscape-painting.webp"
         }
     },
@@ -1173,6 +1222,7 @@
             "year": 2019,
             "size": "S",
             "category": 5,
+            "subcategory": [9],
             "image": "early-wheat-field-landscape-painting.webp"
         }
     },
@@ -1187,6 +1237,7 @@
             "year": 2018,
             "size": "S",
             "category": 5,
+            "subcategory": [9],
             "image": "summer-wheat-landscape-painting.webp"
         }
     },
@@ -1201,6 +1252,7 @@
             "year": 2017,
             "size": "M",
             "category": 5,
+            "subcategory": [9],
             "image": "wheat-fields-in-summer-with-lady-painting.webp"
         }
     },
@@ -1257,6 +1309,7 @@
             "year": 2009,
             "size": "XL",
             "category": 6,
+            "subcategory": [10],
             "image": "large-nude-act-blue-painting.webp"
         }
     },
@@ -1271,6 +1324,7 @@
             "year": 2016,
             "size": "L",
             "category": 6,
+            "subcategory": [10],
             "image": "nude-act-blue-lady-painting.webp"
         }
     },
@@ -1285,6 +1339,7 @@
             "year": 2018,
             "size": "L",
             "category": 6,
+            "subcategory": [10],
             "image": "nude-act-grey-painting.webp"
         }
     },
@@ -1299,6 +1354,7 @@
             "year": 2015,
             "size": "M",
             "category": 6,
+            "subcategory": [10],
             "image": "nude-act-horizontal-painting.webp"
         }
     },
@@ -1313,6 +1369,7 @@
             "year": 2018,
             "size": "L",
             "category": 6,
+            "subcategory": [10],
             "image": "nude-act-red-towel-painting.webp"
         }
     },
@@ -1327,6 +1384,7 @@
             "year": 2017,
             "size": "L",
             "category": 6,
+            "subcategory": [10],
             "image": "nude-act-side-painting.webp"
         }
     },
@@ -1341,6 +1399,7 @@
             "year": 2011,
             "size": "M",
             "category": 6,
+            "subcategory": [10],
             "image": "nude-act-siren-blue-painting.webp"
         }
     },
@@ -1355,6 +1414,7 @@
             "year": 2006,
             "size": "S",
             "category": 6,
+            "subcategory": [10],
             "image": "nude-act-swimming-with-sun-painting.webp"
         }
     },
@@ -1408,9 +1468,10 @@
             "name": "Three Sails in Ocean",
             "description": "A stunning painting capturing the elegance of three sails against the vast expanse of the ocean, celebrating the beauty of nature and adventure.",
             "price": 159.99,
-            "year": 2019,
+            "year": 2020,
             "size": "M",
             "category": 7,
+            "subcategory": [12],
             "image": "three-sails-in-ocean-painting.webp"
         }
     },
@@ -1439,6 +1500,7 @@
             "year": 2017,
             "size": "M",
             "category": 7,
+            "subcategory": [11],
             "image": "large-ship-in-choppy-waters-painting.webp"
         }
     },
@@ -1453,6 +1515,7 @@
             "year": 2002,
             "size": "L",
             "category": 7,
+            "subcategory": [11],
             "image": "large-ship-on-the-sea-painting.webp"
         }
     },
@@ -1464,9 +1527,10 @@
             "name": "Old Ship During Storm",
             "description": "A dramatic painting capturing the resilience of an old ship battling the fury of a stormy sea, symbolizing strength and determination.",
             "price": 219.99,
-            "year": 2019,
+            "year": 2020,
             "size": "L",
             "category": 7,
+            "subcategory": [11, 12],
             "image": "old-ship-during-storm-painting.webp"
         }
     }
