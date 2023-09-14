@@ -20,19 +20,18 @@ def add_to_cart(request):
 
         # Adjust the frame price based on the user's selection
         if frame == 'standard_frame':
-            frame_price = Decimal('10.00')
+            frame_price = Decimal('50.00')
         elif frame == 'premium_frame':
-            frame_price = Decimal('20.00')
+            frame_price = Decimal('100.00')
 
-        # Calculate the total price including the frame and convert to float
-        total_price = float(painting.price + frame_price)
+        total_price = painting.price + frame_price
 
         # Add the painting to the cart with frame information
         cart_item = {
             'sku': painting.sku,
             'name': painting.name,
             'frame': frame,
-            'price': total_price,
+            'price': str(total_price),
         }
 
         # Add the cart item to the session or update if it already exists

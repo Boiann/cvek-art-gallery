@@ -5,7 +5,7 @@ from django.conf import settings
 def cart_contents(request):
     cart_items = request.session.get('cart', [])
     total = sum(Decimal(item['price']) for item in cart_items)
-    painting_count = len(cart_items)
+    cart = request.session.get('cart', {})
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
@@ -14,12 +14,11 @@ def cart_contents(request):
         delivery = 0
         free_delivery_delta = 0
 
-    grand_total = delivery + total
+    grand_total = Decimal(total).quantize(Decimal('0.00'))  # Convert back to Decimal
 
     context = {
         'cart_items': cart_items,
         'total': total,
-        'painting_count': painting_count,
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
