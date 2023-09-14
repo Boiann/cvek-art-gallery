@@ -3,10 +3,9 @@ from django.conf import settings
 
 
 def cart_contents(request):
-
-    cart_items = []
-    total = 0
-    painting_count = 0
+    cart_items = request.session.get('cart', [])
+    total = sum(Decimal(item['price']) for item in cart_items)
+    painting_count = len(cart_items)
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
