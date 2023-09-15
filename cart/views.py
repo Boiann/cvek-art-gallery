@@ -25,6 +25,7 @@ def add_to_cart(request):
         elif frame == 'premium_frame':
             frame_price = Decimal('100.00')
 
+        base_price = painting.price
         total_price = painting.price + frame_price
 
         # Add the painting to the cart with frame information
@@ -34,6 +35,10 @@ def add_to_cart(request):
             'frame': frame,
             'price': str(total_price),
             'image_url': painting.image.url,
+            'size': painting.size,
+            'year': str(painting.year),
+            'base_price': str(base_price),
+            'frame_price': str(frame_price),
         }
 
         existing_item = next((item for item in cart if item['sku'] == painting.sku), None)

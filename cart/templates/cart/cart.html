@@ -27,11 +27,11 @@
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
                         <tr>
-                            <th scope="col">Painting Info</th>
+                            <th scope="col">Selected Painting Info</th>
                             <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
+                            <th scope="col">Selected Frame</th>
+                            <th scope="col">Frame Price</th>
+                            <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
 
@@ -42,15 +42,27 @@
                                 alt="{{ painting.name }}">
                         </td>
                         <td class="py-3">
-                            <p class="my-0">€{{ painting.price }}</p>
+                            <p class="my-0"><strong>{{ painting.name }}</strong></p>
+                            <p class="my-0">€{{ painting.base_price }}</p>
+                            <p class="my-0">Size: {{ painting.size }}</p>
+                            <p class="my-0">Year: {{ painting.year }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <p class="my-0"></p>
+                            <p class="my-0">
+                                {% if painting.frame == 'no_frame' %}
+                                <p class="my-0">No frame selected</p>
+                                {% elif painting.frame == 'standard_frame' %}
+                                <p class="my-0">Standard Frame</p>
+                                {% elif painting.frame == 'premium_frame' %}
+                                <p class="my-0">Premium Frame</p>
+                                {% endif %}
+                            </p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <p class="my-0">€{{ painting.frame_price }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0"></p>
-                        </td><td class="py-3">
-                            <p class="my-0"></p>
+                            <p class="my-0">€{{ painting.price }}</p>
                         </td>
                     </tr>
                     {% endfor %}
