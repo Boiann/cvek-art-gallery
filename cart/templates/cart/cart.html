@@ -59,16 +59,24 @@
                             </p>
                         </td>
                         <td>
-                            <form method="POST" action="{% url 'adjust_frame' painting.sku %}">
-                                {% csrf_token %}
-                                <label for="frame">Select Frame:</label>
-                                <select name="frame" id="frame">
-                                    <option value="no_frame" {% if painting.frame == 'no_frame' %}selected{% endif %}>No Frame</option>
-                                    <option value="standard_frame" {% if painting.frame == 'standard_frame' %}selected{% endif %}>Standard Frame (+€50.00)</option>
-                                    <option value="premium_frame" {% if painting.frame == 'premium_frame' %}selected{% endif %}>Premium Frame (+€100.00)</option>
-                                </select>
-                                <button type="submit">Update Frame</button>
-                            </form>
+                            <div class="frame-form" style="display: none;">
+                                <form method="POST" action="{% url 'adjust_frame' painting.sku %}">
+                                    {% csrf_token %}
+                                    <label for="frame">Select Frame:</label>
+                                    <select name="frame" id="frame">
+                                        <option value="no_frame"
+                                            {% if painting.frame == 'no_frame' %}selected{% endif %}>No Frame</option>
+                                        <option value="standard_frame"
+                                            {% if painting.frame == 'standard_frame' %}selected{% endif %}>Standard
+                                            Frame (+€50.00)</option>
+                                        <option value="premium_frame"
+                                            {% if painting.frame == 'premium_frame' %}selected{% endif %}>Premium Frame
+                                            (+€100.00)</option>
+                                    </select>
+                                    <button type="submit">Update Frame</button>
+                                </form>
+                            </div>
+                            <button class="show-frame-form">Add/Change Frame?</button>
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ painting.price }}</p>
@@ -127,4 +135,25 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const frameForms = document.querySelectorAll(".frame-form");
+        const showFrameFormButtons = document.querySelectorAll(".show-frame-form");
+
+        showFrameFormButtons.forEach((button, index) => {
+            button.addEventListener("click", function () {
+                const frameForm = frameForms[index];
+                if (frameForm.style.display === "none" || frameForm.style.display === "") {
+                    frameForm.style.display = "block";
+                    button.textContent = "Close";
+                } else {
+                    frameForm.style.display = "none";
+                    button.textContent = "Add Frame?";
+                }
+            });
+        });
+    });
+</script>
+
 {% endblock %}
