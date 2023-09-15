@@ -1,11 +1,12 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from paintings.models import Painting
 
 
 def cart_contents(request):
     cart_items = request.session.get('cart', [])
     total = sum(Decimal(item['price']) for item in cart_items)
-    cart = request.session.get('cart', {})
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)

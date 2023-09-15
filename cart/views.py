@@ -11,6 +11,7 @@ def view_cart(request):
 def add_to_cart(request):
     sku = request.POST.get('sku')
     frame_price = Decimal('0.00')  # Default frame price as Decimal
+    cart = request.session.get('cart', [])
 
     if request.method == 'POST':
         frame = request.POST.get('frame')
@@ -32,10 +33,9 @@ def add_to_cart(request):
             'name': painting.name,
             'frame': frame,
             'price': str(total_price),
+            'image_url': painting.image.url,
         }
 
-        # Add the cart item to the session or update if it already exists
-        cart = request.session.get('cart', [])
         existing_item = next((item for item in cart if item['sku'] == painting.sku), None)
 
         if existing_item:
