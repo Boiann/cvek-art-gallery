@@ -8,6 +8,8 @@ def cart_contents(request):
     cart_items = request.session.get('cart', [])
     total = sum(Decimal(item['price']) for item in cart_items)
 
+    total_without_discount = sum(Decimal(item['price']) for item in cart_items)
+
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
@@ -29,6 +31,7 @@ def cart_contents(request):
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
+        'total_without_discount': total_without_discount,
     }
 
     return context
