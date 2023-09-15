@@ -33,6 +33,13 @@ def add_to_cart(request, painting_id):
         base_price = painting.price
         total_price = painting.price + frame_price
 
+        # Check if the user has 3 or more paintings in the cart
+        if len(cart) >= 3:
+            # Apply the discount of 50 EUR
+            total_price -= Decimal('50.00')
+            # Ensure the total price is not negative
+            total_price = max(total_price, Decimal('0.00'))
+
         # Add the painting to the cart with frame information
         cart_item = {
             'sku': painting.sku,

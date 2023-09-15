@@ -15,6 +15,11 @@ def cart_contents(request):
         delivery = 0
         free_delivery_delta = 0
 
+    # Apply the discount for buying 3 or more paintings
+    if len(cart_items) >= 3:
+        total -= Decimal('50.00')
+        total = max(total, Decimal('0.00'))
+
     grand_total = Decimal(total).quantize(Decimal('0.00'))  # Convert back to Decimal
 
     context = {
