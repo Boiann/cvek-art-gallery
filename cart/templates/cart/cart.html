@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Shopping Cart</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {% if cart_items %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col">Selected Painting Info</th>
+                            <th scope="col"></th>
+                            <th scope="col">Selected Frame</th>
+                            <th scope="col">Frame Price</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+
+                    {% for painting in cart_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            <img class="card-img-top img-fluid" src="{{ painting.image_url }}"
+                                alt="{{ painting.name }}">
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ painting.name }}</strong></p>
+                            <p class="my-0">€{{ painting.base_price }}</p>
+                            <p class="my-0">Size: {{ painting.size }}</p>
+                            <p class="my-0">Year: {{ painting.year }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <p class="my-0">
+                                {% if painting.frame == 'no_frame' %}
+                                <p class="my-0">No frame selected</p>
+                                {% elif painting.frame == 'standard_frame' %}
+                                <p class="my-0">Standard Frame</p>
+                                {% elif painting.frame == 'premium_frame' %}
+                                <p class="my-0">Premium Frame</p>
+                                {% endif %}
+                            </p>
+                        </td>
+                        <td>
+                            <div class="frame-form" style="display: none;">
+                                <form method="POST" action="{% url 'adjust_frame' painting.sku %}">
+                                    {% csrf_token %}
+                                    <label for="frame">Select Frame:</label>
+                                    <select name="frame" id="frame">
+                                        <option value="no_frame"
+                                            {% if painting.frame == 'no_frame' %}selected{% endif %}>No Frame</option>
+                                        <option value="standard_frame"
+                                            {% if painting.frame == 'standard_frame' %}selected{% endif %}>Standard
+                                            Frame (+€50.00)</option>
+                                        <option value="premium_frame"
+                                            {% if painting.frame == 'premium_frame' %}selected{% endif %}>Premium Frame
+                                            (+€100.00)</option>
+                                    </select>
+                                    <button type="submit">Update Frame</button>
+                                </form>
+                            </div>
+                            <button class="show-frame-form">Add/Change Frame?</button>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">€{{ painting.price }}</p>
+                        </td>
+                        <td class="py-3">
+                            <form method="POST" action="{% url 'remove_painting' painting.sku %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="sku" value="{{ painting.sku }}">
+                                <button type="submit" class="remove-item text-danger">
+                                    <small>Remove</small>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
+                            <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
+                            {% if free_delivery_delta > 0 %}
+                            <p class="mb-1 text-danger">
+                                You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
+                                more!
+                            </p>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'paintings' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <a href="" class="btn btn-black rounded-0 btn-lg">
+                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            {% else %}
+            <p class="lead mb-5">Your cart is empty.</p>
+            <a href="{% url 'paintings' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const frameForms = document.querySelectorAll(".frame-form");
+        const showFrameFormButtons = document.querySelectorAll(".show-frame-form");
+
+        showFrameFormButtons.forEach((button, index) => {
+            button.addEventListener("click", function () {
+                const frameForm = frameForms[index];
+                if (frameForm.style.display === "none" || frameForm.style.display === "") {
+                    frameForm.style.display = "block";
+                    button.textContent = "Close";
+                } else {
+                    frameForm.style.display = "none";
+                    button.textContent = "Add Frame?";
+                }
+            });
+        });
+    });
+</script>
+
+{% endblock %}
