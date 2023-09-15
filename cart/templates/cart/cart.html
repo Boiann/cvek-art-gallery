@@ -58,8 +58,17 @@
                                 {% endif %}
                             </p>
                         </td>
-                        <td class="py-3 w-25">
-                            <p class="my-0">€{{ painting.frame_price }}</p>
+                        <td>
+                            <form method="POST" action="{% url 'adjust_frame' painting.sku %}">
+                                {% csrf_token %}
+                                <label for="frame">Select Frame:</label>
+                                <select name="frame" id="frame">
+                                    <option value="no_frame" {% if painting.frame == 'no_frame' %}selected{% endif %}>No Frame</option>
+                                    <option value="standard_frame" {% if painting.frame == 'standard_frame' %}selected{% endif %}>Standard Frame (+€50.00)</option>
+                                    <option value="premium_frame" {% if painting.frame == 'premium_frame' %}selected{% endif %}>Premium Frame (+€100.00)</option>
+                                </select>
+                                <button type="submit">Update Frame</button>
+                            </form>
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ painting.price }}</p>

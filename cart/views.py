@@ -20,6 +20,10 @@ def add_to_cart(request, painting_id):
         # Find the painting with the matching SKU
         painting = get_object_or_404(Painting, sku=sku)
 
+        # Set a default frame value if it's not provided in the request
+        if not frame:
+            frame = 'no_frame'  # You can choose your default frame value
+
         # Adjust the frame price based on the user's selection
         if frame == 'standard_frame':
             frame_price = Decimal('50.00')
@@ -63,5 +67,30 @@ def remove_painting(request, painting_sku):
 
         # Update the session with the new cart
         request.session['cart'] = updated_cart
+
+    return redirect('view_cart')
+
+
+def adjust_frame(request, painting_sku):
+    if request.method == 'POST':
+        frame = request.POST.get('frame')
+        cart = request.session.get('cart', [])
+
+        for item in cart:
+            if item['sku'] == painting_sku:
+                item['frame'] = frame
+                # Adjust the frame price based on the selected frame
+                if frame == 'no_frame':
+                    item['frame_price'] = '0.00'
+                elif frame == 'standard_frame':
+                    item['frame_price'] = '50.00'
+                elif frame == 'premium_frame':
+                    item['frame_price'] = '100.00'
+
+                # Recalculate the total price based on the base price and adjusted frame price
+                item['price'] = str(Decimal(item['base_price']) + Decimal(item['frame_price']))
+                break
+
+        request.session['cart'] = cart
 
     return redirect('view_cart')
