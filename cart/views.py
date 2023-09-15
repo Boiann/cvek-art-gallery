@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.http import HttpResponse
 from paintings.models import Painting
 from decimal import Decimal
 
@@ -8,7 +9,7 @@ def view_cart(request):
     return render(request, 'cart/cart.html')
 
 
-def add_to_cart(request):
+def add_to_cart(request, painting_id):
     sku = request.POST.get('sku')
     frame_price = Decimal('0.00')  # Default frame price as Decimal
     cart = request.session.get('cart', [])
@@ -49,5 +50,18 @@ def add_to_cart(request):
             cart.append(cart_item)
 
         request.session['cart'] = cart
+
+    return redirect('view_cart')
+
+
+def remove_painting(request, painting_sku):
+    if request.method == 'POST':
+        cart = request.session.get('cart', [])
+
+        # Create a new cart without the item to be removed
+        updated_cart = [item for item in cart if item['sku'] != painting_sku]
+
+        # Update the session with the new cart
+        request.session['cart'] = updated_cart
 
     return redirect('view_cart')

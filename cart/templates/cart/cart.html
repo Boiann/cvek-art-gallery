@@ -64,6 +64,15 @@
                         <td class="py-3">
                             <p class="my-0">€{{ painting.price }}</p>
                         </td>
+                        <td class="py-3">
+                            <form method="POST" action="{% url 'remove_painting' painting.sku %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="sku" value="{{ painting.sku }}">
+                                <button type="submit" class="remove-item text-danger">
+                                    <small>Remove</small>
+                                </button>
+                            </form>
+                        </td>
                     </tr>
                     {% endfor %}
                     <tr>
