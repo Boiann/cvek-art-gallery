@@ -75,10 +75,13 @@ def add_to_cart(request, painting_id):
 
         request.session['cart'] = cart
 
-    return redirect('view_cart')
+    return redirect('painting_detail', painting_id=painting_id)
 
 
 def remove_painting(request, painting_sku):
+
+    painting = get_object_or_404(Painting, sku=painting_sku)
+
     if request.method == 'POST':
         cart = request.session.get('cart', [])
 
@@ -87,11 +90,15 @@ def remove_painting(request, painting_sku):
 
         # Update the session with the new cart
         request.session['cart'] = updated_cart
+        messages.info(request, f'Removed {painting.name} from your cart!')
 
     return redirect('view_cart')
 
 
 def adjust_frame(request, painting_sku):
+
+    painting = get_object_or_404(Painting, sku=painting_sku)
+
     if request.method == 'POST':
         frame = request.POST.get('frame')
         cart = request.session.get('cart', [])
@@ -112,5 +119,6 @@ def adjust_frame(request, painting_sku):
                 break
 
         request.session['cart'] = cart
+        messages.info(request, f'Updated frame in your cart!')
 
     return redirect('view_cart')
