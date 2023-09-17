@@ -14,6 +14,8 @@ def add_to_cart(request, painting_id):
     frame_price = Decimal('0.00')  # Default frame price as Decimal
     cart = request.session.get('cart', [])
 
+    clearance_discount = Decimal('0.20')  # 20% discount for clearance items
+
     if request.method == 'POST':
         frame = request.POST.get('frame')
 
@@ -30,15 +32,21 @@ def add_to_cart(request, painting_id):
         elif frame == 'premium_frame':
             frame_price = Decimal('100.00')
 
+        subcategory_names = [subcategory.name for subcategory in painting.subcategory.all()]
         base_price = painting.price
-        total_price = painting.price + frame_price
 
-        # Check if the user has 3 or more paintings in the cart
-        if len(cart) >= 3:
-            # Apply the discount of 50 EUR
-            total_price -= Decimal('50.00')
-            # Ensure the total price is not negative
-            total_price = max(total_price, Decimal('0.00'))
+        # Calculate the discounted price for clearance items
+        if painting.subcategory.filter(name='clearance').exists():
+            discounted_price = base_price - (base_price * clearance_discount)
+        else:
+            discounted_price = base_price
+
+        total_price = discounted_price + frame_price
+
+        if painting.subcategory.filter(name='clearance').exists():
+            is_clearance = True
+        else:
+            is_clearance = False
 
         # Add the painting to the cart with frame information
         cart_item = {
@@ -51,6 +59,9 @@ def add_to_cart(request, painting_id):
             'year': str(painting.year),
             'base_price': str(base_price),
             'frame_price': str(frame_price),
+            'subcategory': subcategory_names,
+            'undiscounted_price': str(base_price),
+            'is_clearance': is_clearance,
         }
 
         existing_item = next((item for item in cart if item['sku'] == painting.sku), None)

@@ -50,8 +50,17 @@
                                 alt="{{ painting.name }}">
                         </td>
                         <td class="py-3">
-                            <p class="my-0"><strong>{{ painting.name }}</strong></p>
-                            <p class="my-0">€{{ painting.base_price }}</p>
+                            <p class="my-0 lead font-weight-bold"><strong>{{ painting.name }}</strong></p>
+                            {% if painting.is_clearance %}
+                            <p class="lead mb-0 text-left" style="color: red;">Clearance</p>
+                            <del>Regular Price: €{{ painting.base_price|floatformat:2 }}</del>
+                            <p class="lead mb-0 text-left font-weight-bold">Clearance Price:
+                                €{{ painting.price|floatformat:2 }}</p>
+                            {% else %}
+                            <br>
+                            <p class="my-0 lead font-weight-bold"><i class="fa-solid fa-euro-sign"></i>{{ painting.base_price|floatformat:2 }}</p>
+                            {% endif %}
+                            <br>
                             <p class="my-0">Size: {{ painting.size }}</p>
                             <p class="my-0">Year: {{ painting.year }}</p>
                         </td>
@@ -87,7 +96,7 @@
                             <button class="show-frame-form">Add/Change Frame?</button>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">€{{ painting.price }}</p>
+                            <p class="my-0">€{{ painting.price|floatformat:2 }}</p>
                         </td>
                         <td class="py-3">
                             <form method="POST" action="{% url 'remove_painting' painting.sku %}">

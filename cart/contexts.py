@@ -24,6 +24,19 @@ def cart_contents(request):
 
     grand_total = Decimal(total).quantize(Decimal('0.00'))  # Convert back to Decimal
 
+    for item in cart_items:
+        painting = get_object_or_404(Painting, sku=item['sku'])
+        is_clearance = painting.subcategory.filter(name='clearance').exists()
+        if is_clearance:
+            discount_percentage = Decimal('0.20')
+            discounted_price = Decimal(item['price']) - (Decimal(item['price']) * discount_percentage)
+            discounted_price = discounted_price.quantize(Decimal('0.00'))
+        else:
+            discounted_price = None
+
+        item['subcategory'] = painting.subcategory.all()  # Add subcategory to the cart item
+        item['discounted_price'] = str(discounted_price) if discounted_price else None  # Add discounted_price to the cart item
+
     context = {
         'cart_items': cart_items,
         'total': total,
