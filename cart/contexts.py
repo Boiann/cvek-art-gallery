@@ -6,45 +6,46 @@ from paintings.models import Painting
 
 def cart_contents(request):
     cart_items = request.session.get('cart', [])
-    total = sum(Decimal(item['price']) for item in cart_items)
+    total = Decimal('0.00')
+    total_without_discount = Decimal('0.00')
+    clearance_discount = Decimal('0.20')  # 20% discount for clearance items
 
-    total_without_discount = sum(Decimal(item['price']) for item in cart_items)
+    for item in cart_items:
+        painting = get_object_or_404(Painting, sku=item['sku'])
+        frame_price = Decimal(item['frame_price'])
+        base_price = Decimal(item['base_price'])
+
+        if painting.subcategory.filter(name='clearance').exists():
+            discounted_price = base_price - (base_price * clearance_discount)
+            total_without_discount += discounted_price + frame_price  # Use discounted price for clearance items
+        else:
+            discounted_price = base_price
+            total_without_discount += base_price + frame_price  # Use base price for regular items
+
+        total += discounted_price + frame_price
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
-        delivery = 0
-        free_delivery_delta = 0
+        delivery = Decimal('0.00')
+        free_delivery_delta = Decimal('0.00')
 
     # Apply the discount for buying 3 or more paintings
     if len(cart_items) >= 3:
         total -= Decimal('50.00')
         total = max(total, Decimal('0.00'))
 
-    grand_total = Decimal(total).quantize(Decimal('0.00'))  # Convert back to Decimal
-
-    for item in cart_items:
-        painting = get_object_or_404(Painting, sku=item['sku'])
-        is_clearance = painting.subcategory.filter(name='clearance').exists()
-        if is_clearance:
-            discount_percentage = Decimal('0.20')
-            discounted_price = Decimal(item['price']) - (Decimal(item['price']) * discount_percentage)
-            discounted_price = discounted_price.quantize(Decimal('0.00'))
-        else:
-            discounted_price = None
-
-        item['subcategory'] = painting.subcategory.all()  # Add subcategory to the cart item
-        item['discounted_price'] = str(discounted_price) if discounted_price else None  # Add discounted_price to the cart item
+    grand_total = total + delivery
 
     context = {
         'cart_items': cart_items,
-        'total': total,
-        'delivery': delivery,
-        'free_delivery_delta': free_delivery_delta,
+        'total': total.quantize(Decimal('0.00')),
+        'delivery': delivery.quantize(Decimal('0.00')),
+        'free_delivery_delta': free_delivery_delta.quantize(Decimal('0.00')),
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total': grand_total,
-        'total_without_discount': total_without_discount,
+        'grand_total': grand_total.quantize(Decimal('0.00')),
+        'total_without_discount': total_without_discount.quantize(Decimal('0.00')),
     }
 
     return context
