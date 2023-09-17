@@ -1,0 +1,84 @@
+<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+    <!-- data-delay="4000" -->
+    <div class="arrow-up arrow-success"></div>
+    <div class="w-100 toast-capper bg-success"></div>
+    <div class="toast-header bg-white text-dark">
+        <strong class="mr-auto">Success!</strong>
+        <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body bg-white">
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
+            {% if cart_items|length >= 3 and cart_items|length <= 5 %}
+        <div class="row">
+            <div class="col">
+            <p style="color: green;"><strong>Congratulations! You qualify for a €50 discount for buying 3 or more paintings.</strong></p>
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
+        {% endif %}
+        {% if cart_items|length >= 6 %}
+        <div class="row">
+            <div class="col">
+                <p style="color: green;"><strong>Congratulations! You qualify for a €100 discount for buying 6 or more paintings.</strong></p>
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
+        {% endif %}
+        {% if grand_total %}
+        <p class="logo-font bg-white text-black py-1">Your Cart:</p>
+        <div class="bag-notification-wrapper">
+            {% for painting in cart_items %}
+            <div class="row">
+                <div class="col-3 my-1">
+                    <img class="w-100" src="{{ painting.image_url }}">
+                </div>
+                <div class="col-9">
+                    <p class="my-0"><strong>{{ painting.name }}</strong></p>
+                    <p class="my-0">
+                        {% if painting.is_clearance %}
+                        <p style="color: red;">NO FRAMES AVAILABLE</p>
+                        {% else %}
+                        {% if painting.frame == 'no_frame' %}
+                        <p class="my-0">No frame selected</p>
+                        {% elif painting.frame == 'standard_frame' %}
+                        <p class="my-0">Standard Frame (+€50.00)</p>
+                        {% elif painting.frame == 'premium_frame' %}
+                        <p class="my-0">Premium Frame (+€100.00)</p>
+                        {% endif %}
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col">
+                <strong>
+                    <p class="mt-3 mb-1 text-black">
+                        Total{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}:
+                        <span class="float-right">${{ total|floatformat:2 }}</span>
+                    </p>
+                </strong>
+                {% if free_delivery_delta > 0 %}
+                <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
+                    Spend <strong>${{ free_delivery_delta }}</strong> more to get free next day delivery!
+                </p>
+                {% endif %}
+                <a href="{% url 'view_cart' %}" class="btn btn-black btn-block rounded-0">
+                    <span class="text-uppercase">Go To Secure Checkout</span>
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
