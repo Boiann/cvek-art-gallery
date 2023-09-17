@@ -31,8 +31,13 @@ def cart_contents(request):
         delivery = Decimal('0.00')
         free_delivery_delta = Decimal('0.00')
 
-    # Apply the discount for buying 3 or more paintings
+    # Apply the discount for buying 3-5 paintings
     if len(cart_items) >= 3:
+        total -= Decimal('50.00')
+        total = max(total, Decimal('0.00'))
+
+    # Apply the discount for buying 6 or more paintings
+    if len(cart_items) >= 6:
         total -= Decimal('50.00')
         total = max(total, Decimal('0.00'))
 
