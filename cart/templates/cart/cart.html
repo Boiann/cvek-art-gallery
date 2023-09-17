@@ -51,14 +51,15 @@
                         </td>
                         <td class="py-3">
                             <p class="my-0 lead font-weight-bold"><strong>{{ painting.name }}</strong></p>
+
                             {% if painting.is_clearance %}
-                            <p class="lead mb-0 text-left" style="color: red;">Clearance</p>
+                            <p class="lead mb-0 text-left" style="color: red;">Clearance Painting</p>
                             <del>Regular Price: €{{ painting.base_price|floatformat:2 }}</del>
                             <p class="lead mb-0 text-left font-weight-bold">Clearance Price:
                                 €{{ painting.price|floatformat:2 }}</p>
                             {% else %}
                             <br>
-                            <p class="my-0 lead font-weight-bold"><i class="fa-solid fa-euro-sign"></i>{{ painting.base_price|floatformat:2 }}</p>
+                            <i class="fa-solid fa-euro-sign"></i>{{ painting.base_price|floatformat:2 }}
                             {% endif %}
                             <br>
                             <p class="my-0">Size: {{ painting.size }}</p>
@@ -66,17 +67,25 @@
                         </td>
                         <td class="py-3 w-25">
                             <p class="my-0">
+                                {% if painting.is_clearance %}
+                                <p style="color: red;">NO FRAMES AVAILABLE</p>
+                                {% else %}
+                                <br>
                                 {% if painting.frame == 'no_frame' %}
                                 <p class="my-0">No frame selected</p>
                                 {% elif painting.frame == 'standard_frame' %}
-                                <p class="my-0">Standard Frame</p>
+                                <p class="my-0">Standard Frame (+€50.00)</p>
                                 {% elif painting.frame == 'premium_frame' %}
-                                <p class="my-0">Premium Frame</p>
+                                <p class="my-0">Premium Frame (+€100.00)</p>
+                                {% endif %}
                                 {% endif %}
                             </p>
                         </td>
                         <td>
                             <div class="frame-form" style="display: none;">
+                                {% if painting.is_clearance %}
+                                <p style="color: red;">NO FRAMES OPTION</p>
+                                {% else %}
                                 <form method="POST" action="{% url 'adjust_frame' painting.sku %}">
                                     {% csrf_token %}
                                     <label for="frame">Select Frame:</label>
@@ -92,8 +101,11 @@
                                     </select>
                                     <button type="submit">Update Frame</button>
                                 </form>
+                                {% endif %}
                             </div>
+                            {% if not painting.is_clearance %}
                             <button class="show-frame-form">Add/Change Frame?</button>
+                            {% endif %}
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ painting.price|floatformat:2 }}</p>
