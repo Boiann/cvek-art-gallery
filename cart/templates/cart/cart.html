@@ -170,18 +170,18 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const frameForms = document.querySelectorAll(".frame-form");
         const showFrameFormButtons = document.querySelectorAll(".show-frame-form");
 
-        showFrameFormButtons.forEach((button, index) => {
+        showFrameFormButtons.forEach((button) => {
             button.addEventListener("click", function () {
-                const frameForm = frameForms[index];
+                const frameForm = button.previousElementSibling;
+
                 if (frameForm.style.display === "none" || frameForm.style.display === "") {
                     frameForm.style.display = "block";
                     button.textContent = "Close";
                 } else {
                     frameForm.style.display = "none";
-                    button.textContent = "Add Frame?";
+                    button.textContent = "Add/Change Frame?";
                 }
             });
         });
