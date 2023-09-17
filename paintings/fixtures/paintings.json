@@ -1059,10 +1059,11 @@
             "sku": "p073",
             "name": "Morning Over Forest and Lake",
             "description": "A breathtaking painting capturing the serene beauty of a morning scene over a peaceful forest and tranquil lake.",
-            "price": 229.99,
+            "price": 249.99,
             "year": 2006,
             "size": "M",
             "category": 5,
+            "subcategory": [14],
             "image": "morning-over-forest-and-lake-painting.webp"
         }
     },
@@ -1366,11 +1367,11 @@
             "sku": "p094",
             "name": "Nude Act Red Towel",
             "description": "A captivating painting featuring a nude figure draped in a vibrant red towel, symbolizing sensuality and warmth.",
-            "price": 219.99,
+            "price": 249.99,
             "year": 2018,
             "size": "L",
             "category": 6,
-            "subcategory": [10],
+            "subcategory": [10, 14],
             "image": "nude-act-red-towel-painting.webp"
         }
     },

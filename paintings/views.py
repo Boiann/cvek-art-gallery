@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Painting, Category, SubCategory
+from decimal import Decimal
 
 
 def all_paintings(request):
@@ -55,12 +56,27 @@ def all_paintings(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    # Check if each painting is in clearance and calculate discounted prices
+    for painting in paintings:
+        is_clearance = painting.subcategory.filter(name='clearance').exists()
+        if is_clearance:
+            discount_percentage = Decimal('0.20')  # 20% discount as a Decimal
+            discounted_price = painting.price - (painting.price * discount_percentage)
+            # Limit the clearance price to 2 decimal places
+            discounted_price = discounted_price.quantize(Decimal('0.00'))
+        else:
+            discounted_price = None
+        painting.is_clearance = is_clearance
+        painting.discounted_price = discounted_price
+
     context = {
         'paintings': paintings,
         'search_term': query,
         'current_categories': categories,
         'subcategories': subcategories,  # Include subcategories in the context
         'current_sorting': current_sorting,
+        'is_clearance': is_clearance,  # Include is_clearance in the context
+        'discounted_price': discounted_price,
     }
 
     return render(request, 'paintings/paintings.html', context)
