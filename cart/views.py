@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.http import HttpResponse
 from paintings.models import Painting
 from decimal import Decimal
+from django.contrib import messages
 
 
 def view_cart(request):
@@ -70,6 +71,7 @@ def add_to_cart(request, painting_id):
             existing_item.update(cart_item)
         else:
             cart.append(cart_item)
+            messages.success(request, f'Added {painting.name} to your cart')
 
         request.session['cart'] = cart
 
