@@ -31,8 +31,15 @@
                 <p class="mb-0 font-weight-bold">{{ painting.name }}</p>
                 <p class="mb-0">Painting size: {{ painting.size }}</p>
                 <br>
-                <p class="lead mb-0 text-left font-weight-bold"><i
-                        class="fa-solid fa-euro-sign"></i>{{ painting.price }}</p>
+                <p class="lead mb-0 text-left font-weight-bold">
+                    {% if is_clearance %}
+                    <p class="lead mb-0 text-left font-weight-bold">Clearance sale! Save 20% on the regular price:</p>
+                    <del>Regular Price: €{{ painting.price }}</del>
+                    <p class="lead mb-0 text-left font-weight-bold">Clearance Price: €{{ discounted_price }}</p>
+                    {% else %} 
+                    <i class="fa-solid fa-euro-sign"></i>{{ painting.price }}
+                    {% endif %}
+            </p>
                 {% if painting.year %}
                 <small class="text-muted"><i class="fa-solid fa-calendar-days"></i>{{ painting.year }}</small>
                 {% else %}

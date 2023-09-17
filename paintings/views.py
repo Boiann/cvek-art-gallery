@@ -87,8 +87,22 @@ def painting_detail(request, painting_id):
 
     painting = get_object_or_404(Painting, pk=painting_id)
 
+    # Check if the painting belongs to the 'clearance' subcategory
+    is_clearance = painting.subcategory.filter(name='clearance').exists()
+
+    # Calculate the discounted price if it's a clearance item
+    if is_clearance:
+        discount_percentage = Decimal('0.20')  # 20% discount as a Decimal
+        discounted_price = painting.price - (painting.price * discount_percentage)
+        # Limit the clearance price to 2 decimal places
+        discounted_price = discounted_price.quantize(Decimal('0.00'))
+    else:
+        discounted_price = None
+
     context = {
         'painting': painting,
+        'discounted_price': discounted_price,
+        'is_clearance': is_clearance,
     }
 
     return render(request, 'paintings/painting_detail.html', context)
