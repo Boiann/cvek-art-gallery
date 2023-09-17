@@ -31,8 +31,15 @@
                 <p class="mb-0 font-weight-bold">{{ painting.name }}</p>
                 <p class="mb-0">Painting size: {{ painting.size }}</p>
                 <br>
-                <p class="lead mb-0 text-left font-weight-bold"><i
-                        class="fa-solid fa-euro-sign"></i>{{ painting.price }}</p>
+                <p class="lead mb-0 text-left font-weight-bold">
+                    {% if is_clearance %}
+                    <p class="lead mb-0 text-left font-weight-bold">Clearance sale! Save 20% on the regular price:</p>
+                    <del>Regular Price: €{{ painting.price }}</del>
+                    <p class="lead mb-0 text-left font-weight-bold">Clearance Price: €{{ discounted_price }}</p>
+                    {% else %} 
+                    <i class="fa-solid fa-euro-sign"></i>{{ painting.price }}
+                    {% endif %}
+            </p>
                 {% if painting.year %}
                 <small class="text-muted"><i class="fa-solid fa-calendar-days"></i>{{ painting.year }}</small>
                 {% else %}
@@ -49,12 +56,16 @@
                 <form method="POST" action="{% url 'add_to_cart' painting.id %}">
                     {% csrf_token %}
                     <input type="hidden" name="sku" value="{{ painting.sku }}">
+                    {% if is_clearance %}
+                    <p style="color: red;">NO FRAMES AVAILABLE</p>
+                    {% else %}
                     <label for="frame">Select Frame:</label>
                     <select id="frame" name="frame">
                         <option value="no_frame">No Frame</option>
                         <option value="standard_frame">Standard Frame (+€50.00)</option>
                         <option value="premium_frame">Premium Frame (+€100.00)</option>
                     </select>
+                    {% endif %}
                     <button type="submit">Add to Cart</button>
                 </form>
             </div>

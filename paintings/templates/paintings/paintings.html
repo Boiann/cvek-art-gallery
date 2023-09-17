@@ -79,8 +79,16 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold"><i
-                                            class="fa-solid fa-euro-sign"></i>{{ painting.price }}</p>
+                                    {% if painting.is_clearance %}
+                                    <p class="mb-0 text-left">
+                                        <del><i class="fa-solid fa-euro-sign"></i>{{ painting.price }}</del>
+                                    </p>
+                                    <p class="lead mb-0 text-left font-weight-bold"><i class="fa-solid fa-euro-sign"></i>{{ painting.discounted_price }}</p>
+                                    {% else %}
+                                    <p class="lead mb-0 text-left font-weight-bold">
+                                        <i class="fa-solid fa-euro-sign"></i>{{ painting.price }}
+                                    </p>
+                                    {% endif %}
                                     {% if painting.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
