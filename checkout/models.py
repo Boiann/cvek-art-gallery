@@ -32,9 +32,15 @@ class Order(models.Model):
     def update_total(self):
         """
         Update grand total each time a line item is added,
-        accounting for delivery costs.
+        accounting for delivery costs and frame prices.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+
+        # Calculate the frame price total
+        frame_price_total = self.lineitems.aggregate(Sum('frame_price'))['frame_price__sum'] or 0
+
+        self.order_total += frame_price_total  # Add frame price total to order total
+
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
         else:
@@ -58,6 +64,7 @@ class Order(models.Model):
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     painting = models.ForeignKey(Painting, null=False, blank=False, on_delete=models.CASCADE)
+    frame = models.CharField(max_length=20, null=True, blank=True)  # Add a field for frame selection
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
@@ -65,7 +72,25 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.painting.price
+        base_price = self.painting.price
+        frame_price = Decimal('0.00')  # Default frame price as Decimal
+
+        # Calculate the frame price based on the selected frame
+        if self.frame == 'standard_frame':
+            frame_price = Decimal('50.00')
+        elif self.frame == 'premium_frame':
+            frame_price = Decimal('100.00')
+
+        # Calculate the discounted price for clearance items
+        if self.painting.subcategory.filter(name='clearance').exists():
+            clearance_discount = Decimal('0.20')  # 20% discount for clearance items
+            discounted_price = base_price - (base_price * clearance_discount)
+        else:
+            discounted_price = base_price
+
+        total_price = discounted_price + frame_price
+
+        self.lineitem_total = total_price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
