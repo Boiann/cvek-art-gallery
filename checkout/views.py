@@ -18,8 +18,10 @@ def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe_cart_item = request.session.get('stripe_cart_item', [])
+
         stripe.PaymentIntent.modify(pid, metadata={
-            'cart': json.dumps(request.session.get('cart', {})),
+            'cart': json.dumps(stripe_cart_item),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -27,6 +29,7 @@ def cache_checkout_data(request):
     except Exception as e:
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
+        print(e)
         return HttpResponse(content=e, status=400)
 
 
@@ -51,32 +54,16 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
-            for item_data in cart:
+            for item in cart:
                 try:
-                    painting = Painting.objects.get(id=item_data['id'])
-                    frame = item_data.get('frame', None)
+                    painting_id = item['id']
+                    painting = Painting.objects.get(id=painting_id)
                     frame_price = Decimal('0.00')
-
-                    if frame == 'standard_frame':
-                        frame_price = Decimal('50.00')
-                    elif frame == 'premium_frame':
-                        frame_price = Decimal('100.00')
-
-                    base_price = painting.price
-
-                    if painting.subcategory.filter(name='clearance').exists():
-                        clearance_discount = Decimal('0.20')
-                        discounted_price = base_price - (base_price * clearance_discount)
-                    else:
-                        discounted_price = base_price
-
-                    total_price = discounted_price + frame_price
 
                     order_line_item = OrderLineItem(
                         order=order,
-                        painting=painting,  # Associate the order line item with the actual Painting object
-                        frame=frame,
-                        # Other fields...
+                        painting=painting,
+                        frame=frame_price,
                     )
                     order_line_item.save()
                 except Painting.DoesNotExist:
