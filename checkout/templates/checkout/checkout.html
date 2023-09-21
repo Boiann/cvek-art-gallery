@@ -59,7 +59,7 @@
                         {% endif %}
                     </p>
                     <p class="my-0 small text-muted">
-                        <i class="fa-solid fa-euro-sign"></i>{{ painting.base_price|floatformat:2 }}
+                        <i class="fa-solid fa-euro-sign"></i>{{ painting.price|floatformat:2 }}
                     </p>
                 </div>
             </div>
@@ -67,11 +67,19 @@
             <hr class="my-0">
             <div class="row text-black text-right">
                 <div class="col-7 offset-2">
+                    {% if cart_items|length >= 3 %}
+                    <p class="text-success lead">DISCOUNT:</p>
+                    {% endif %}
                     <p class="my-0">Order Total:</p>
                     <p class="my-0">Delivery:</p>
                     <p class="my-0">Grand Total:</p>
                 </div>
                 <div class="col-3">
+                    {% if cart_items|length >= 3 and cart_items|length <= 5 %}
+                    <p class="text-success lead">€50</p>
+                    {% elif cart_items|length >= 6 %}
+                    <p class="text-success lead">€100</p>
+                    {% endif %}
                     <p class="my-0">€{{ total | floatformat:2 }}</p>
                     <p class="my-0">€{{ delivery | floatformat:2 }}</p>
                     <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
@@ -155,8 +163,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

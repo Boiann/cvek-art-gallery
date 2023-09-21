@@ -58,12 +58,12 @@ def checkout(request):
                 try:
                     painting_id = item['id']
                     painting = Painting.objects.get(id=painting_id)
-                    frame_price = Decimal('0.00')
+                    frame = item['frame']
 
                     order_line_item = OrderLineItem(
                         order=order,
                         painting=painting,
-                        frame=frame_price,
+                        frame=frame,
                     )
                     order_line_item.save()
                 except Painting.DoesNotExist:
@@ -119,6 +119,28 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+
+    for item in order.lineitems.all():
+        base_price = item.painting.price
+        frame_price = Decimal('0.00')  # Default frame price as Decimal
+
+        if item.frame == 'standard_frame':
+            frame_price = Decimal('50.00')
+        elif item.frame == 'premium_frame':
+            frame_price = Decimal('100.00')
+
+        if item.painting.subcategory.filter(name='clearance').exists():
+            clearance_discount = Decimal('0.20')  # 20% discount for clearance items
+            discounted_price = base_price - (base_price * clearance_discount)
+            item.is_clearance = True
+        else:
+            discounted_price = base_price
+            item.is_clearance = False
+
+        # print(f"Item ID: {item.id}, is_clearance: {item.is_clearance}")
+
+        total_price = discounted_price + frame_price
+        item.frame_price = frame_price
 
     if 'cart' in request.session:
         del request.session['cart']
