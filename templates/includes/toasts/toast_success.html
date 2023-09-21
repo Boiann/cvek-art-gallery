@@ -31,7 +31,7 @@
             </div>
         </div>
         {% endif %}
-        {% if grand_total %}
+        {% if grand_total and not on_profile_page %}
         <p class="logo-font bg-white text-black py-1">Your Cart:</p>
         <div class="bag-notification-wrapper">
             {% for painting in cart_items %}
