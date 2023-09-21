@@ -51,6 +51,7 @@ def add_to_cart(request, painting_id):
 
         # Add the painting to the cart with frame information
         cart_item = {
+            'id': painting.id,
             'sku': painting.sku,
             'name': painting.name,
             'frame': frame,

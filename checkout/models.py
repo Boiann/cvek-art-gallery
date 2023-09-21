@@ -2,7 +2,10 @@ import uuid
 
 from django.db import models
 from django.db.models import Sum
+from decimal import Decimal
 from django.conf import settings
+
+from django_countries.fields import CountryField
 
 from paintings.models import Painting
 
@@ -12,7 +15,7 @@ class Order(models.Model):
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
-    country = models.CharField(max_length=40, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
@@ -22,6 +25,9 @@ class Order(models.Model):
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    discount_applied = models.BooleanField(default=False)
+    original_cart = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
     def _generate_order_number(self):
         """
@@ -34,17 +40,26 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs and frame prices.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
 
-        # Calculate the frame price total
-        frame_price_total = self.lineitems.aggregate(Sum('frame_price'))['frame_price__sum'] or 0
+        line_items_count = self.lineitems.count()
 
-        self.order_total += frame_price_total  # Add frame price total to order total
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
 
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
         else:
             self.delivery_cost = 0
+
+        # Apply discounts based on the number of line items
+        if line_items_count >= 6:
+            self.order_total -= Decimal('100.00')
+            self.discount_applied = True
+        elif line_items_count >= 3:
+            self.order_total -= Decimal('50.00')
+            self.discount_applied = True
+        else:
+            self.discount_applied = False
+
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
@@ -66,6 +81,20 @@ class OrderLineItem(models.Model):
     painting = models.ForeignKey(Painting, null=False, blank=False, on_delete=models.CASCADE)
     frame = models.CharField(max_length=20, null=True, blank=True)  # Add a field for frame selection
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+
+    # Add frame choices for selection in admin OrderLineItem model
+    FRAME_CHOICES = [
+        ('no_frame', 'No Frame'),
+        ('standard_frame', 'Standard Frame'),
+        ('premium_frame', 'Premium Frame'),
+    ]
+
+    frame = models.CharField(
+        max_length=20,
+        choices=FRAME_CHOICES,
+        null=True,
+        blank=True,
+    )
 
     def save(self, *args, **kwargs):
         """
@@ -90,7 +119,7 @@ class OrderLineItem(models.Model):
 
         total_price = discounted_price + frame_price
 
-        self.lineitem_total = total_price * self.quantity
+        self.lineitem_total = total_price  # Set line item total directly without quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
