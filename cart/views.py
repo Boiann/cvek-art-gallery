@@ -76,14 +76,6 @@ def add_to_cart(request, painting_id):
 
         request.session['cart'] = cart
 
-        # Create a separate stripe_cart_item for Stripe
-        stripe_cart_item = {
-            'id': painting.id,
-            'sku': painting.sku,
-        }
-
-        request.session['stripe_cart_item'] = stripe_cart_item
-
     return redirect('painting_detail', painting_id=painting_id)
 
 

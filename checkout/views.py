@@ -18,7 +18,9 @@ def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
-        stripe_cart_item = request.session.get('stripe_cart_item', [])
+        cart = request.session.get('cart', [])
+
+        stripe_cart_item = [{'sku': item['sku'], 'frame': item['frame']} for item in cart]
 
         stripe.PaymentIntent.modify(pid, metadata={
             'cart': json.dumps(stripe_cart_item),
@@ -53,7 +55,11 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_cart = json.dumps(cart)
+            order.save()
             for item in cart:
                 try:
                     painting_id = item['id']
