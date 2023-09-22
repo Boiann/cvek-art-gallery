@@ -33,7 +33,6 @@ def cache_checkout_data(request):
     except Exception as e:
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
-        print(e)
         return HttpResponse(content=e, status=400)
 
 
@@ -81,7 +80,6 @@ def checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
-
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
@@ -184,8 +182,6 @@ def checkout_success(request, order_number):
         else:
             discounted_price = base_price
             item.is_clearance = False
-
-        # print(f"Item ID: {item.id}, is_clearance: {item.is_clearance}")
 
         total_price = discounted_price + frame_price
         item.frame_price = frame_price
