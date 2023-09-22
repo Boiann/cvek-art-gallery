@@ -50,7 +50,7 @@ class StripeWH_Handler:
         """
         intent = event.data.object
         pid = intent.id
-        cart = json.loads(intent.metadata.cart)
+        cart_items_for_metadata = json.loads(intent.metadata.cart_items)
         save_info = intent.metadata.save_info
 
         # Get the Charge object
@@ -94,7 +94,7 @@ class StripeWH_Handler:
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
                     grand_total=grand_total,
-                    original_cart=cart,
+                    original_cart=json.dumps(cart_items_for_metadata),
                     stripe_pid=pid,
                 )
                 order_exists = True
@@ -102,8 +102,6 @@ class StripeWH_Handler:
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
-
-        order_exists = Order.objects.filter(stripe_pid=pid).exists()
 
         if order_exists:
             self._send_confirmation_email(order)

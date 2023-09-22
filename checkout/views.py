@@ -22,15 +22,17 @@ def cache_checkout_data(request):
         stripe.api_key = settings.STRIPE_SECRET_KEY
         cart = request.session.get('cart', [])
 
-        stripe_cart_item = [{'sku': item['sku'], 'frame': item['frame']} for item in cart]
+        cart_items_for_metadata = [{'sku': item['sku'], 'frame': item['frame']} for item in cart]
 
         stripe.PaymentIntent.modify(pid, metadata={
-            'cart': json.dumps(stripe_cart_item),
+            # 'cart': json.dumps(request.session.get('cart', {})),
+            'cart_items': json.dumps(cart_items_for_metadata),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
         return HttpResponse(status=200)
     except Exception as e:
+        print(e)
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
@@ -42,6 +44,7 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', [])
+        cart_items_for_metadata = [{'sku': item['sku'], 'frame': item['frame']} for item in cart]
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -55,12 +58,15 @@ def checkout(request):
             'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
+        # print("Form Data:", form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
-            order.original_cart = json.dumps(cart)
+            # order.original_cart = json.dumps(cart)
+            order.original_cart = json.dumps(cart_items_for_metadata)
             order.save()
+            # print("Order Created:", order.order_number)
             for item in cart:
                 try:
                     painting_id = item['id']
@@ -165,6 +171,8 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+
+    # print(f'Order Number: {order.order_number}')
 
     for item in order.lineitems.all():
         base_price = item.painting.price
