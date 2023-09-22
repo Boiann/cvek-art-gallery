@@ -7,6 +7,8 @@ from decimal import Decimal
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from paintings.models import Painting
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 from cart.contexts import cart_contents
 
 import stripe
@@ -20,18 +22,19 @@ def cache_checkout_data(request):
         stripe.api_key = settings.STRIPE_SECRET_KEY
         cart = request.session.get('cart', [])
 
-        stripe_cart_item = [{'sku': item['sku'], 'frame': item['frame']} for item in cart]
+        cart_items_for_metadata = [{'sku': item['sku'], 'frame': item['frame']} for item in cart]
 
         stripe.PaymentIntent.modify(pid, metadata={
-            'cart': json.dumps(stripe_cart_item),
+            # 'cart': json.dumps(request.session.get('cart', {})),
+            'cart_items': json.dumps(cart_items_for_metadata),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
         return HttpResponse(status=200)
     except Exception as e:
+        print(e)
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
-        print(e)
         return HttpResponse(content=e, status=400)
 
 
@@ -41,6 +44,7 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', [])
+        cart_items_for_metadata = [{'sku': item['sku'], 'frame': item['frame']} for item in cart]
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -54,12 +58,15 @@ def checkout(request):
             'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
+        # print("Form Data:", form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
-            order.original_cart = json.dumps(cart)
+            # order.original_cart = json.dumps(cart)
+            order.original_cart = json.dumps(cart_items_for_metadata)
             order.save()
+            # print("Order Created:", order.order_number)
             for item in cart:
                 try:
                     painting_id = item['id']
@@ -74,12 +81,11 @@ def checkout(request):
                     order_line_item.save()
                 except Painting.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your cart wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
-
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
@@ -88,7 +94,7 @@ def checkout(request):
     else:
         cart = request.session.get('cart', [])
         if not cart:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your cart at the moment")
             return redirect(reverse('paintings'))
 
         current_cart = cart_contents(request)
@@ -100,7 +106,25 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        order_form = OrderForm()
+        # Attempt to prefill the form with any info the user maintains in their profile
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'county': profile.default_county,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -122,9 +146,33 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        # Attach the user's profile to the order
+        order.user_profile = profile
+        order.save()
+
+        # Save the user's info
+        if save_info:
+            profile_data = {
+                'default_phone_number': order.phone_number,
+                'default_country': order.country,
+                'default_postcode': order.postcode,
+                'default_town_or_city': order.town_or_city,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_county': order.county,
+            }
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
+
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+
+    # print(f'Order Number: {order.order_number}')
 
     for item in order.lineitems.all():
         base_price = item.painting.price
@@ -142,8 +190,6 @@ def checkout_success(request, order_number):
         else:
             discounted_price = base_price
             item.is_clearance = False
-
-        # print(f"Item ID: {item.id}, is_clearance: {item.is_clearance}")
 
         total_price = discounted_price + frame_price
         item.frame_price = frame_price
