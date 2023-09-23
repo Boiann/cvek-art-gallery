@@ -55,8 +55,13 @@
                     {% for painting in cart_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="card-img-top img-fluid" src="{{ painting.image_url }}"
-                                alt="{{ painting.name }}">
+                            {% if painting.image_url %}
+                                <img class="img-fluid rounded" src="{{ painting.image_url }}"
+                                    alt="{{ painting.name }}">
+                                {% else %}
+                                <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ painting.name }}">
+                                {% endif %}
                         </td>
                         <td class="py-3">
                             <p class="my-0 lead font-weight-bold"><strong>{{ painting.name }}</strong></p>
