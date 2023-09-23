@@ -15,10 +15,11 @@
                 <hr class="mt-1 mb-3">
             </div>
         </div>
-            {% if cart_items|length >= 3 and cart_items|length <= 5 %}
+        {% if cart_items|length >= 3 and cart_items|length <= 5 %}
         <div class="row">
             <div class="col">
-            <p style="color: green;"><strong>Congratulations! You qualify for a €50 discount for buying 3 or more paintings.</strong></p>
+                <p style="color: green;"><strong>Congratulations! You qualify for a €50 discount for buying 3 or more
+                        paintings.</strong></p>
                 <hr class="mt-1 mb-3">
             </div>
         </div>
@@ -26,7 +27,8 @@
         {% if cart_items|length >= 6 %}
         <div class="row">
             <div class="col">
-                <p style="color: green;"><strong>Congratulations! You qualify for a €100 discount for buying 6 or more paintings.</strong></p>
+                <p style="color: green;"><strong>Congratulations! You qualify for a €100 discount for buying 6 or more
+                        paintings.</strong></p>
                 <hr class="mt-1 mb-3">
             </div>
         </div>
@@ -37,7 +39,11 @@
             {% for painting in cart_items %}
             <div class="row">
                 <div class="col-3 my-1">
-                    <img class="w-100" src="{{ painting.image_url }}">
+                    {% if painting.image_url %}
+                    <img class="img-fluid rounded" src="{{ painting.image_url }}" alt="{{ painting.name }}">
+                    {% else %}
+                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ painting.name }}">
+                    {% endif %}
                 </div>
                 <div class="col-9">
                     <p class="my-0"><strong>{{ painting.name }}</strong></p>

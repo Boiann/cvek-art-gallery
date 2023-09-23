@@ -55,8 +55,13 @@
                     {% for painting in cart_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="card-img-top img-fluid" src="{{ painting.image_url }}"
-                                alt="{{ painting.name }}">
+                            {% if painting.image_url %}
+                                <img class="img-fluid rounded" src="{{ painting.image_url }}"
+                                    alt="{{ painting.name }}">
+                                {% else %}
+                                <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ painting.name }}">
+                                {% endif %}
                         </td>
                         <td class="py-3">
                             <p class="my-0 lead font-weight-bold"><strong>{{ painting.name }}</strong></p>
@@ -95,7 +100,7 @@
                                 {% if painting.is_clearance %}
                                 <p style="color: red;">NO FRAMES OPTION</p>
                                 {% else %}
-                                <form method="POST" action="{% url 'adjust_frame' painting.sku %}">
+                                <form method="POST" action="{% url 'adjust_frame' painting.id %}">
                                     {% csrf_token %}
                                     <label for="frame">Select Frame:</label>
                                     <select name="frame" id="frame">
@@ -120,10 +125,10 @@
                             <p class="my-0">€{{ painting.price|floatformat:2 }}</p>
                         </td>
                         <td class="py-3">
-                            <form method="POST" action="{% url 'remove_painting' painting.sku %}">
+                            <form method="POST" action="{% url 'remove_painting' painting.id %}">
                                 {% csrf_token %}
-                                <input type="hidden" name="sku" value="{{ painting.sku }}">
-                                <button type="submit" class="remove-item text-danger">
+                                <input type="hidden" name="id" value="{{ painting.id }}">
+                                <button type="submit" class="remove-item btn-danger btn-sm">
                                     <small>Remove</small>
                                 </button>
                             </form>

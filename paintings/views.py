@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Painting, Category, SubCategory
 from decimal import Decimal
+from .forms import PaintingForm
 
 
 def all_paintings(request):
@@ -15,6 +17,9 @@ def all_paintings(request):
     subcategories = None
     sort = None
     direction = None
+
+    is_clearance = False
+    discounted_price = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -48,7 +53,13 @@ def all_paintings(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('paintings'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = (
+                Q(name__icontains=query) |
+                Q(description__icontains=query) |
+                Q(category__name__icontains=query) |
+                Q(subcategory__name__icontains=query)
+                )
+
             paintings = paintings.filter(queries)
 
     # Get all subcategories
@@ -106,3 +117,73 @@ def painting_detail(request, painting_id):
     }
 
     return render(request, 'paintings/painting_detail.html', context)
+
+
+@login_required
+def add_painting(request):
+    """ Add a painting to the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, access denied. Try again in a couple of months for further disapproval.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = PaintingForm(request.POST, request.FILES)
+        if form.is_valid():
+            painting = form.save()
+            messages.success(request, 'Successfully added painting!')
+            return redirect(reverse('painting_detail', args=[painting.id]))
+        else:
+            messages.error(request, 'Failed to add painting. Please ensure the form is valid.')
+    else:
+        form = PaintingForm()
+    template = 'paintings/add_painting.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_painting(request, painting_id):
+    """ Edit a painting in the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, access denied. Try again in a couple of months for further disapproval.')
+        return redirect(reverse('home'))
+
+    painting = get_object_or_404(Painting, pk=painting_id)
+    if request.method == 'POST':
+        form = PaintingForm(request.POST, request.FILES, instance=painting)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated painting!')
+            return redirect(reverse('painting_detail', args=[painting.id]))
+        else:
+            messages.error(request, 'Failed to update painting. Please ensure the form is valid.')
+    else:
+        form = PaintingForm(instance=painting)
+        messages.info(request, f'You are editing {painting.name}')
+
+    template = 'paintings/edit_painting.html'
+    context = {
+        'form': form,
+        'painting': painting,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_painting(request, painting_id):
+    """ Delete a painting from the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, access denied. Try again in a couple of months for further disapproval.')
+        return redirect(reverse('home'))
+
+    painting = get_object_or_404(Painting, pk=painting_id)
+    painting.delete()
+    messages.success(request, 'Painting deleted!')
+    return redirect(reverse('paintings'))
