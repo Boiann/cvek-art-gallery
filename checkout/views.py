@@ -22,7 +22,7 @@ def cache_checkout_data(request):
         stripe.api_key = settings.STRIPE_SECRET_KEY
         cart = request.session.get('cart', [])
 
-        cart_items_for_metadata = [{'sku': item['sku'], 'frame': item['frame']} for item in cart]
+        cart_items_for_metadata = [{'id': item['id'], 'frame': item['frame']} for item in cart]
 
         stripe.PaymentIntent.modify(pid, metadata={
             # 'cart': json.dumps(request.session.get('cart', {})),
@@ -44,7 +44,7 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', [])
-        cart_items_for_metadata = [{'sku': item['sku'], 'frame': item['frame']} for item in cart]
+        cart_items_for_metadata = [{'id': item['id'], 'frame': item['frame']} for item in cart]
 
         form_data = {
             'full_name': request.POST['full_name'],

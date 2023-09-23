@@ -126,7 +126,7 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 for item in cart:
-                    painting = Painting.objects.get(sku=item['sku'])
+                    painting = Painting.objects.get(id=item['id'])
                     frame = item['frame']
                     # Create an OrderLineItem for this item
                     order_line_item = OrderLineItem(

@@ -11,7 +11,7 @@ def cart_contents(request):
     clearance_discount = Decimal('0.20')  # 20% discount for clearance items
 
     for item in cart_items:
-        painting = get_object_or_404(Painting, sku=item['sku'])
+        painting = get_object_or_404(Painting, id=item['id'])
         frame_price = Decimal(item['frame_price'])
         base_price = Decimal(item['base_price'])
 

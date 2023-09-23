@@ -11,7 +11,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, painting_id):
-    sku = request.POST.get('sku')
+    id = request.POST.get('id')
     frame_price = Decimal('0.00')  # Default frame price as Decimal
     cart = request.session.get('cart', [])
 
@@ -20,8 +20,8 @@ def add_to_cart(request, painting_id):
     if request.method == 'POST':
         frame = request.POST.get('frame')
 
-        # Find the painting with the matching SKU
-        painting = get_object_or_404(Painting, sku=sku)
+        # Find the painting with the matching id
+        painting = get_object_or_404(Painting, id=id)
 
         # Set a default frame value if it's not provided in the request
         if not frame:
@@ -66,7 +66,7 @@ def add_to_cart(request, painting_id):
             'is_clearance': is_clearance,
         }
 
-        existing_item = next((item for item in cart if item['sku'] == painting.sku), None)
+        existing_item = next((item for item in cart if item['id'] == painting.id), None)
 
         if existing_item:
             existing_item.update(cart_item)
@@ -79,15 +79,15 @@ def add_to_cart(request, painting_id):
     return redirect('painting_detail', painting_id=painting_id)
 
 
-def remove_painting(request, painting_sku):
+def remove_painting(request, painting_id):
 
-    painting = get_object_or_404(Painting, sku=painting_sku)
+    painting = get_object_or_404(Painting, id=painting_id)
 
     if request.method == 'POST':
         cart = request.session.get('cart', [])
 
         # Create a new cart without the item to be removed
-        updated_cart = [item for item in cart if item['sku'] != painting_sku]
+        updated_cart = [item for item in cart if item['id'] != painting_id]
 
         # Update the session with the new cart
         request.session['cart'] = updated_cart
@@ -96,16 +96,16 @@ def remove_painting(request, painting_sku):
     return redirect('view_cart')
 
 
-def adjust_frame(request, painting_sku):
+def adjust_frame(request, painting_id):
 
-    painting = get_object_or_404(Painting, sku=painting_sku)
+    painting = get_object_or_404(Painting, id=painting_id)
 
     if request.method == 'POST':
         frame = request.POST.get('frame')
         cart = request.session.get('cart', [])
 
         for item in cart:
-            if item['sku'] == painting_sku:
+            if item['id'] == painting_id:
                 item['frame'] = frame
                 # Adjust the frame price based on the selected frame
                 if frame == 'no_frame':

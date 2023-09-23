@@ -55,7 +55,7 @@
                 <p class="mt-3">{{ painting.description }}</p>
                 <form method="POST" action="{% url 'add_to_cart' painting.id %}">
                     {% csrf_token %}
-                    <input type="hidden" name="sku" value="{{ painting.sku }}">
+                    <input type="hidden" name="id" value="{{ painting.id }}">
                     {% if is_clearance %}
                     <p style="color: red;">NO FRAMES AVAILABLE</p>
                     {% else %}
