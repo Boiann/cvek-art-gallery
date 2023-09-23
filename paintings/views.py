@@ -17,6 +17,9 @@ def all_paintings(request):
     sort = None
     direction = None
 
+    is_clearance = False
+    discounted_price = None
+
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -49,7 +52,13 @@ def all_paintings(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('paintings'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = (
+                Q(name__icontains=query) |
+                Q(description__icontains=query) |
+                Q(category__name__icontains=query) |
+                Q(subcategory__name__icontains=query)
+                )
+
             paintings = paintings.filter(queries)
 
     # Get all subcategories
