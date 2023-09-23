@@ -127,3 +127,27 @@ def add_painting(request):
     }
 
     return render(request, template, context)
+
+
+def edit_painting(request, painting_id):
+    """ Edit a painting in the store """
+    painting = get_object_or_404(Painting, pk=painting_id)
+    if request.method == 'POST':
+        form = PaintingForm(request.POST, request.FILES, instance=painting)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated painting!')
+            return redirect(reverse('painting_detail', args=[painting.id]))
+        else:
+            messages.error(request, 'Failed to update painting. Please ensure the form is valid.')
+    else:
+        form = PaintingForm(instance=painting)
+        messages.info(request, f'You are editing {painting.name}')
+
+    template = 'paintings/edit_painting.html'
+    context = {
+        'form': form,
+        'painting': painting,
+    }
+
+    return render(request, template, context)
