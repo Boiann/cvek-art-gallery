@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Painting, Category, SubCategory
 from decimal import Decimal
+from .forms import PaintingForm
 
 
 def all_paintings(request):
@@ -106,3 +107,14 @@ def painting_detail(request, painting_id):
     }
 
     return render(request, 'paintings/painting_detail.html', context)
+
+
+def add_painting(request):
+    """ Add a painting to the store """
+    form = PaintingForm()
+    template = 'paintings/add_painting.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
