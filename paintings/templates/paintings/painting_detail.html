@@ -34,8 +34,8 @@
                 {% endif %}
                 {% if request.user.is_superuser %}
                 <small>
-                    <a href="{% url 'edit_painting' painting.id %}">Edit</a> |
-                    <a class="text-danger" href="{% url 'delete_painting' painting.id %}">Delete</a>
+                    <a class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#edit-modal">Edit</a> |
+                    <a class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-modal">Delete</a>
                 </small>
                 {% endif %}
                 <br>
@@ -80,4 +80,48 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-center text-danger col-12" id="ModalLongTitle">Are you sure?</h5>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">
+                    Are you sure you want to edit this painting?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'edit_painting' painting.id %}">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Yes</button>
+                </a>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-center text-danger col-12" id="ModalLongTitle">Are you sure?</h5>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">
+                    Are you sure you want to delete this painting from the database?
+                    This action is irreversible!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'delete_painting' painting.id %}">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Yes</button>
+                </a>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 {% endblock %}

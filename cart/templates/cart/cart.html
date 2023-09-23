@@ -128,7 +128,7 @@
                             <form method="POST" action="{% url 'remove_painting' painting.id %}">
                                 {% csrf_token %}
                                 <input type="hidden" name="id" value="{{ painting.id }}">
-                                <button type="submit" class="remove-item text-danger">
+                                <button type="submit" class="remove-item btn-danger btn-sm">
                                     <small>Remove</small>
                                 </button>
                             </form>
