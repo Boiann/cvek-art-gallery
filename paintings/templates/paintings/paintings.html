@@ -83,7 +83,8 @@
                                     <p class="mb-0 text-left">
                                         <del><i class="fa-solid fa-euro-sign"></i>{{ painting.price }}</del>
                                     </p>
-                                    <p class="lead mb-0 text-left font-weight-bold"><i class="fa-solid fa-euro-sign"></i>{{ painting.discounted_price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold"><i
+                                            class="fa-solid fa-euro-sign"></i>{{ painting.discounted_price }}</p>
                                     {% else %}
                                     <p class="lead mb-0 text-left font-weight-bold">
                                         <i class="fa-solid fa-euro-sign"></i>{{ painting.price }}
@@ -102,6 +103,12 @@
                                             class="fa-solid fa-calendar-days"></i>{{ painting.year }}</small>
                                     {% else %}
                                     <small class="text-muted">Year unknown</small>
+                                    {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_painting' painting.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_painting' painting.id %}">Delete</a>
+                                    </small>
                                     {% endif %}
                                 </div>
                             </div>

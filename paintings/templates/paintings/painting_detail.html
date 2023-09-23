@@ -32,16 +32,22 @@
                 {% else %}
                 <p class="mb-0">Painting size unknown</p>
                 {% endif %}
+                {% if request.user.is_superuser %}
+                <small>
+                    <a href="{% url 'edit_painting' painting.id %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_painting' painting.id %}">Delete</a>
+                </small>
+                {% endif %}
                 <br>
                 <p class="lead mb-0 text-left font-weight-bold">
                     {% if is_clearance %}
                     <p class="lead mb-0 text-left font-weight-bold">Clearance sale! Save 20% on the regular price:</p>
                     <del>Regular Price: €{{ painting.price }}</del>
                     <p class="lead mb-0 text-left font-weight-bold">Clearance Price: €{{ discounted_price }}</p>
-                    {% else %} 
+                    {% else %}
                     <i class="fa-solid fa-euro-sign"></i>{{ painting.price }}
                     {% endif %}
-            </p>
+                </p>
                 {% if painting.year %}
                 <small class="text-muted"><i class="fa-solid fa-calendar-days"></i>{{ painting.year }}</small>
                 {% else %}
