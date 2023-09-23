@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Painting, Category, SubCategory
@@ -118,8 +119,14 @@ def painting_detail(request, painting_id):
     return render(request, 'paintings/painting_detail.html', context)
 
 
+@login_required
 def add_painting(request):
     """ Add a painting to the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, access denied. Try again in a couple of months for further disapproval.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = PaintingForm(request.POST, request.FILES)
         if form.is_valid():
@@ -138,8 +145,14 @@ def add_painting(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_painting(request, painting_id):
     """ Edit a painting in the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, access denied. Try again in a couple of months for further disapproval.')
+        return redirect(reverse('home'))
+
     painting = get_object_or_404(Painting, pk=painting_id)
     if request.method == 'POST':
         form = PaintingForm(request.POST, request.FILES, instance=painting)
@@ -162,8 +175,14 @@ def edit_painting(request, painting_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_painting(request, painting_id):
     """ Delete a painting from the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, access denied. Try again in a couple of months for further disapproval.')
+        return redirect(reverse('home'))
+
     painting = get_object_or_404(Painting, pk=painting_id)
     painting.delete()
     messages.success(request, 'Painting deleted!')
