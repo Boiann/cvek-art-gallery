@@ -14,88 +14,43 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="animals-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="categories-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Animals
+                Explore Categories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="animals-link">
-                <a href="{% url 'paintings' %}?subcategory=horses" class="dropdown-item">Horses</a>
-                <a href="{% url 'paintings' %}?category=animals" class="dropdown-item">All Animals</a>
+            <div class="dropdown-menu border-0" aria-labelledby="categories-link">
+                <a href="{% url 'paintings' %}?category=animals" class="dropdown-item">Animals</a>
+                <a href="{% url 'paintings' %}?category=flowers" class="dropdown-item">Flowers</a>
+                <a href="{% url 'paintings' %}?category=buildings" class="dropdown-item">Buildings</a>
+                <a href="{% url 'paintings' %}?category=forest" class="dropdown-item">Forest</a>
+                <a href="{% url 'paintings' %}?category=landscapes" class="dropdown-item">Landscapes</a>
+                <a href="{% url 'paintings' %}?category=women" class="dropdown-item">Women</a>
+                <a href="{% url 'paintings' %}?category=sea" class="dropdown-item">Sea</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="flowers-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="subcategories-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Flowers
+                Explore Sub-Categories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="flowers-link">
+            <div class="dropdown-menu border-0" aria-labelledby="subcategories-link">
+                <a href="{% url 'paintings' %}?subcategory=horses" class="dropdown-item">Horses</a>
                 <a href="{% url 'paintings' %}?subcategory=orchids" class="dropdown-item">Orchids</a>
                 <a href="{% url 'paintings' %}?subcategory=roses" class="dropdown-item">Roses</a>
                 <a href="{% url 'paintings' %}?subcategory=sunflowers" class="dropdown-item">Sunflowers</a>
-                <a href="{% url 'paintings' %}?category=flowers" class="dropdown-item">All Flowers</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="buildings-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Buildings
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="buildings-link">
                 <a href="{% url 'paintings' %}?subcategory=huts" class="dropdown-item">Huts</a>
-                <a href="{% url 'paintings' %}?category=buildings" class="dropdown-item">All Buildings</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="forest-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Forest
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="forest-link">
                 <a href="{% url 'paintings' %}?subcategory=birches" class="dropdown-item">Birches</a>
                 <a href="{% url 'paintings' %}?subcategory=waterfalls" class="dropdown-item">Waterfalls</a>
-                <a href="{% url 'paintings' %}?category=forest" class="dropdown-item">All Forest</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="landscapes-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Landscapes
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="landscapes-link">
                 <a href="{% url 'paintings' %}?subcategory=sunrise_sundown" class="dropdown-item">Sunrise & Sundown</a>
                 <a href="{% url 'paintings' %}?subcategory=wheat_fields" class="dropdown-item">Wheat Fields</a>
-                <a href="{% url 'paintings' %}?category=landscapes" class="dropdown-item">All Landscapes</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="women-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Women
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="women-link">
                 <a href="{% url 'paintings' %}?subcategory=nude" class="dropdown-item">Nude Acts</a>
-                <a href="{% url 'paintings' %}?category=women" class="dropdown-item">All Women</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="sea-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Sea
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="sea-link">
                 <a href="{% url 'paintings' %}?subcategory=large_ships" class="dropdown-item">Large Ships</a>
-                <a href="{% url 'paintings' %}?category=sea" class="dropdown-item">All Sea</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Specials
             </a>
@@ -104,6 +59,18 @@
                 <a href="{% url 'paintings' %}?subcategory=deals" class="dropdown-item">Deals</a>
                 <a href="{% url 'paintings' %}?subcategory=clearance" class="dropdown-item">Clearance</a>
                 <a href="{% url 'paintings' %}?subcategory=new_paintings,deals,clearance" class="dropdown-item">All Specials</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="about-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="about-link">
+                <a href="#" class="dropdown-item">About the Artist</a>
+                <a href="#" class="dropdown-item">Contact Us</a>
+                <a href="#" class="dropdown-item">T&C</a>
             </div>
         </li>
     </ul>
