@@ -2,13 +2,13 @@ html {
     height: 100%;
 }
 
-body {
+/* body {
     background: url('/media/large-white-flowers-opening-painting.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
-}
+} */
 
 /* from Bulma */
 .icon {
@@ -130,9 +130,42 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: white;
+    background: url('/media/large-white-flowers-opening-painting.webp') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;
     z-index: -1;
 }
+
+.adjusted-pad1 {
+    padding-bottom: 150px;
+}
+
+.adjusted-pad2 {
+    padding-bottom: 250px;
+}
+
+.adjusted-pad3 {
+    padding-bottom: 350px;
+}
+
+.ci1 {
+    background: url('/media/large-white-flowers-opening-painting.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+.ci2 {
+    background: url('/media/wheat-fields-in-summer-with-lady-painting.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+.ci3 {
+    background: url('/media/roman-building-daruvar-painting.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
 
 a.category-badge>span.badge:hover {
     background: #212529 !important;
