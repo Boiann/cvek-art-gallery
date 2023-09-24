@@ -120,14 +120,17 @@
             </nav>
         </div>
         <!-- Information banner -->
-        <div id="delivery-banner" class="row text-center delivery-banner marquee"> 
-            <h5 class="fw-normal my-2 text-uppercase"><span
-                class="logo-font my-1">Free</span> delivery on orders over €{{ free_delivery_threshold }}!
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                Offers for buying multiple paintings! 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                Check out our Clearance section! 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <div id="delivery-banner" class="row text-center delivery-banner marquee">
+            <h5 class="fw-normal my-2 text-uppercase"><span class="logo-font my-1">Free</span> delivery on orders over
+                €{{ free_delivery_threshold }}!
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp;
+                Offers for buying multiple paintings!
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp;
+                Check out our Clearance section!
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp;
             </h5>
         </div>
     </header>
@@ -156,12 +159,166 @@
     {% block content %}
     {% endblock %}
 
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
+    <footer class="text-center font-weight-bold">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center p-4 mt-5 border-bottom">
+            <div class="me-5 ">
+                <a class="btn btn-outline-dark font-weight-bold" href="#">Subscribe to our Newsletter!</a>
+            </div>
 
+        </section>
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Cvek Art Gallery
+                        </h6>
+                        <p>
+                            <i class="fas fa-home me-3"></i> Ulica PoslijeAprila 27+2, Varos Daruv, Croatia
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            info@cvek-art-gallery.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone me-3"></i> + 385 12 345 678
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Popular Categories
+                        </h6>
+                        <p>
+                            <a href="{% url 'paintings' %}?subcategory=clearance" class="text-reset">Clearance</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'paintings' %}?subcategory=roses" class="text-reset">Roses</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'paintings' %}?subcategory=new_paintings" class="text-reset">New Paintings</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'paintings' %}?category=landscapes" class="text-reset">Landscapes</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            About
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">About the Artist</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Contact Us</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Terms and Conditions</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Privacy Policy</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Social Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Follow Us</h6>
+                        <p>
+                            <a href="https://facebook.com" class="me-4 text-reset" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://twitter.com" class="me-4 text-reset" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://instagram.com" class="me-4 text-reset" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://youtube.com" class="me-4 text-reset" target="_blank">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4">
+            Project &copy; Bojan Bakaric 2023 <a
+                href="https://github.com/Boiann/cvek-art-gallery" class="me-4 text-reset" target="_blank">
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+            <p>Portfolio Project, not a real website</p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>
+    </div>
+
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+
+    $('.toast').toast('show');
+
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
+
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
+{% endblock %}
 
 </body>
 
