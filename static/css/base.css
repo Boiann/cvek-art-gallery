@@ -182,6 +182,63 @@ html {
         inset #9b8e88 0 0 0 17px;
 }
 
+/* Delivery banner */
+
+.marquee {
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    background-color: black !important;
+    opacity: 0.4;
+    color: white !important;
+}
+
+.marquee h5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 20px;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-right 1s linear infinite;
+    -webkit-animation: scroll-right 1s linear infinite;
+    animation: scroll-right 30s linear infinite;
+}
+
+@-moz-keyframes scroll-right {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes scroll-right {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(60%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
 a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
