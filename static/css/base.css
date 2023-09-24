@@ -40,7 +40,8 @@ html {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
+    /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -49,6 +50,10 @@ html {
 .btn-outline-black:focus {
     background: black;
     color: white !important;
+}
+
+.dropdown-item:hover {
+    background: #b8d4f3;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -166,6 +171,16 @@ html {
     height: calc(100vh - 164px);
 }
 
+.box {
+    padding: 30px;
+    box-shadow:
+        inset #5c4033 0 0 0 5px,
+        inset #694f43 0 0 0 1px,
+        inset #755e53 0 0 0 10px,
+        inset #826e64 0 0 0 11px,
+        inset #8e7e76 0 0 0 16px,
+        inset #9b8e88 0 0 0 17px;
+}
 
 a.category-badge>span.badge:hover {
     background: #212529 !important;
@@ -190,7 +205,9 @@ img {
     border-width: thick;
 }
 
-.card-img, .card-img-top, .card-img-bottom {
+.card-img,
+.card-img-top,
+.card-img-bottom {
     height: 40vh;
     object-fit: cover;
 }
@@ -350,6 +367,7 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 116px;
     }
+
     body {
         height: calc(100vh - 116px);
     }

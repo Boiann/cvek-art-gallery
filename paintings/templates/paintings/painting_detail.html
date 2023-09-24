@@ -16,7 +16,7 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if painting.image %}
-                <img class="img-fluid" src="{{ painting.image.url }}" alt="{{ painting.name }}">
+                <img class="img-fluid box" src="{{ painting.image.url }}" alt="{{ painting.name }}">
                 {% else %}
                 <a href="">
                     <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ painting.name }}">
