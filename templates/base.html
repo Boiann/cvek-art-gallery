@@ -12,6 +12,7 @@
     {% endblock %}
 
     {% block extra_meta %}
+    <link rel="icon" href="/media/favicon.png">
     {% endblock %}
 
     {% block corecss %}
@@ -50,7 +51,9 @@
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Cvek</strong> Art Gallery</h2>
+                    <h2 class="logo-font text-black my-0">
+                        <img src="/media/favicon.png" id="logo-image" alt="logo image">
+                        <strong>Cvek</strong> Art Gallery</h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -125,7 +128,7 @@
                 €{{ free_delivery_threshold }}!
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 &nbsp; &nbsp; &nbsp;
-                Offers for buying multiple paintings!
+                Buy 3, get €50 off --- Buy 6, get €100 off!
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 &nbsp; &nbsp; &nbsp;
                 Check out our Clearance section!

@@ -167,7 +167,7 @@ html {
 }
 
 .ci3 {
-    background: url('/media/roman-building-daruvar-painting.webp') no-repeat center center fixed;
+    background: url('/media/white-wildflowers-painting.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
 }
@@ -242,6 +242,19 @@ html {
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
     }
+}
+
+#logo-image {
+    width: 40px;
+    height: auto;
+    border: none !important;
+}
+
+.about-pad {
+    padding-top: 200px;
+    background: url('/media/red-sunset-painting.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
 }
 
 a.category-badge>span.badge:hover {
