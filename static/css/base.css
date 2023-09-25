@@ -1,14 +1,15 @@
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
-body {
+/* body {
     background: url('/media/large-white-flowers-opening-painting.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
-}
+} */
 
 /* from Bulma */
 .icon {
@@ -40,7 +41,8 @@ body {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
+    /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -49,6 +51,10 @@ body {
 .btn-outline-black:focus {
     background: black;
     color: white !important;
+}
+
+.dropdown-item:hover {
+    background: #b8d4f3;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -130,8 +136,125 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: white;
+    background: url('/media/large-white-flowers-opening-painting.webp') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;
     z-index: -1;
+}
+
+.adjusted-pad1 {
+    padding-bottom: 150px;
+}
+
+.adjusted-pad2 {
+    padding-bottom: 250px;
+}
+
+.adjusted-pad3 {
+    padding-bottom: 350px;
+}
+
+.ci1 {
+    background: url('/media/large-white-flowers-opening-painting.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+.ci2 {
+    background: url('/media/wheat-fields-in-summer-with-lady-painting.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+.ci3 {
+    background: url('/media/white-wildflowers-painting.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+.box {
+    padding: 30px;
+    box-shadow:
+        inset #5c4033 0 0 0 5px,
+        inset #694f43 0 0 0 1px,
+        inset #755e53 0 0 0 10px,
+        inset #826e64 0 0 0 11px,
+        inset #8e7e76 0 0 0 16px,
+        inset #9b8e88 0 0 0 17px;
+}
+
+.c-color {
+    opacity: 0.4;
+}
+
+/* Delivery banner */
+
+.marquee {
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    background-color: black !important;
+    opacity: 0.4;
+    color: white !important;
+}
+
+.marquee h5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 20px;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-right 1s linear infinite;
+    -webkit-animation: scroll-right 1s linear infinite;
+    animation: scroll-right 30s linear infinite;
+}
+
+@-moz-keyframes scroll-right {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes scroll-right {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(60%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+#logo-image {
+    width: 40px;
+    height: auto;
+    border: none !important;
+}
+
+.about-pad {
+    padding-top: 200px;
+    background: url('/media/red-sunset-painting.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
 }
 
 a.category-badge>span.badge:hover {
@@ -157,7 +280,9 @@ img {
     border-width: thick;
 }
 
-.card-img, .card-img-top, .card-img-bottom {
+.card-img,
+.card-img-top,
+.card-img-bottom {
     height: 40vh;
     object-fit: cover;
 }
@@ -317,6 +442,7 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 116px;
     }
+
     body {
         height: calc(100vh - 116px);
     }
