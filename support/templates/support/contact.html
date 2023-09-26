@@ -11,5 +11,14 @@
 
 {% block content %}
 <div class="overlay"></div>
-<h1>Contact</h1>
+
+
+<div class="container-fluid">
+
+    <form action="">
+        {% csrf_token %}
+        {{ form|crispy }}
+    </form>
+</div>
+
 {% endblock %}
