@@ -1,0 +1,14 @@
+<p class="my-0 lead font-weight-bold"><strong>{{ painting.name }}</strong></p>
+
+{% if painting.is_clearance %}
+<p class="lead mb-0 text-left" style="color: red;">Clearance Painting</p>
+<del>Regular Price: €{{ painting.base_price|floatformat:2 }}</del>
+<p class="lead mb-0 text-left font-weight-bold">Clearance Price:
+    €{{ painting.price|floatformat:2 }}</p>
+{% else %}
+<br>
+<i class="fa-solid fa-euro-sign"></i>{{ painting.base_price|floatformat:2 }}
+{% endif %}
+<br>
+<p class="my-0">Size: {{ painting.size }}</p>
+<p class="my-0">Year: {{ painting.year }}</p>
