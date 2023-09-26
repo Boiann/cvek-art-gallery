@@ -86,6 +86,7 @@
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_painting' %}" class="dropdown-item">Product Management</a>
+                            <a href="{% url 'admin:index' %}" class="dropdown-item">Admin Page</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -227,7 +228,7 @@
                             <a href="{% url 'about' %}" class="text-reset">About the Artist</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Contact Us</a>
+                            <a href="{% url 'contact' %}" class="text-reset">Contact Us</a>
                         </p>
                         <p>
                             <a href="#!" class="text-reset">Terms and Conditions</a>

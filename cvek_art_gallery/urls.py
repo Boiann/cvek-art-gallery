@@ -35,4 +35,5 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('about/', views.about, name='about'),
     path('subscribe/', views.subscribe, name='subscribe'),
+    path('contact/', views.contact, name='contact'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

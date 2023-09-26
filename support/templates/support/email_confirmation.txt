@@ -1,0 +1,22 @@
+Hi {{ name }}!
+
+Thank you for contacting us,
+we will be in touch with you shortly!
+
+This is a copy of your message:
+
+-----------------
+
+{{ message }}
+
+-----------------
+
+If your query demands urgent attention,
+please call us at the phone number provided on the website.
+
+https://cvek-art-gallery-d4a224801c39.herokuapp.com/
+
+
+Talk soon,
+
+Cvek Art Gallery
