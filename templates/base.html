@@ -12,7 +12,7 @@
     {% endblock %}
 
     {% block extra_meta %}
-    <link href="{% static 'favicon/favicon.png' %}">
+    <link rel="shortcut icon" type="image/png" href="https://cvek-art-gallery-d4a224801c39.s3.eu-north-1.amazonaws.com/static/favicon/favicon.png">
     {% endblock %}
 
     {% block corecss %}
@@ -23,6 +23,7 @@
     {% endblock %}
 
     {% block extra_css %}
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {% block corejs %}
@@ -166,7 +167,7 @@
         <!-- Section: Social media -->
         <section class="d-flex justify-content-center p-4 mt-5 border-bottom">
             <div class="me-5 ">
-                <a class="btn btn-outline-dark font-weight-bold" href="#">Subscribe to our Newsletter!</a>
+                <a class="btn btn-outline-dark font-weight-bold" href="{% url 'subscribe' %}">Subscribe to our Newsletter!</a>
             </div>
 
         </section>

@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from support import views
 
 # Custom error handling views
 handler404 = 'cvek_art_gallery.views.handler404'
@@ -32,5 +33,6 @@ urlpatterns = [
     path('cart/', include('cart.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
-    path('about/', include('support.urls')),
+    path('about/', views.about, name='about'),
+    path('subscribe/', views.subscribe, name='subscribe'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

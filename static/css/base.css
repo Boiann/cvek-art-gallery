@@ -11,6 +11,17 @@ html {
     font-family: 'Lato';
 } */
 
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 600px;
+}
+
+#mc_embed_signup h2 {
+    text-align: center;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
