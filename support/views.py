@@ -11,3 +11,9 @@ def subscribe(request):
     """ A view to return the subscribe page """
 
     return render(request, 'support/subscribe.html')
+
+
+def contact(request):
+    """ A view to return the contact page """
+
+    return render(request, 'support/contact.html')
