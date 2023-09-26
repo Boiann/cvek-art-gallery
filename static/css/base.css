@@ -3,19 +3,11 @@ html {
     scroll-behavior: smooth;
 }
 
-/* body {
-    background: url('/media/large-white-flowers-opening-painting.webp') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
-} */
-
 #mc_embed_signup {
     background: #fff;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
-    width: 600px;
+    width: 100%;
 }
 
 #mc_embed_signup h2 {
@@ -42,7 +34,7 @@ html {
 .shop-now-button {
     background: black;
     color: white;
-    min-width: 260px;
+    min-width: 200px;
 }
 
 .btn-black {
@@ -222,6 +214,7 @@ html {
     -moz-animation: scroll-right 1s linear infinite;
     -webkit-animation: scroll-right 1s linear infinite;
     animation: scroll-right 30s linear infinite;
+    white-space: nowrap;
 }
 
 @-moz-keyframes scroll-right {
@@ -445,6 +438,12 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width: 500px) {
+    #intro-items h1{
+        font-size: 280%;
     }
 }
 
