@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY_CAG', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-boiann-cvekartgallery-hmompk0hxtl.ws-eu104.gitpod.io', 'localhost',
+    '8000-boiann-cvekartgallery-hmompk0hxtl.ws-eu105.gitpod.io', 'localhost',
     'cvek-art-gallery-d4a224801c39.herokuapp.com']
 
 
