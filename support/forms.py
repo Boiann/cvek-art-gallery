@@ -21,7 +21,7 @@ class ContactForm(forms.ModelForm):
         }
 
         for field in self.fields:
-            if field != 'inquiry_purpose':
+            if field != 'contact_reason':
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:
