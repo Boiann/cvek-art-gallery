@@ -1,7 +1,7 @@
 User-agent: *
-Disallow:/accounts/
+Disallow: /accounts/
 Disallow: /admin/
 Disallow: /profiles/
 Disallow: /cart/
 Disallow: /checkout/
-Sitemap:https://cvek-art-gallery-d4a224801c39.herokuapp.com/sitemap.xml
+Sitemap: https://cvek-art-gallery-d4a224801c39.herokuapp.com/sitemap.xml

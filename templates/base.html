@@ -9,10 +9,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="Cvek Art Gallery">
+    <meta name="author" content="Bojan Bakaric">
+    <meta name="description" content="Cvek Oil on Canvas paintings gallery and store">
+    <meta name="keywords" content=
+                    "oil painting, oil art, paintings, homemade art, self-taught art, beautiful paintings,
+                    landscape oil art, still life oil paintings, original oil canvas art, fine art oil on canvas,
+                    animals art, landscapes art, flowers art, women art,
+                    creative journey, artistic inspiration, artistic evolution, art exhibit success, artistic passion,
+                    free shipping, free delivery, safe shopping, discounts, Croatia, Ireland">
     {% endblock %}
 
     {% block extra_meta %}
-    <link rel="shortcut icon" type="image/png" href="https://cvek-art-gallery-d4a224801c39.s3.eu-north-1.amazonaws.com/media/favicon.png">
+    <link rel="shortcut icon" type="image/png"
+        href="https://cvek-art-gallery-d4a224801c39.s3.eu-north-1.amazonaws.com/media/favicon.png">
     {% endblock %}
 
     {% block corecss %}
@@ -168,7 +178,8 @@
         <!-- Section: Social media -->
         <section class="d-flex justify-content-center p-4 mt-5 border-bottom">
             <div class="me-5 ">
-                <a class="btn btn-outline-dark font-weight-bold" href="{% url 'subscribe' %}">Subscribe to our Newsletter!</a>
+                <a class="btn btn-outline-dark font-weight-bold" href="{% url 'subscribe' %}">Subscribe to our
+                    Newsletter!</a>
             </div>
 
         </section>
@@ -210,7 +221,8 @@
                             <a href="{% url 'paintings' %}?subcategory=roses" class="text-reset">Roses</a>
                         </p>
                         <p>
-                            <a href="{% url 'paintings' %}?subcategory=new_paintings" class="text-reset">New Paintings</a>
+                            <a href="{% url 'paintings' %}?subcategory=new_paintings" class="text-reset">New
+                                Paintings</a>
                         </p>
                         <p>
                             <a href="{% url 'paintings' %}?category=landscapes" class="text-reset">Landscapes</a>
@@ -273,8 +285,8 @@
 
         <!-- Copyright -->
         <div class="text-center p-4">
-            Project &copy; Bojan Bakaric 2023 <a
-                href="https://github.com/Boiann/cvek-art-gallery" class="me-4 text-reset" target="_blank">
+            Project &copy; Bojan Bakaric 2023 <a href="https://github.com/Boiann/cvek-art-gallery"
+                class="me-4 text-reset" target="_blank">
                 <i class="fa-brands fa-square-github"></i>
             </a>
             <p>Portfolio Project, not a real website</p>
@@ -291,40 +303,39 @@
     </div>
 
 
-{% block postloadjs %}
-{{ block.super }}
-<script type="text/javascript">
+    {% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('.toast').toast('show');
 
-    $('.toast').toast('show');
+        $('.btt-link').click(function (e) {
+            window.scrollTo(0, 0)
+        })
+    </script>
 
-    $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
-</script>
+    <script type="text/javascript">
+        $('#sort-selector').change(function () {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
 
-<script type="text/javascript">
-    $('#sort-selector').change(function () {
-        var selector = $(this);
-        var currentUrl = new URL(window.location);
+            var selectedVal = selector.val();
+            if (selectedVal != "reset") {
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
 
-        var selectedVal = selector.val();
-        if (selectedVal != "reset") {
-            var sort = selectedVal.split("_")[0];
-            var direction = selectedVal.split("_")[1];
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
 
-            currentUrl.searchParams.set("sort", sort);
-            currentUrl.searchParams.set("direction", direction);
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
 
-            window.location.replace(currentUrl);
-        } else {
-            currentUrl.searchParams.delete("sort");
-            currentUrl.searchParams.delete("direction");
-
-            window.location.replace(currentUrl);
-        }
-    })
-</script>
-{% endblock %}
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
+    {% endblock %}
 
 </body>
 
