@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/cart/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?sort=year&amp;direction=asc</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?category=animals</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?category=flowers</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?category=buildings</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?category=forest</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?category=landscapes</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?category=women</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?category=sea</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=horses</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=orchids</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=roses</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=sunflowers</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=huts</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=birches</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=waterfalls</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=sunrise_sundown</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=wheat_fields</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=nude</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=large_ships</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=new_paintings</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=deals</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=clearance</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/?subcategory=new_paintings,deals,clearance</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/support/about/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/support/contact/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/support/t_and_c/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/support/privacy/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/support/subscribe/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/31</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/17</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/43</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/2</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/41</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/22</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/61</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/21</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/34</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/35</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/52</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/50</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/7</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/12</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/28</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/85</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/46</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/76</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/10</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/63</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/20</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/30</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/62</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/26</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/27</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/83</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/97</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/9</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/38</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/8</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/84</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/39</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/25</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/16</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/29</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/56</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/58</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/100</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/55</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/65</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/24</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/75</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/37</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/82</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/19</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/98</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/36</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/47</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/48</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/53</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/54</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/57</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/64</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/74</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/102</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/18</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/32</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/81</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/67</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/60</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/69</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/80</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/23</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/99</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/88</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/6</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/49</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/96</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/101</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/66</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/93</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/79</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/5</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/42</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/70</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/4</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/45</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/51</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/87</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/59</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/11</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/68</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/1</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/40</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/44</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/71</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/72</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cvek-art-gallery-d4a224801c39.herokuapp.com/paintings/14</loc>
+  <lastmod>2023-09-27T13:05:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
