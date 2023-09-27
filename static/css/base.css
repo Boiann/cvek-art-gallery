@@ -463,6 +463,26 @@ input[name='q']::placeholder {
     .adjusted-pad3 {
     padding-bottom: 35px;
     }
+
+    .about-pad {
+        padding-top: 10vh;
+        height: calc(60vh - 164px);
+    }
+
+    .img-fluid {
+        max-width: 70%;
+    }
+
+    h2 {
+        padding-top: 10px;
+    }
+}
+
+@media (max-height: 720px),
+        (max-width: 400px) {
+    .about-pad{
+        height: calc(85vh - 164px);
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
