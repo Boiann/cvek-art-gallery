@@ -473,7 +473,7 @@ input[name='q']::placeholder {
         height: calc(60vh - 164px);
     }
 
-    .img-fluid {
+    .img-fluid-adjusted {
         max-width: 70%;
     }
 
