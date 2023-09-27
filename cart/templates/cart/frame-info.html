@@ -1,0 +1,14 @@
+<p class="my-0">
+    {% if painting.is_clearance %}
+    <p style="color: red;">NO FRAMES AVAILABLE</p>
+    {% else %}
+    <br>
+    {% if painting.frame == 'no_frame' %}
+    <p class="my-0">No frame selected</p>
+    {% elif painting.frame == 'standard_frame' %}
+    <p class="my-0">Standard Frame (+€50.00)</p>
+    {% elif painting.frame == 'premium_frame' %}
+    <p class="my-0">Premium Frame (+€100.00)</p>
+    {% endif %}
+    {% endif %}
+</p>

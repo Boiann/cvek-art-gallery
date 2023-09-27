@@ -26,21 +26,63 @@
             {% if cart_items|length >= 3 and cart_items|length <= 5 %}
             <div class="row">
                 <div class="col">
-                    <p class="text-success lead font-weight-bold">Congratulations! You qualify for a €50 discount for buying 3 or more
+                    <p class="text-success lead font-weight-bold">Congratulations! You qualify for a €50 discount for
+                        buying 3 or more
                         paintings.</p>
                 </div>
             </div>
-            {% else %}
-            {% if cart_items|length >= 6 %}
+            {% elif cart_items|length >= 6 %}
             <div class="row">
                 <div class="col">
-                    <p class="text-success lead font-weight-bold">Congratulations! You qualify for a €100 discount for buying 6 or more
+                    <p class="text-success lead font-weight-bold">Congratulations! You qualify for a €100 discount for
+                        buying 6 or more
                         paintings.</p>
                 </div>
             </div>
             {% endif %}
-            {% endif %}
-            <div class="table-responsive rounded">
+            <div class="d-block d-md-none">
+                <div class="row">
+                    <div class="col">
+                        {% include "cart/cart-total.html" %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-2">
+                        {% include "cart/checkout-buttons.html" %}
+                        <p class="text-muted mb-5">A summary of your cart contents is below:</p>
+                    </div>
+                </div>
+                {% for painting in cart_items %}
+                <div class="row">
+                    <div class="col-12 col-sm-6 mb-2">
+                        {% include "cart/painting-image.html" %}
+                    </div>
+                    <div class="col-12 col-sm-6 mb-2">
+                        {% include "cart/painting-info.html" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% include "cart/frame-form.html" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <td class="py-3">
+                            <p class="my-0">Subtotal: €{{ painting.price|floatformat:2 }}</p>
+                        </td>
+                        {% include "cart/remove.html" %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="btt-button shadow-sm rounded-0 border border-black">
+                    <a class="btt-link d-flex h-100">
+                        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="table-responsive rounded d-none d-md-block">
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
                         <tr>
@@ -55,110 +97,33 @@
                     {% for painting in cart_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            {% if painting.image_url %}
-                            <img class="img-fluid rounded" src="{{ painting.image_url }}" alt="{{ painting.name }}">
-                            {% else %}
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ painting.name }}">
-                            {% endif %}
+                            {% include "cart/painting-image.html" %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0 lead font-weight-bold"><strong>{{ painting.name }}</strong></p>
-
-                            {% if painting.is_clearance %}
-                            <p class="lead mb-0 text-left" style="color: red;">Clearance Painting</p>
-                            <del>Regular Price: €{{ painting.base_price|floatformat:2 }}</del>
-                            <p class="lead mb-0 text-left font-weight-bold">Clearance Price:
-                                €{{ painting.price|floatformat:2 }}</p>
-                            {% else %}
-                            <br>
-                            <i class="fa-solid fa-euro-sign"></i>{{ painting.base_price|floatformat:2 }}
-                            {% endif %}
-                            <br>
-                            <p class="my-0">Size: {{ painting.size }}</p>
-                            <p class="my-0">Year: {{ painting.year }}</p>
+                            {% include "cart/painting-info.html" %}
                         </td>
                         <td class="py-3 w-25">
-                            <p class="my-0">
-                                {% if painting.is_clearance %}
-                                <p style="color: red;">NO FRAMES AVAILABLE</p>
-                                {% else %}
-                                <br>
-                                {% if painting.frame == 'no_frame' %}
-                                <p class="my-0">No frame selected</p>
-                                {% elif painting.frame == 'standard_frame' %}
-                                <p class="my-0">Standard Frame (+€50.00)</p>
-                                {% elif painting.frame == 'premium_frame' %}
-                                <p class="my-0">Premium Frame (+€100.00)</p>
-                                {% endif %}
-                                {% endif %}
-                            </p>
+                            {% include "cart/frame-info.html" %}
                         </td>
                         <td>
-                            {% if painting.is_clearance %}
-                            <p style="color: red;">NO FRAMES OPTION</p>
-                            {% else %}
-                            <form method="POST" action="{% url 'adjust_frame' painting.id %}">
-                                {% csrf_token %}
-                                <label for="frame">Select Frame:</label>
-                                <select name="frame" id="frame">
-                                    <option value="no_frame" {% if painting.frame == 'no_frame' %}selected{% endif %}>No
-                                        Frame</option>
-                                    <option value="standard_frame"
-                                        {% if painting.frame == 'standard_frame' %}selected{% endif %}>Standard
-                                        Frame (+€50.00)</option>
-                                    <option value="premium_frame"
-                                        {% if painting.frame == 'premium_frame' %}selected{% endif %}>Premium Frame
-                                        (+€100.00)</option>
-                                </select>
-                                <button type="submit">Update Frame</button>
-                            </form>
-                            {% endif %}
+                            {% include "cart/frame-form.html" %}
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ painting.price|floatformat:2 }}</p>
                         </td>
                         <td class="py-3">
-                            <form method="POST" action="{% url 'remove_painting' painting.id %}">
-                                {% csrf_token %}
-                                <input type="hidden" name="id" value="{{ painting.id }}">
-                                <button type="submit" class="remove-item btn-danger btn-sm">
-                                    <small>Remove</small>
-                                </button>
-                            </form>
+                            {% include "cart/remove.html" %}
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
-                            {% if cart_items|length >= 3 %}
-                            <h6><strong>Total Without Discount: €{{ total_without_discount|floatformat:2 }}</strong>
-                            </h6>
-                            {% endif %}
-                            <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
-                            {% if free_delivery_delta > 0 %}
-                            <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong>
-                                more!
-                            </p>
-                            {% endif %}
+                            {% include "cart/cart-total.html" %}
                         </td>
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'paintings' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                <span class="text-uppercase">Secure Checkout</span>
-                                <span class="icon">
-                                    <i class="fas fa-lock"></i>
-                                </span>
-                            </a>
+                            {% include "cart/checkout-buttons.html" %}
                         </td>
                     </tr>
                 </table>

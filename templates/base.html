@@ -8,7 +8,7 @@
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {% endblock %}
 
     {% block extra_meta %}
@@ -86,7 +86,7 @@
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_painting' %}" class="dropdown-item">Product Management</a>
-                            <a href="{% url 'admin:index' %}" class="dropdown-item">Admin Page</a>
+                            <a href="{% url 'admin:index' %}" class="dropdown-item" target="_blank">Admin Page</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -115,7 +115,7 @@
             </div>
         </div>
         <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg bg-white w-100">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -126,8 +126,8 @@
         </div>
         <!-- Information banner -->
         <div id="delivery-banner" class="row text-center delivery-banner marquee">
-            <h5 class="fw-normal my-2 text-uppercase"><span class="logo-font my-1">Free</span> delivery on orders over
-                €{{ free_delivery_threshold }}!
+            <h5 class="fw-normal my-2 text-uppercase">
+                Free delivery on orders over €{{ free_delivery_threshold }}!
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 &nbsp; &nbsp; &nbsp;
                 Buy 3, get €50 off --- Buy 6, get €100 off!
@@ -231,10 +231,10 @@
                             <a href="{% url 'contact' %}" class="text-reset">Contact Us</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Terms and Conditions</a>
+                            <a href="{% url 't_and_c' %}" class="text-reset">Terms and Conditions</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Privacy Policy</a>
+                            <a href="{% url 'privacy' %}" class="text-reset">Privacy Policy</a>
                         </p>
                     </div>
                     <!-- Grid column -->

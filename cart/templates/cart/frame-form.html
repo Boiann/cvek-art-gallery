@@ -1,0 +1,17 @@
+{% if painting.is_clearance %}
+<p style="color: red;">NO FRAMES OPTION</p>
+{% else %}
+<form method="POST" action="{% url 'adjust_frame' painting.id %}">
+    {% csrf_token %}
+    <label for="frame">Select Frame:</label>
+    <select name="frame" id="frame">
+        <option value="no_frame" {% if painting.frame == 'no_frame' %}selected{% endif %}>No
+            Frame</option>
+        <option value="standard_frame" {% if painting.frame == 'standard_frame' %}selected{% endif %}>Standard
+            Frame (+€50.00)</option>
+        <option value="premium_frame" {% if painting.frame == 'premium_frame' %}selected{% endif %}>Premium Frame
+            (+€100.00)</option>
+    </select>
+    <button type="submit" class="my-2">Update Frame</button>
+</form>
+{% endif %}
