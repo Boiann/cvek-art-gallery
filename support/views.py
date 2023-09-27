@@ -42,7 +42,10 @@ def contact(request):
             form.save()
             name = form.cleaned_data['name']
             user_message = form.cleaned_data['message']
-            subject = form.cleaned_data['contact_reason']
+            contact_reason = form.cleaned_data['contact_reason']
+
+            subject = f'Cvek Art Gallery - contact about {contact_reason}'
+
             message = render_to_string(
                 'support/email_confirmation.txt', {
                     'name': name,
@@ -58,7 +61,7 @@ def contact(request):
                 email_from,
                 email_to
             )
-            messages.success(request, f'Your message was sent successfuly')
+            messages.info(request, f'Your message was sent successfuly')
             return redirect(reverse('contact'))
 
         else:

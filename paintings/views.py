@@ -84,6 +84,7 @@ def all_paintings(request):
         'paintings': paintings,
         'search_term': query,
         'current_categories': categories,
+        'current_subcategories': subcategories,
         'subcategories': subcategories,  # Include subcategories in the context
         'current_sorting': current_sorting,
         'is_clearance': is_clearance,  # Include is_clearance in the context
