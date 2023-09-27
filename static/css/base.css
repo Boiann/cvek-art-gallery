@@ -302,6 +302,10 @@ img {
     justify-content: space-around;
 }
 
+.fab, .fa-brands {
+    font-size: 20px;
+}
+
 a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
