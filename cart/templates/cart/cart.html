@@ -84,7 +84,7 @@
             </div>
             <div class="table-responsive rounded d-none d-md-block">
                 <table class="table table-sm table-borderless">
-                    <thead class="text-black">
+                    <thead class="text-black lead font-weight-bold">
                         <tr>
                             <th scope="col">Selected Painting Info</th>
                             <th scope="col"></th>
@@ -96,22 +96,22 @@
 
                     {% for painting in cart_items %}
                     <tr>
-                        <td class="p-3 w-25">
+                        <td class="py-4 w-25">
                             {% include "cart/painting-image.html" %}
                         </td>
-                        <td class="py-3">
+                        <td class="py-4">
                             {% include "cart/painting-info.html" %}
                         </td>
-                        <td class="py-3 w-25">
+                        <td class="py-4 w-25">
                             {% include "cart/frame-info.html" %}
                         </td>
-                        <td>
+                        <td class="py-4">
                             {% include "cart/frame-form.html" %}
                         </td>
-                        <td class="py-3">
+                        <td class="py-4">
                             <p class="my-0">€{{ painting.price|floatformat:2 }}</p>
                         </td>
-                        <td class="py-3">
+                        <td class="py-4">
                             {% include "cart/remove.html" %}
                         </td>
                     </tr>
