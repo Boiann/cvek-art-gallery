@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col my-2">
                         {% include "cart/checkout-buttons.html" %}
                         <p class="text-muted mb-5">A summary of your cart contents is below:</p>
                     </div>
@@ -61,13 +61,13 @@
                         {% include "cart/painting-info.html" %}
                     </div>
                     <div class="col-12 col-sm-6">
-                        {% include "cart/remove.html" %}
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        {% include "cart/frame-info.html" %}
-                    </div>
-                    <div class="col-12 col-sm-6">
                         {% include "cart/frame-form.html" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <td class="py-3">
+                            <p class="my-0">Subtotal: €{{ painting.price|floatformat:2 }}</p>
+                        </td>
+                        {% include "cart/remove.html" %}
                     </div>
                 </div>
                 <div class="row">

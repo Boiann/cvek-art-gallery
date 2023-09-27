@@ -441,9 +441,21 @@ input[name='q']::placeholder {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
     #intro-items h1{
         font-size: 280%;
+    }
+
+    .adjusted-pad1 {
+    padding-bottom: 15px;
+    }
+
+    .adjusted-pad2 {
+    padding-bottom: 25px;
+    }
+
+    .adjusted-pad3 {
+    padding-bottom: 35px;
     }
 }
 
