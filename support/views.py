@@ -20,6 +20,18 @@ def subscribe(request):
     return render(request, 'support/subscribe.html')
 
 
+def t_and_c(request):
+    """ A view to return the t&c's page """
+
+    return render(request, 'support/legal/t_and_c.html')
+
+
+def privacy(request):
+    """ A view to return the privacy page """
+
+    return render(request, 'support/legal/privacy.html')
+
+
 def contact(request):
     """ A view to return the contact page """
 
