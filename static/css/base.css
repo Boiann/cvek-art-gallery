@@ -296,6 +296,12 @@ img {
     height: 600px;
 }
 
+.row-adjusted {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
 a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
