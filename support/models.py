@@ -3,8 +3,7 @@ from django.db import models
 
 class Contact(models.Model):
 
-    # Options for the Inquiry
-
+    # Choices for the reason of contac
     CONTACT_REASONS = [
         ('', 'Reason of Contact'),
         ('PAINTING', 'Painting/s'),
@@ -14,6 +13,7 @@ class Contact(models.Model):
 
     ]
 
+    # Fields for the Contact model
     contact_reason = models.CharField(max_length=24, choices=CONTACT_REASONS)
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)

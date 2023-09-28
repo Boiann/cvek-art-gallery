@@ -44,8 +44,10 @@ def contact(request):
             user_message = form.cleaned_data['message']
             contact_reason = form.cleaned_data['contact_reason']
 
+            # Create an email subject
             subject = f'Cvek Art Gallery - contact about {contact_reason}'
 
+            # Render the email message using a template
             message = render_to_string(
                 'support/email_confirmation.txt', {
                     'name': name,
@@ -55,16 +57,18 @@ def contact(request):
             email_from = settings.DEFAULT_FROM_EMAIL
             email_to = [form.cleaned_data['email']]
 
+            # Send the email
             send_mail(
                 subject,
                 message,
                 email_from,
                 email_to
             )
+            # Display a success message and redirect to the contact page
             messages.info(request, f'Your message was sent successfuly')
-            return redirect(reverse('contact'))
-
+            return redirect(reverse('home'))
         else:
+            # Display an error message if form submission fails
             messages.error(request, f'An error occured, please try again later')
 
     context = {

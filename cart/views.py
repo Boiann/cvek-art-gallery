@@ -11,6 +11,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, painting_id):
+    """ Handles adding paintings to the cart """
     id = request.POST.get('id')
     frame_price = Decimal('0.00')  # Default frame price as Decimal
     cart = request.session.get('cart', [])
@@ -25,7 +26,7 @@ def add_to_cart(request, painting_id):
 
         # Set a default frame value if it's not provided in the request
         if not frame:
-            frame = 'no_frame'  # You can choose your default frame value
+            frame = 'no_frame'  # Choose your default frame value
 
         # Adjust the frame price based on the user's selection
         if frame == 'standard_frame':
@@ -33,7 +34,8 @@ def add_to_cart(request, painting_id):
         elif frame == 'premium_frame':
             frame_price = Decimal('100.00')
 
-        subcategory_names = [subcategory.name for subcategory in painting.subcategory.all()]
+        subcategory_names = [
+            subcategory.name for subcategory in painting.subcategory.all()]
         base_price = painting.price
 
         # Calculate the discounted price for clearance items
@@ -66,7 +68,8 @@ def add_to_cart(request, painting_id):
             'is_clearance': is_clearance,
         }
 
-        existing_item = next((item for item in cart if item['id'] == painting.id), None)
+        existing_item = next(
+            (item for item in cart if item['id'] == painting.id), None)
 
         if existing_item:
             existing_item.update(cart_item)
@@ -115,8 +118,10 @@ def adjust_frame(request, painting_id):
                 elif frame == 'premium_frame':
                     item['frame_price'] = '100.00'
 
-                # Recalculate the total price based on the base price and adjusted frame price
-                item['price'] = str(Decimal(item['base_price']) + Decimal(item['frame_price']))
+                # Recalculate the total price based on
+                # the base price and adjusted frame price
+                item['price'] = str(
+                    Decimal(item['base_price']) + Decimal(item['frame_price']))
                 break
 
         request.session['cart'] = cart

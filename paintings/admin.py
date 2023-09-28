@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Painting, Category, SubCategory
 
 
+# Configure the admin interface for the Painting model
 class PaintingAdmin(admin.ModelAdmin):
     list_display = (
         'name',
@@ -16,6 +17,7 @@ class PaintingAdmin(admin.ModelAdmin):
     ordering = ('sku',)
 
 
+# Configure the admin interface for the Category model
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
@@ -23,6 +25,7 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
+# Configure the admin interface for the SubCategory model
 class SubCategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
@@ -30,6 +33,7 @@ class SubCategoryAdmin(admin.ModelAdmin):
     )
 
 
+# Register the configured admin classes for each model
 admin.site.register(Painting, PaintingAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(SubCategory, SubCategoryAdmin)

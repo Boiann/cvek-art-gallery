@@ -11,13 +11,15 @@ class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInline,)
 
     readonly_fields = (
-        'order_number', 'date', 'delivery_cost', 'order_total', 'grand_total', 'discount_applied',
+        'order_number', 'date', 'delivery_cost', 'order_total',
+        'grand_total', 'discount_applied',
         'original_cart', 'stripe_pid')
 
     fields = (
         'order_number', 'user_profile', 'date', 'full_name', 'email',
         'phone_number', 'country', 'postcode', 'town_or_city',
-        'street_address1', 'street_address2', 'county', 'delivery_cost', 'order_total', 'grand_total',
+        'street_address1', 'street_address2', 'county', 'delivery_cost',
+        'order_total', 'grand_total',
         'discount_applied', 'original_cart', 'stripe_pid')
 
     list_display = ('order_number', 'date', 'full_name',
@@ -27,4 +29,5 @@ class OrderAdmin(admin.ModelAdmin):
     ordering = ('-date',)
 
 
+# Register the Order and OrderAdmin classes with the Django admin site
 admin.site.register(Order, OrderAdmin)

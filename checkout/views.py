@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse, \
+    get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -15,6 +16,7 @@ import stripe
 import json
 
 
+# View to cache checkout data for Stripe payment
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -22,7 +24,9 @@ def cache_checkout_data(request):
         stripe.api_key = settings.STRIPE_SECRET_KEY
         cart = request.session.get('cart', [])
 
-        cart_items_for_metadata = [{'id': item['id'], 'frame': item['frame']} for item in cart]
+        # Prepare cart items for metadata
+        cart_items_for_metadata = [
+            {'id': item['id'], 'frame': item['frame']} for item in cart]
 
         stripe.PaymentIntent.modify(pid, metadata={
             # 'cart': json.dumps(request.session.get('cart', {})),
@@ -44,8 +48,10 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', [])
-        cart_items_for_metadata = [{'id': item['id'], 'frame': item['frame']} for item in cart]
+        cart_items_for_metadata = [
+            {'id': item['id'], 'frame': item['frame']} for item in cart]
 
+        # Process form data and create an order
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -58,15 +64,13 @@ def checkout(request):
             'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
-        # print("Form Data:", form_data)
+
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
-            # order.original_cart = json.dumps(cart)
             order.original_cart = json.dumps(cart_items_for_metadata)
             order.save()
-            # print("Order Created:", order.order_number)
             for item in cart:
                 try:
                     painting_id = item['id']
@@ -81,20 +85,23 @@ def checkout(request):
                     order_line_item.save()
                 except Painting.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your cart wasn't found in our database. "
+                        "One of the products in your cart \
+                            wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         cart = request.session.get('cart', [])
         if not cart:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(
+                request, "There's nothing in your cart at the moment")
             return redirect(reverse('paintings'))
 
         current_cart = cart_contents(request)
@@ -106,7 +113,8 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with any
+        # info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -164,15 +172,14 @@ def checkout_success(request, order_number):
                 'default_street_address2': order.street_address2,
                 'default_county': order.county,
             }
-            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            user_profile_form = UserProfileForm(
+                profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
-
-    # print(f'Order Number: {order.order_number}')
 
     for item in order.lineitems.all():
         base_price = item.painting.price
@@ -184,8 +191,10 @@ def checkout_success(request, order_number):
             frame_price = Decimal('100.00')
 
         if item.painting.subcategory.filter(name='clearance').exists():
-            clearance_discount = Decimal('0.20')  # 20% discount for clearance items
-            discounted_price = base_price - (base_price * clearance_discount)
+            # 20% discount for clearance items
+            clearance_discount = Decimal('0.20')
+            discounted_price = base_price - (
+                base_price * clearance_discount)
             item.is_clearance = True
         else:
             discounted_price = base_price

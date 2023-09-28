@@ -452,7 +452,7 @@ input[name='q']::placeholder {
 }
 
 @media (max-width: 400px) {
-    #intro-items h1{
+    .intro-items h1{
         font-size: 280%;
     }
 
