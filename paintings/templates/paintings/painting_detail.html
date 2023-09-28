@@ -94,8 +94,10 @@
                 </p>
             </div>
             <div class="modal-footer">
+                {% if request.user.is_superuser %}
                 <a href="{% url 'edit_painting' painting.id %}" class="btn btn-success">Yes
                 </a>
+                {% endif %}
                 <button class="btn btn-danger" data-bs-dismiss="modal">No</button>
             </div>
         </div>
@@ -115,8 +117,10 @@
                 </p>
             </div>
             <div class="modal-footer">
+                {% if request.user.is_superuser %}
                 <a href="{% url 'delete_painting' painting.id %}" class="btn btn-success">Yes
                 </a>
+                {% endif %}
                 <button class="btn btn-danger" data-bs-dismiss="modal">No</button>
             </div>
         </div>
