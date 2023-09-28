@@ -4,7 +4,6 @@
 <html lang="en">
 
 <head>
-
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
@@ -12,8 +11,7 @@
     <meta name="copyright" content="Cvek Art Gallery">
     <meta name="author" content="Bojan Bakaric">
     <meta name="description" content="Cvek Oil on Canvas paintings gallery and store">
-    <meta name="keywords" content=
-                    "oil painting, oil art, paintings, homemade art, self-taught art, beautiful paintings,
+    <meta name="keywords" content="oil painting, oil art, paintings, homemade art, self-taught art, beautiful paintings,
                     landscape oil art, still life oil paintings, original oil canvas art, fine art oil on canvas,
                     animals art, landscapes art, flowers art, women art,
                     creative journey, artistic inspiration, artistic evolution, art exhibit success, artistic passion,
@@ -21,6 +19,7 @@
     {% endblock %}
 
     {% block extra_meta %}
+    <!-- Favicon -->
     <link rel="shortcut icon" type="image/png"
         href="https://cvek-art-gallery-d4a224801c39.s3.eu-north-1.amazonaws.com/media/favicon.png">
     {% endblock %}
@@ -46,7 +45,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
     </script>
-    </script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
@@ -58,23 +56,27 @@
 </head>
 
 <body>
+    <!-- Logo and header name -->
     <header class="container-fluid fixed-top bg-white">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0">
-                        <img src="{{ MEDIA_URL }}logo.png" id="logo-image" alt="logo image">
+                        <img src="{{ MEDIA_URL }}logo.png" id="logo-image" alt="Cvek Art Gallery logo">
                         <strong>Cvek</strong> Art Gallery</h2>
                 </a>
             </div>
+            <!-- Search box -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'paintings' %}">
+                <form method="GET" action="{% url 'paintings' %}" aria-label="Search form">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search our site">
+                        <label class="sr-only">Search our site</label>
+                        <input id="search-input" class="form-control border border-black rounded-0" type="text" name="q"
+                            placeholder="Search our site" aria-label="Search input box">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit" >
                                 <span class="icon">
+                                    <span class="sr-only">Search</span>
                                     <i class="fas fa-search"></i>
                                 </span>
                             </button>
@@ -82,11 +84,12 @@
                     </div>
                 </form>
             </div>
+            <!-- Account links -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -106,6 +109,7 @@
                             {% endif %}
                         </div>
                     </li>
+                    <!-- Cart and total of paintings in cart -->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_cart' %}">
@@ -128,13 +132,16 @@
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <!-- Information banner -->
+
+        <!-- Information banner/animated marquee -->
         <div id="delivery-banner" class="row text-center delivery-banner marquee">
             <h5 class="fw-normal my-2 text-uppercase">
                 Free delivery on orders over €{{ free_delivery_threshold }}!
@@ -150,6 +157,7 @@
         </div>
     </header>
 
+    <!-- Toasts/messages -->
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -174,24 +182,21 @@
     {% block content %}
     {% endblock %}
 
+    <!-- Footer -->
+
+    <!-- Mailchimp newsletter subscription link  -->
     <footer class="text-center font-weight-bold">
-        <!-- Section: Social media -->
         <section class="d-flex justify-content-center p-4 mt-5 border-bottom">
-            <div class="me-5 ">
+            <h2 class="me-5">
                 <a class="btn btn-outline-dark font-weight-bold" href="{% url 'subscribe' %}">Subscribe to our
                     Newsletter!</a>
-            </div>
-
+            </h2>
         </section>
-
-        <!-- Section: Links  -->
+        <!-- Footer content -->
         <section class="">
             <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
                 <div class="row mt-3">
-                    <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4">
                             Cvek Art Gallery
                         </h6>
@@ -206,11 +211,7 @@
                             <i class="fas fa-phone me-3"></i> + 385 12 345 678
                         </p>
                     </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
                             Popular Categories
                         </h6>
@@ -228,11 +229,7 @@
                             <a href="{% url 'paintings' %}?category=landscapes" class="text-reset">Landscapes</a>
                         </p>
                     </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
                             About
                         </h6>
@@ -249,54 +246,48 @@
                             <a href="{% url 'privacy' %}" class="text-reset">Privacy Policy</a>
                         </p>
                     </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <!-- Social Links -->
                         <h6 class="text-uppercase fw-bold mb-4">Follow Us</h6>
                         <p>
-                            <a href="https://facebook.com" class="me-4 text-reset" target="_blank">
+                            <a href="https://facebook.com" class="me-4 text-reset" target="_blank" aria-label="Facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </p>
                         <p>
-                            <a href="https://twitter.com" class="me-4 text-reset" target="_blank">
+                            <a href="https://twitter.com" class="me-4 text-reset" target="_blank" aria-label="Twitter">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </p>
                         <p>
-                            <a href="https://instagram.com" class="me-4 text-reset" target="_blank">
+                            <a href="https://instagram.com" class="me-4 text-reset" target="_blank" aria-label="Instagram">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </p>
                         <p>
-                            <a href="https://youtube.com" class="me-4 text-reset" target="_blank">
+                            <a href="https://youtube.com" class="me-4 text-reset" target="_blank" aria-label="YouTube">
                                 <i class="fa-brands fa-youtube"></i>
                             </a>
                         </p>
                     </div>
-                    <!-- Grid column -->
                 </div>
-                <!-- Grid row -->
             </div>
         </section>
-        <!-- Section: Links  -->
 
         <!-- Copyright -->
         <div class="text-center p-4">
             Project &copy; Bojan Bakaric 2023 <a href="https://github.com/Boiann/cvek-art-gallery"
-                class="me-4 text-reset" target="_blank">
+                class="me-4 text-reset" target="_blank" aria-label="GitHub">
                 <i class="fa-brands fa-square-github"></i>
             </a>
             <p>Portfolio Project, not a real website</p>
             <p>All paintings produced (and images of them) on this site are owned by Mr. Cvek</p>
         </div>
-        <!-- Copyright -->
     </footer>
-    <!-- Footer -->
 
+    <!-- Back to top button -->
     <div class="btt-button shadow-sm rounded-0 border border-black">
+        <span class="sr-only">Back to top</span>
         <a class="btt-link d-flex h-100">
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>
@@ -305,7 +296,7 @@
 
     {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
 
         $('.btt-link').click(function (e) {
@@ -313,7 +304,7 @@
         })
     </script>
 
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function () {
             var selector = $(this);
             var currentUrl = new URL(window.location);
