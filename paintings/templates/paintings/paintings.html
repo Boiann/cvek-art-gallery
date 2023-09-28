@@ -49,7 +49,7 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_subcategories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'paintings' %}">Paintings Home</a> | </span>
+                        <span class="small"><a href="{% url 'paintings' %}" class="text-black font-weight-bold">Paintings Home</a> | </span>
                         {% endif %}
                         {{ paintings|length }} Paintings{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
@@ -73,7 +73,7 @@
                         {% endif %}
                         <div class="card-body pb-0">
                             <a href="{% url 'painting_detail' painting.id %}">
-                                <p class="mb-0">{{ painting.name }}</p>
+                                <p class="mb-0 font-weight-bold text-black">{{ painting.name }}</p>
                             </a>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">

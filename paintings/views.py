@@ -132,7 +132,7 @@ def add_painting(request):
         form = PaintingForm(request.POST, request.FILES)
         if form.is_valid():
             painting = form.save()
-            messages.success(request, 'Successfully added painting!')
+            messages.info(request, 'Successfully added painting!')
             return redirect(reverse('painting_detail', args=[painting.id]))
         else:
             messages.error(request, 'Failed to add painting. Please ensure the form is valid.')
@@ -159,7 +159,7 @@ def edit_painting(request, painting_id):
         form = PaintingForm(request.POST, request.FILES, instance=painting)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated painting!')
+            messages.info(request, 'Successfully updated painting!')
             return redirect(reverse('painting_detail', args=[painting.id]))
         else:
             messages.error(request, 'Failed to update painting. Please ensure the form is valid.')

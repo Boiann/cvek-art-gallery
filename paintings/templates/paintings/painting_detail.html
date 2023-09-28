@@ -81,12 +81,12 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title text-center text-danger col-12" id="ModalLongTitle">Are you sure?</h5>
+                <h3 class="modal-title text-center text-danger col-12">Are you sure?</h3>
             </div>
             <div class="modal-body">
                 <p class="text-center">
@@ -94,20 +94,19 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <a href="{% url 'edit_painting' painting.id %}">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Yes</button>
+                <a href="{% url 'edit_painting' painting.id %}" class="btn btn-success">Yes
                 </a>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal">No</button>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title text-center text-danger col-12" id="ModalLongTitle">Are you sure?</h5>
+                <h3 class="modal-title text-center text-danger col-12">Are you sure?</h3>
             </div>
             <div class="modal-body">
                 <p class="text-center">
@@ -116,10 +115,9 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <a href="{% url 'delete_painting' painting.id %}">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Yes</button>
+                <a href="{% url 'delete_painting' painting.id %}" class="btn btn-success">Yes
                 </a>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                <button class="btn btn-danger" data-bs-dismiss="modal">No</button>
             </div>
         </div>
     </div>
