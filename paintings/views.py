@@ -22,6 +22,7 @@ def all_paintings(request):
     discounted_price = None
 
     if request.GET:
+        # Handle sorting
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -37,20 +38,24 @@ def all_paintings(request):
                     sortkey = f'-{sortkey}'
             paintings = paintings.order_by(sortkey)
 
+        # Handle category filtering
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             paintings = paintings.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        # Handle subcategory filtering
         if 'subcategory' in request.GET:
             subcategories = request.GET['subcategory'].split(',')
             paintings = paintings.filter(subcategory__name__in=subcategories)
             subcategories = SubCategory.objects.filter(name__in=subcategories)
 
+        # Handle search
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('paintings'))
 
             queries = (
@@ -72,7 +77,8 @@ def all_paintings(request):
         is_clearance = painting.subcategory.filter(name='clearance').exists()
         if is_clearance:
             discount_percentage = Decimal('0.20')  # 20% discount as a Decimal
-            discounted_price = painting.price - (painting.price * discount_percentage)
+            discounted_price = painting.price - (
+                painting.price * discount_percentage)
             # Limit the clearance price to 2 decimal places
             discounted_price = discounted_price.quantize(Decimal('0.00'))
         else:
@@ -105,7 +111,8 @@ def painting_detail(request, painting_id):
     # Calculate the discounted price if it's a clearance item
     if is_clearance:
         discount_percentage = Decimal('0.20')  # 20% discount as a Decimal
-        discounted_price = painting.price - (painting.price * discount_percentage)
+        discounted_price = painting.price - (
+            painting.price * discount_percentage)
         # Limit the clearance price to 2 decimal places
         discounted_price = discounted_price.quantize(Decimal('0.00'))
     else:
@@ -120,12 +127,15 @@ def painting_detail(request, painting_id):
     return render(request, 'paintings/painting_detail.html', context)
 
 
+# View to add a painting (admin access required)
 @login_required
 def add_painting(request):
     """ Add a painting to the store """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, access denied. Try again in a couple of months for further disapproval.')
+        messages.error(
+            request, 'Sorry, access denied. \
+                Try again in a couple of months for further disapproval.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -135,7 +145,9 @@ def add_painting(request):
             messages.info(request, 'Successfully added painting!')
             return redirect(reverse('painting_detail', args=[painting.id]))
         else:
-            messages.error(request, 'Failed to add painting. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add painting. \
+                    Please ensure the form is valid.')
     else:
         form = PaintingForm()
     template = 'paintings/add_painting.html'
@@ -146,12 +158,15 @@ def add_painting(request):
     return render(request, template, context)
 
 
+# View to edit a painting (admin access required)
 @login_required
 def edit_painting(request, painting_id):
     """ Edit a painting in the store """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, access denied. Try again in a couple of months for further disapproval.')
+        messages.error(
+            request, 'Sorry, access denied. Try again in a couple \
+                of months for further disapproval.')
         return redirect(reverse('home'))
 
     painting = get_object_or_404(Painting, pk=painting_id)
@@ -162,7 +177,9 @@ def edit_painting(request, painting_id):
             messages.info(request, 'Successfully updated painting!')
             return redirect(reverse('painting_detail', args=[painting.id]))
         else:
-            messages.error(request, 'Failed to update painting. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update painting. \
+                    Please ensure the form is valid.')
     else:
         form = PaintingForm(instance=painting)
         messages.info(request, f'You are editing {painting.name}')
@@ -176,12 +193,15 @@ def edit_painting(request, painting_id):
     return render(request, template, context)
 
 
+# View to delete a painting (admin access required)
 @login_required
 def delete_painting(request, painting_id):
     """ Delete a painting from the store """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, access denied. Try again in a couple of months for further disapproval.')
+        messages.error(
+            request, 'Sorry, access denied. Try again in a couple of \
+                months for further disapproval.')
         return redirect(reverse('home'))
 
     painting = get_object_or_404(Painting, pk=painting_id)

@@ -1,6 +1,7 @@
 from django.db import models
 
 
+# Define the Category model
 class Category(models.Model):
 
     class Meta:
@@ -16,12 +17,14 @@ class Category(models.Model):
         return self.friendly_name
 
 
+# Define the SubCategory model
 class SubCategory(models.Model):
 
     class Meta:
         verbose_name_plural = 'SubCategories'
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -32,14 +35,17 @@ class SubCategory(models.Model):
         return self.friendly_name
 
 
+# Define the Painting model
 class Painting(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
     subcategory = models.ManyToManyField('SubCategory', blank=True)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    year = models.DecimalField(max_digits=4, decimal_places=0, null=True, blank=True)
+    year = models.DecimalField(
+        max_digits=4, decimal_places=0, null=True, blank=True)
     size = models.CharField(max_length=254, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 

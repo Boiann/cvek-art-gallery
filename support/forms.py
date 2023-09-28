@@ -13,6 +13,7 @@ class ContactForm(forms.ModelForm):
 
         super().__init__(*args, **kwargs)
 
+        # Define placeholders for form fields
         placeholders = {
             'name': 'Name',
             'email': 'Email Address',
@@ -20,6 +21,7 @@ class ContactForm(forms.ModelForm):
             'message': 'message',
         }
 
+        # Loop through form fields and set placeholders
         for field in self.fields:
             if field != 'contact_reason':
                 if self.fields[field].required:

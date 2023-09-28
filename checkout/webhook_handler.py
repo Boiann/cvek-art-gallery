@@ -74,8 +74,10 @@ class StripeWH_Handler:
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
                 profile.default_town_or_city = shipping_details.address.city
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_street_address1 = \
+                    shipping_details.address.line1
+                profile.default_street_address2 = \
+                    shipping_details.address.line2
                 profile.default_county = shipping_details.address.state
                 profile.save()
 
@@ -83,6 +85,7 @@ class StripeWH_Handler:
         attempt = 1
         while attempt <= 5:
             try:
+                # Check if an order with the same details already exists
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
@@ -104,13 +107,16 @@ class StripeWH_Handler:
                 time.sleep(1)
 
         if order_exists:
+            # Send a confirmation email for the existing order
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} | SUCCESS: \
+                    Verified order already in database',
                 status=200)
         else:
             order = None
             try:
+                # Create a new order based on the webhook data
                 order = Order.objects.create(
                     full_name=shipping_details.name,
                     user_profile=profile,
@@ -141,9 +147,11 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
+        # Send a confirmation email for the newly created order
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=f'Webhook received: {event["type"]} | SUCCESS: \
+                Created order in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):

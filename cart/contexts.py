@@ -4,12 +4,14 @@ from django.shortcuts import get_object_or_404
 from paintings.models import Painting
 
 
+# Define the 'cart_contents' function to calculate cart details
 def cart_contents(request):
     cart_items = request.session.get('cart', [])
     total = Decimal('0.00')
     total_without_discount = Decimal('0.00')
     clearance_discount = Decimal('0.20')  # 20% discount for clearance items
 
+    # Iterate through each item in the cart
     for item in cart_items:
         painting = get_object_or_404(Painting, id=item['id'])
         frame_price = Decimal(item['frame_price'])
@@ -17,10 +19,12 @@ def cart_contents(request):
 
         if painting.subcategory.filter(name='clearance').exists():
             discounted_price = base_price - (base_price * clearance_discount)
-            total_without_discount += discounted_price + frame_price  # Use discounted price for clearance items
+            # Use discounted price for clearance items
+            total_without_discount += discounted_price + frame_price
         else:
             discounted_price = base_price
-            total_without_discount += base_price + frame_price  # Use base price for regular items
+            # Use base price for regular items
+            total_without_discount += base_price + frame_price
 
         total += discounted_price + frame_price
 
@@ -50,7 +54,8 @@ def cart_contents(request):
         'free_delivery_delta': free_delivery_delta.quantize(Decimal('0.00')),
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total.quantize(Decimal('0.00')),
-        'total_without_discount': total_without_discount.quantize(Decimal('0.00')),
+        'total_without_discount':
+        total_without_discount.quantize(Decimal('0.00')),
     }
 
     return context
