@@ -137,6 +137,8 @@ Visit the live site
 
 ## **Testing**
 
+**Testing information can be found in a separate testing file [TESTING.md](/TESTING.md).**
+
 [Back to top ⇧](#cvek-art-gallery)
 
 ---
