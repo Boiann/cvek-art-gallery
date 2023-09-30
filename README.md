@@ -958,7 +958,60 @@ The following features could be added to CAG in the future. Project deadline inf
 
 ### **Languages Used**
 
-### **Programs Used**
+- [HTML](https://en.wikipedia.org/wiki/HTML5) - For adding content and formatting.
+- [CSS](https://en.wikipedia.org/wiki/CSS) - For adding style and colours.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - For adding interactive features.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - High-level, general-purpose programming language.
+
+### **Django and Python Packages**
+
+- [asgiref](https://pypi.org/project/asgiref/) - ASGI (Asynchronous Server Gateway Interface) framework, a standard interface between web servers and Python web applications.
+- [boto3](https://pypi.org/project/boto3/) - Amazon Web Services (AWS) SDK for Python, providing access to AWS services.
+- [botocore](https://pypi.org/project/botocore/) - Low-level, core functionality of AWS SDK for Python (Boto3).
+- [dj-database-url](https://pypi.org/project/dj-database-url/) - A utility for utilizing database URLs in Django applications.
+- [Django](https://www.djangoproject.com/) - A Python-based web framework that follows the model-template-view architectural pattern, used for building the project.
+- [django-allauth](https://django-allauth.readthedocs.io/) - A Django application used for account registration, management, and authentication.
+- [django-countries](https://pypi.org/project/django-countries/) - A Django application for providing country choices for forms.
+- [django-crispy-forms](https://pypi.org/project/django-crispy-forms/) - A Django application that makes it easy to style Django forms.
+- [django-storages](https://pypi.org/project/django-storages/) - A collection of custom storage backends for Django.
+- [gunicorn](https://pypi.org/project/gunicorn/) - A Python Web Server Gateway Interface (WSGI) HTTP server.
+- [jmespath](https://pypi.org/project/jmespath/) - A query language for JSON, allowing you to search and manipulate JSON data.
+- [oauthlib](https://pypi.org/project/oauthlib/) - A generic and reusable Python library for implementing OAuth1 and OAuth2 providers.
+- [Pillow](https://pypi.org/project/Pillow/) - The Python Imaging Library adds image processing capabilities to your Python interpreter.
+- [psycopg2](https://pypi.org/project/psycopg2/) - A PostgreSQL adapter for Python.
+- [python3-openid](https://pypi.org/project/python3-openid/) - A set of Python packages for implementing OpenID Connect.
+- [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - OAuthlib authentication support for Requests.
+- [s3transfer](https://pypi.org/project/s3transfer/) - An Amazon S3 Transfer Manager for Python.
+- [sqlparse](https://pypi.org/project/sqlparse/) - A non-validating SQL parser module for Python.
+- [stripe](https://pypi.org/project/stripe/) - A Python library for the Stripe API.
+- [urllib3](https://pypi.org/project/urllib3/) - A powerful HTTP client for Python, which provides features such as connection pooling, request retries, and more.
+
+### **Programs/Tools Used**
+
+- [Amazon AWS](https://aws.amazon.com/) - Used to store the static and media files for the site.
+- [Mailchimp](https://mailchimp.com/) - Used to create the newsletter signup form.
+- [Stripe](https://stripe.com/gb) has been used for the payment processing and webhooks handling.
+- [GitHub](https://github.com/) - Source code hosted on GitHub, deployed using Git Pages.
+- [GitPod](https://www.gitpod.io/) - Used to commit, comment and push code during the development process.
+- [Font Awesome](https://fontawesome.com/) - Font Awesome use to source necessary icons used in the project.
+- [Balsamiq](https://balsamiq.com/) - Used to create wireframes and website structure map for the project.
+- [Google Keep](https://keep.google.com/) - Used to make notes during the project duration.
+- [LanguageTool](https://languagetool.org/) - Used for general spell-check.
+- [Google Fonts](https://fonts.google.com/) - Used to import fonts to the project.
+- [GifCap](https://gifcap.dev/) - Used to capture gif-s of the project.
+- [Heroku](https://www.heroku.com/) - Used to deploy the project.
+- [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker) - Used to make the iteration flowchart for the project.
+- [Bootstrap clean blog](https://startbootstrap.com/theme/clean-blog) - Bootstrap blog template imported in for content management and CSS.
+- [ElephantSQL](https://www.elephantsql.com/) - Free and open-source relational database management system (RDBMS).
+- [Bootstrap5](https://getbootstrap.com/) - Used for adding predefined styled elements and creating responsiveness.
+- [Pixillion Image Converter](https://www.nchsoftware.com/imageconverter/index.html?ns=true&kw=pixillion%20image%20converter&gclid=Cj0KCQiA99ybBhD9ARIsALvZavXKEsfJf5-WRUHKOv8Luf35hSJFHVg7l8SLYQtDfGnAyDrmVsToYwgaAtHqEALw_wcB) - Used to convert the images into webp format
+- [JsHint](https://jshint.com/) - Used for validating the javascript code.
+- [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used for validating the python code.
+- [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) - Used for validating the HTML.
+- [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) - Used for validating the CSS.
+- [Chrome Del Tools](https://developer.chrome.com/docs/devtools/) - For debugging the project.
+- [W.A.V.E.](https://wave.webaim.org/) - Used for testing accessibility.
+- [LightHouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used for testing performance.
 
 [Back to top ⇧](#cvek-art-gallery)
 
