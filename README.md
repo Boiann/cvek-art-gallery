@@ -191,15 +191,16 @@ The 'noimage' image, used for adding new painting to the store without actual pa
     - When logging out, the user is asked 'Are you sure' before signing out.
     - When signed out, the user is brought to the index page.
 
-  - *Paintings page (this includes all the categoties, subcategories and sorting options):*
+  - *Paintings page (this includes all the categories, subcategories and sorting options):*
     - The user is presented with a paginated view of paintings for sale.
     - Each painting card consists of image, price, category name and year it was made.
     - If the user clicks on a painting the detail of the painting is presented
+    - All of the paintings have category and subcategory, so it is possible to have a painting in for example, category Flowers but also a subcategory of 'New Paintings'. This is important for a better UX because now if the user selects category 'Flowers', all of the paintings in that category will be included in the result, even if they are in a different subcategories, for example 'Clearance'.
 
   - *Painting-detail page:*
     - This page shows larger image of the Painting, as well as it's full name, size, price, year of production, add to cart button and frame option dropdown button
     - The customer can choose to add a standard (+€50) or Premium (+€100) frame, which affects the price at the checkout
-    - If the painting is in 'clearance' subcategory, no frame options are available
+    - If the painting is in 'clearance' subcategory, no frame options are available (But the painting is sold at reduced price)
 
   - *Cart page*
     - Consists of the list of paintings user has placed in the cart, current selected frame, with Subtotal calculations on the right depending on if the user wishes to add/remove/change the frame selected
@@ -273,7 +274,8 @@ Multiple apps and classes/models were created for the project, each one supporti
 | name          | name          | CharField     | max_length=254 |
 | friendly_name | friendly_name | CharField     | max_length=254, null=True, blank=True |
 
-   - SubCategory model
+   - SubCategory model, it was a valuable addition to the project because not only can one painting be a single category, but it can be a category with multiple categories,
+   making it simple for the store owner to include a painting to, for example, category Flowers but also a subcategory of 'New Paintings'
 
 | Name          | Database Key  | Field Type    | Validation     |
 | ------------- | ------------- | ------------- | -------------- |
@@ -380,6 +382,8 @@ Colored text was used when possible (using Tex) for organizing, color-coding and
 
 Before writing any code, everything was considered and planned as much as possible. All of these calculations and documents were made before 'actual' work on the project began.
 
+---
+
 <details>
 <summary>Timeboxing - GLOBAL</summary>
 
@@ -434,6 +438,8 @@ FINAL TOTAL === 200 hrs.
 
 </details>
 
+---
+
 <details>
 <summary>Timeboxing Milestones-Epics</summary>
 
@@ -477,6 +483,8 @@ Weeks Available = 3 weeks and 3 days = 24 days +
 
 </details>
 
+---
+
 <details>
 <summary>Timeboxing - ITERATION</summary> 
 
@@ -507,6 +515,8 @@ please see the Timeboxing/Project Flow image
 - The day before, preferably prepare the next week's milestone plan using Projects Board/Issues and do a revision of work done
 
 </details>
+
+---
 
 <details>
 <summary>User stories/tasks development</summary>
@@ -609,6 +619,8 @@ EPIC: Project submission final check
 
 </details>
 
+---
+
 <details>
 <summary>CAG Timeboxing/Project Flow Image</summary>
 
@@ -618,6 +630,7 @@ EPIC: Project submission final check
 ---
 
 **Version Control**
+
 Git branching/squashing and merging was used in this project. When work was to be done a separate branch was made, using author's own created [Guide](https://github.com/Boiann/branching-merging-squashing). The strategy was to have each branch dedicated to one feature/fix/issue or epic/iteration. After the work was completed on a particular branch, the branch would be squashed and merged to the main branch. The squashed branches are then usually deleted, but they are left as is in this project to demonstrate development.
 
 ---
@@ -628,11 +641,314 @@ Git branching/squashing and merging was used in this project. When work was to b
 
 ## **Features**
 
-<!-- Features images/gifs -->
+All of the features presented in this sections are fully responsive on all devices and screen widths.
+Please refer to [TESTING.md](/TESTING.md) for more information about responsiveness testing.
+
+### **Index**
+
+<details>
+<summary>Index page image carousel and shop now button opening paintings for sale, animated marquee, logo and title return to index</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Index page dropdown menus opening respective pages/selections</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Search funtion returning relevant paintings, returning category/subcategory, nothing found result</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Subscription button opening subscription page</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Footer nav links opening new page</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Footer social media links open in a new tab</summary>
+
+<!-- GIF --> 
+</details>
+
+### **Account**
+
+<details>
+<summary>My Account dropdown links, register and log in pages with reverse links</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Register page email required warning, password not matching warning, user already registered warning</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Register page check email and validation</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Successful sign-in success toast message, 3 sec delay before disappearing</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Logging out 'are you sure' check and success toast message</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Password reset functionality, email check</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>My Account page for details after user is logged in</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Admin links in 'My Account'</summary>
+
+<!-- GIF --> 
+</details>
+
+### **Paintings**
+
+<details>
+<summary>All Paintings dropdown returns selected sorting</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Paintings paginated view, sorting options and smooth return to top button</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Paintings having in a category can have subcategory and return in the selected category</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Painting detail view, info and frame selector</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Painting in 'Clearance' subcat has no frames available, 20% discount</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Admin painting detail view, edit and delete buttons visible, warning modals</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Admin 'Product Management' link and adding new painting, no image</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Admin 'Product Management' link and adding new painting, with image</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Admin edit painting page and success message/s</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Admin delete painting page and success message</summary>
+
+<!-- GIF --> 
+</details>
+
+### **Cart**
+
+<details>
+<summary>Add to cart success message and basket total updating, mini-view of cart with delivery warning and cart info</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Add to cart success message and mini-view of cart with frame info and over 3 paintings in the cart message</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Add to cart button with different frame selected updates the basket total</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Cart page with paintings info, grand total calculation with delivery</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Cart page with paintings info, grand total calculation with 3 paintings discount</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Cart page with paintings info, grand total calculation with 6 paintings discount</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Cart page with paintings info, update/change frame option, delete painting from cart</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Cart page with paintings info, 'clearance' painting info and no frames options</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Keep shopping button lists all paintings</summary>
+
+<!-- GIF --> 
+</details>
+
+### **Checkout**
+
+<details>
+<summary>Checkout page and order summary with relevant info about paintings to be purchased, discount visible</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Adjust cart button returns to current cart</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Order form not working without inputs</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Successful purchase of unregistered user, email check</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Successful purchase of registered user, email check</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Successful purchase of registered user, order and details saved to 'My Profile' page</summary>
+
+<!-- GIF --> 
+</details>
+
+### **Other**
+
+<details>
+<summary>Newsletter link opening subscribe page, thank you msg, already subscribed msg </summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>About the Artist page</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>T&C's page</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Privacy page</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Contact us page, form inputs required, success redirect to index and email check</summary>
+
+<!-- GIF --> 
+</details>
+
+### **Admin page**
+
+<details>
+<summary>Admin can view details of orders</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Admin can edit/delete details of orders and users</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Admin can create new painting for sale on admin page</summary>
+
+<!-- GIF --> 
+</details>
 
 ## **Future Implementations**
 
-<!-- Description -->
+The following features could be added to CAG in the future. Project deadline influenced heavily what was left out.
+
+  - Add Social sign-in options (Google, GitHub, Facebook)
+  - Add wishlist feature
+  - Add testimonials feature, Painting review doesn't really make sense as each painting is unique and is fully visible when purchasing, but reviews/testimonials about the frame quality, sizes and the shopping experience as a whole would benefit business
+  - Add real-time database tracking for paintings sold, this was looked into but didn't make it into the project. It would be good to disable the 'Add to Cart' button while the painting is in the cart, and display 'Out of Stock' info when the painting is purchased. For a real business this is a must have to avoid problems with items of single/unique quantity.
+  - Create or pay for automated response email for customers that subscribe to the Newsletter, possibly add a discount voucher or similar
 
 [Back to top ⇧](#cvek-art-gallery)
 
