@@ -5,9 +5,9 @@ https://github.com/Boiann/boudoir-studio -->
 
 [Main README.md file](/README.md)
 
-View live project
+Visit the live site - [Cvek Art Gallery](https://cvek-art-gallery-d4a224801c39.herokuapp.com/ "Link to Cvek Art Gallery")
 
-View GitHub repository
+View GitHub [Repository](https://github.com/Boiann/cvek-art-gallery)
 
 ---
 ## **Contents**

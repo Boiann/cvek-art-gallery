@@ -7,7 +7,7 @@ Cvek Art Gallery is a Project 5 for Code Institute Full-stack development progra
 
 <!-- AmIResponsive img -->
 
-Visit the live site [Here.](https://cvek-art-gallery-d4a224801c39.herokuapp.com/ "Link to Cvek Art Gallery")
+Visit the live site - [Cvek Art Gallery](https://cvek-art-gallery-d4a224801c39.herokuapp.com/ "Link to Cvek Art Gallery")
 
 ---
 
@@ -1011,6 +1011,10 @@ The following features could be added to CAG in the future. Project deadline inf
 - [ElephantSQL](https://www.elephantsql.com/) - Free and open-source relational database management system (RDBMS).
 - [Bootstrap5](https://getbootstrap.com/) - Used for adding predefined styled elements and creating responsiveness.
 - [Pixillion Image Converter](https://www.nchsoftware.com/imageconverter/index.html?ns=true&kw=pixillion%20image%20converter&gclid=Cj0KCQiA99ybBhD9ARIsALvZavXKEsfJf5-WRUHKOv8Luf35hSJFHVg7l8SLYQtDfGnAyDrmVsToYwgaAtHqEALw_wcB) - Used to convert the images into webp format
+- [Looka](https://looka.com/) - Used for favicon and logo creation.
+- [Email on Deck](https://www.emailondeck.com/) - Used for testing various email communication/verification.
+- [WebsitePolicies](https://www.websitepolicies.com/terms-and-conditions-generator) - Used to create T&C's for the project.
+- [TermsFeed](https://www.termsfeed.com/privacy-policy-generator/) - Used to create Privacy Policy for the project.
 - [JsHint](https://jshint.com/) - Used for validating the javascript code.
 - [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used for validating the python code.
 - [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) - Used for validating the HTML.
@@ -1043,9 +1047,40 @@ The following features could be added to CAG in the future. Project deadline inf
 
 ### **Code used and adapted**
 
-### **Websites visited to gather knowledge**
+ - The Code Institute's [Boutique Ado](https://github.com/Boiann/boutique_ado) walkthrough project provided a lot of the site's original functionality, direction and design choices that were modified and expanded as needed. It was relied on heavily during whole development process and a lot of code is used directly from it, or with changes/updates to it.
+
+ - Previous projects of the developer were used, [Boudoir Studio](https://boiann.github.io/boudoir-studio/index.html) ( GithHub repository [here](https://github.com/Boiann/boudoir-studio) ), [Budget Calculator](https://boiann.github.io/budget-calculator/) ( GithHub repository [here](https://github.com/Boiann/budget-calculator) ) and [Space Quiz](https://space-quiz.herokuapp.com/) ( GithHub repository [here](https://github.com/Boiann/space-quiz) ) as a source for looking up the code/solutions for CSS and README purposes mainly. [Federal Bureau of Control](https://federal-bureau-of-control.herokuapp.com/) ( GithHub repository [here](https://github.com/Boiann/federal-bureau-of-control) ) was used to adapt and look up bits and pieces of python code where needed.
+
+ - How to implement Category, SubCategory and Product in django, found on [Stack Overflow](https://stackoverflow.com/questions/71523700/how-to-implement-category-subcategory-and-product-in-django).
+
+ - Marquee animation effect, found on [w3Schools](https://www.w3schools.in/css3/css-marquee).
+
+ - Bootstrap website template (used for 'About the Artist' page), found on [startbootstrap](https://startbootstrap.com/previews/full-width-pics).
+
+### **Websites visited for info and solutions**
+
+There were many sites visited during the duration of the project.
+[Google](https://google.com/ "Google home page") was used to produce results of the specific query, and [Stack Overflow](https://stackoverflow.com/ "Stack Overflow home page") proved to be the best source of information for various queries/issues. 
+
+Standouts are [Django documentation](https://docs.djangoproject.com/en/4.2/) and [Bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) that helped immensely.
+
+A lot of other projects were looked into to help with development, standouts are [PP5-EliteTechPC](https://github.com/kryspinm97/PP5-EliteTechPC), [le_patissier](https://github.com/LudovicLeGuen/le_patissier), [level_up_loot_vt](https://github.com/VictoriaT87/level_up_loot_vt), [CI_PP5_Blade](https://github.com/rockroman/CI_PP5_Blade) and [drizzle-and-shade](https://github.com/michelleconville/drizzle-and-shade).
 
 ###  **Acknowledgments**
+
+This whole project is dedicated to my true father, Boris Cvek. I could get pathetic and write ad infinitum. But I think it's clear enough I admire the man. All the praise and admiration in the world cannot paint the picture (haha) well enough to describe it. He is the one that made me into the man I am now, and I am forever grateful.
+
+Without support I got from other people, this project would never be realized. I'll try and remember to thank everyone and everything I can!
+
+- M., my wife, thank you for your support and cheering me on, lifting me back up when it got hard. Thank you for taking care of all the housework and food, children and numerous other responsibilities while I was busy with the project. Without you this journey would never be possible. And when it got hard and complicated, you never gave up on me and this dream of career change.
+- A., G. and V., my three beautiful girls. Thank you for being so understanding during the project work. Thank you from the bottom of my heart for being who you are, wonderful and delightful souls. You make me proud to be your dad.
+- Boris and Maja, my brother and sister, thank you for your support.
+- Marija and Boris, my mother and father, thank you for making me feel like a superstar when I announced I'm starting this journey and your support throughout it.
+- John, my friend, thank you for starting me on this path, and for your support, chats and sharing the things you learned.
+- Helen from Code Institute, thank you believing in me and making this change possible.
+- Slack community, thank you for being a constant source of good information and solutions.
+- Koko, my mentor, thank you for being an incredible source of solutions and good advice, your support meant a great deal during the project.
+- C8H10N4O2 in a cup. Thank you for existing.
 
 [Back to top ⇧](#cvek-art-gallery)
 
