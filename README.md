@@ -888,6 +888,12 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 <!-- GIF --> 
 </details>
 
+<details>
+<summary>Successful purchase positive results from Stripe webhooks</summary>
+
+<!-- GIF --> 
+</details>
+
 ### **Other**
 
 <details>
@@ -1018,6 +1024,8 @@ The following features could be added to CAG in the future. Project deadline inf
 ---
 
 ## **Deployment**
+
+**Deployment information can be found in a separate file [DEPLOYMENT.md](/DEPLOYMENT.md).**
 
 [Back to top ⇧](#cvek-art-gallery)
 
