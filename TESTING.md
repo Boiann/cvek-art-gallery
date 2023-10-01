@@ -121,11 +121,6 @@ The [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_opt
 
  <!-- img -->
 
- - Edit Painting
- <br>
-
- <!-- img -->
-
 ### **W3C CSS Validator**
 
 The [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS code used, showing no errors.
@@ -215,7 +210,12 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 #### Home App
 
- - urls.py & views.py
+ - urls.py
+ <br>
+
+ <!-- img -->
+
+ - views.py
  <br>
 
  <!-- img -->
@@ -483,7 +483,7 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ### **WAVE WebAim**
 
-[W.A.V.E.](https://wave.webaim.org/) was used to test for accessibility, showing no errors.
+[W.A.V.E.](https://wave.webaim.org/) was used to test for accessibility, showing no errors. Unfortunately cart, checkout and pages requiring login could not be tested on WebAim.
 
  - Index
  <br>
@@ -496,26 +496,6 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
  <!-- img -->
 
  - Painting detail
- <br>
-
- <!-- img -->
-
- - Cart
- <br>
-
- <!-- img -->
-
- - Checkout
- <br>
-
- <!-- img -->
-
- - Checkout success
- <br>
-
- <!-- img -->
-
-  - Newsletter
  <br>
 
  <!-- img -->
@@ -545,30 +525,11 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
  <!-- img -->
 
- - Log out
- <br>
-
- <!-- img -->
-
  - Register
  <br>
 
  <!-- img -->
 
- - My Account
- <br>
-
- <!-- img -->
-
- - Add Painting
- <br>
-
- <!-- img -->
-
- - Edit Painting
- <br>
-
- <!-- img -->
 
 [Back to top ⇧](#cvek-art-gallery---testing)
 

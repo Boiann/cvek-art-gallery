@@ -69,7 +69,8 @@ def contact(request):
             return redirect(reverse('home'))
         else:
             # Display an error message if form submission fails
-            messages.error(request, f'An error occured, please try again later')
+            messages.error(
+                request, f'An error occured, please try again later')
 
     context = {
         'form': form,
