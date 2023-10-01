@@ -755,13 +755,13 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 </details>
 
 <details>
-<summary>Admin edit painting page and success message/s working</summary>
+<summary>Admin edit painting page modal and success message/s working</summary>
 
 <!-- GIF --> 
 </details>
 
 <details>
-<summary>Admin delete painting page and success message working</summary>
+<summary>Admin delete painting page modal and success message working</summary>
 
 <!-- GIF --> 
 </details>
@@ -973,6 +973,8 @@ Two of the biggest bugs were with Stripe webhooks and in later development, conn
   - Slack community members suggested that `DISABLE_COLLECTSTATIC` should actually NOT be removed for the first time deployment connected with AWS, this was later looked into and the issue is actually having the debug mode set to true, and that was creating issues for some people
   - Trying to run collectstatic and 'fixing' static settings in settings.py only made things worse, lack of experience made it worse still
   - Finally, the mistake was caught - because of multiple projects in GitPod workspace each project had it's own `DATABSE_URL`, renamed to `DATABSE_URL_CAG` for this project. This was an issue before with Stripe, because `STRIPE_WH_SECRET` set to general user scope (Boiann/*) was returning webhooks from both Boutique Ado + CAG. This was caught early, fixed quickly, and promise was made to oneself - 'Don't do this again'. But it did happen again, because database Heroku Config var was using `DATABSE_URL`. Changing that config var to `DATABSE_URL_CAG` solved issues with media files.
+
+ - Sitemap bug - when sitemap was created for the first time, it was over 2500 lines long. At first, this was thought to be an issue with missing robots.txt file. After that was added, the sitemap still returned very large. Other projects were tested to see their sitemap scope, all returned ok. After Google, Slack and Stack Overflow check, tutoring was contacted, yielding no clear instruction/advice. Upon closer examination, it was noticed that add/edit/delete painting links were crawled, which only a superuser can do. The issue was that the html presented no edit/delete buttons for regular user (superuser check) but the buttons were still present in the hidden modal. Adding superuser check within the modal itself solved this issue and returned sitemap of normal size. 
 
 [Back to top ⇧](#cvek-art-gallery---testing)
 

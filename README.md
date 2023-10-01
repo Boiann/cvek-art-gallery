@@ -5,7 +5,7 @@ https://github.com/Boiann/budget-calculator -->
 
 Cvek Art Gallery is a Project 5 for Code Institute Full-stack development program: E-Commerce Applications. It is a B2C platform, gallery/store where the user can purchase painting/s, with added frame and discount options. Using mainly Django, a Python back-end development framework and Bootstrap, front-end (CSS) framework wired up to Stripe, this project was brought to life. Made with passion and meant to honor my father whose abilities, persistence and the thirst for learning keep inspiring. 
 
-<!-- AmIResponsive img -->
+![Responsive website image](readme_assets/images/general/amiresponsive_cag.png)
 
 Visit the live site - [Cvek Art Gallery](https://cvek-art-gallery-d4a224801c39.herokuapp.com/ "Link to Cvek Art Gallery")
 
@@ -133,9 +133,15 @@ This site follows a B2C (business-to-consumer) model, selling paintings with or 
 
 The site is connected to Facebook where business page was made. The [Facebook link](https://www.facebook.com/people/Cvek-Art-Gallery/61551953037626/) is not guaranteed to not be removed by the time this project is reviewed, and for that reason it is not included in the site footer FB link. FB page was captured in GIF format as proof:
 
-<!-- FB GIF -->
+<details>
+<summary>Facebook GIF:</summary>
 
-The project also includes descriptive meta tags in base.html head, sitemap.xm and robots.txt to optimize SEO. Newsletter subscription is also supported via MailChimp.
+![Facebook GIF](readme_assets/gifs/general/fb-recording.gif)
+</details>
+
+### **Marketing**
+
+The project includes descriptive meta tags in base.html head, sitemap.xm and robots.txt to optimize SEO. Newsletter subscription is also supported via MailChimp. For better SEO all of the paintings added have normal and descriptive names instead of num/char mix, example; "springtime-waterfall-in-forest-painting.webp".
 
 [Back to top ⇧](#cvek-art-gallery)
 
@@ -151,7 +157,7 @@ The color scheme used in the project is not explicitly defined. Using Bootstrap 
 
 All the images of paintings were taken in the home of Mr. Cvek with his blessing. He also approved their usage in this project. Only two images were produced explicitly for the purposes of the project, the logo and favicon. 
 
-<!-- Logo img -->
+![Logo image](readme_assets/images/general/logo.png)
 
 The 'noimage' image, used for adding new painting to the store without actual painting image, was included even if it doesn't really make sense to submit a painting for sale without its image. It was kept in for testing purposes.
 
@@ -334,13 +340,13 @@ Wireframes for Assessment Guide and Project Planning & Ux were made before the o
 <details>
 <summary>Assessment guide wireframe</summary>
 
-<!-- img -->
+![Assessment guide wireframe](readme_assets/images/wireframes/pp5_assessment_guide.png)
 </details>
 
 <details>
 <summary>Project planning wireframe</summary>
 
-<!-- img -->
+![Project planning wireframe](readme_assets/images/wireframes/pp5_planning_and_ux.png)
 </details>
 
 Using Agile, the basic or Minimal Viable Product (MVP) wireframe was made, then if time allows and the scope can increase, Enhanced and Superior wireframes were to be developed.
@@ -349,7 +355,7 @@ Differences between scopes were considered early as to allow for the use of Agil
 <details>
 <summary>MVP wireframe + mobile</summary>
 
-<!-- image -->
+![MVP wireframe + mobile](readme_assets/images/wireframes/cag_mvp_wireframe.png)
 </details>
 
 
@@ -374,7 +380,8 @@ The structure of development was: Milestone => Epic => Task/User Story.
 Epics were considered as iterations, and all of them contained 5 issues except one that had 10 of them. Using the MoSCoW prioritization technique, they were separated into 60% as Must Have, 20% Should Have and 20% Could Have.
 
 Three templates were used to create the respective Epic, Task and User Story, plus one for BUGs:
-  <!-- img/s -->
+
+![Issue templates](readme_assets/images/general/issue_templates.png)
 
 Colored text was used when possible (using Tex) for organizing, color-coding and visual distinction.
 
@@ -624,7 +631,7 @@ EPIC: Project submission final check
 <details>
 <summary>CAG Timeboxing/Project Flow Image</summary>
 
-<!-- timebox flow img -->
+![CAG Timeboxing/Project Flow Image](readme_assets/images/general/cag_timeboxing.png)
 </details>
 
 ---
@@ -783,13 +790,13 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 </details>
 
 <details>
-<summary>Admin edit painting page and success message/s</summary>
+<summary>Admin edit painting page modal and success message/s</summary>
 
 <!-- GIF --> 
 </details>
 
 <details>
-<summary>Admin delete painting page and success message</summary>
+<summary>Admin delete painting page modal and success message</summary>
 
 <!-- GIF --> 
 </details>
