@@ -41,6 +41,9 @@ View GitHub [Repository](https://github.com/Boiann/cvek-art-gallery)
 
 The [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) was used to validate the HTML code used, showing no errors.
 
+<details>
+<summary>HTML Validation:</summary>
+
  - Index
  <br>
 
@@ -121,15 +124,20 @@ The [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_opt
 
 ![Add Painting](readme_assets/images/tests/html/html-add-painting.png)
 
+</details>
+
 ---
 
 ### **W3C CSS Validator**
 
 The [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS code used, showing no errors.
 
-<br>
+<details>
+<summary>CSS Validation:</summary>
 
 ![CSS Validator](readme_assets/images/tests/rest/css.png)
+
+</details>
 
 ---
 
@@ -137,9 +145,12 @@ The [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_
 
 The [JsHint](https://jshint.com/) was used to validate the Javascript code used, showing no errors.
 
-<br>
+<details>
+<summary>Javascript Validation:</summary>
 
 ![Javascript Validator](readme_assets/gifs/general/js-validation.gif)
+
+</details>
 
 ---
 
@@ -150,6 +161,9 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 ---
 
 #### Cart App
+
+<details>
+<summary>Cart App Validation:</summary>
 
  - contexts.py
  <br>
@@ -166,9 +180,14 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ![views](readme_assets/images/tests/python/cart/views.png)
 
+</details>
+
 ---
 
 #### Checkout App
+
+<details>
+<summary>Checkout App Validation:</summary>
 
  - admin.py
  <br>
@@ -210,9 +229,14 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ![webhooks](readme_assets/images/tests/python/checkout/webhooks.png)
 
+</details>
+
 ---
 
 #### Root App - cvek_art_gallery
+
+<details>
+<summary>Root App Validation:</summary>
 
  - urls.py
  <br>
@@ -224,9 +248,14 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ![views](readme_assets/images/tests/python/root/views.png)
 
+</details>
+
 ---
 
 #### Home App
+
+<details>
+<summary>Home App Validation:</summary>
 
  - urls.py
  <br>
@@ -238,9 +267,14 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ![views](readme_assets/images/tests/python/home/views.png)
 
+</details>
+
 ---
 
 #### Paintings App
+
+<details>
+<summary>Paintings App Validation:</summary>
 
  - admin.py
  <br>
@@ -272,9 +306,14 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ![widgets](readme_assets/images/tests/python/paintings/widgets.png)
 
+</details>
+
 ---
 
 #### Profiles App
+
+<details>
+<summary>Profiles App Validation:</summary>
 
  - forms.py
  <br>
@@ -296,9 +335,14 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ![views](readme_assets/images/tests/python/profiles/views.png)
 
+</details>
+
 ---
 
 #### Support App
+
+<details>
+<summary>Support App Validation:</summary>
 
  - forms.py
  <br>
@@ -320,6 +364,8 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ![views](readme_assets/images/tests/python/support/views.png)
 
+</details>
+
 ---
 
 ### **Lighthouse**
@@ -327,6 +373,9 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 [LightHouse](https://developer.chrome.com/docs/lighthouse/overview/) was used for testing performance.
 
 #### Desktop:
+
+<details>
+<summary>Desktop Lighthouse Validation:</summary>
 
  - Index
  <br>
@@ -413,9 +462,14 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ![Edit Painting](readme_assets/images/tests/lighthouse/desktop/edit-painting.png)
 
+</details>
+
 ---
 
 #### Mobile:
+
+<details>
+<summary>Mobile Lighthouse Validation:</summary>
 
  - Index
  <br>
@@ -502,6 +556,9 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ![Edit Painting](readme_assets/images/tests/lighthouse/mobile/edit-painting.png)
 
+</details>
+
+---
 
 [Back to top ⇧](#cvek-art-gallery---testing)
 
@@ -512,6 +569,9 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 ### **WAVE WebAim**
 
 [W.A.V.E.](https://wave.webaim.org/) was used to test for accessibility, showing no errors. Unfortunately cart, checkout and pages requiring login could not be tested on WebAim.
+
+<details>
+<summary>WAVE WebAim Validation:</summary>
 
  - Index
  <br>
@@ -558,6 +618,9 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 ![Register](readme_assets/images/tests/wave/register.png)
 
+</details>
+
+---
 
 [Back to top ⇧](#cvek-art-gallery---testing)
 

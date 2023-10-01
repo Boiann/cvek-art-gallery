@@ -99,27 +99,27 @@ To keep your personal information secure, it is advised to use Stripe test Visa 
 Many user stories were developed for the project using Agile development methodology, for the full list please see the [CAG Project.](https://github.com/users/Boiann/projects/12 "Link to Cvek Art Gallery Project") The following stories are selected from that project, and are the more important ones.
 
 #### **First Time Visitor**
- * I can open the home page so that I can see what this website is about.
- * I can effectively explore this website so that I can access all the info I need.
- * I can see a list of paintings so that I can select one or more to purchase.
- * I can find out more about the artist so that I can find out more about him.
- * I can modify my shopping bag so that I can adjust my purchase.
- * I can see a notification upon successful modifying/removing so that I can know I'm doing things right.
- * I can connect with the store/business on Facebook so I can follow on any news/updates/special offers.
+ * [Issue #24](https://github.com/Boiann/cvek-art-gallery/issues/24) I can open the home page so that I can see what this website is about.
+ * [Issue #26](https://github.com/Boiann/cvek-art-gallery/issues/26) I can effectively explore this website so that I can access all the info I need.
+ * [Issue #29](https://github.com/Boiann/cvek-art-gallery/issues/29) I can see a list of paintings so that I can select one or more to purchase.
+ * [Issue #32](https://github.com/Boiann/cvek-art-gallery/issues/32) I can find out more about the artist so that I can find out more about him.
+ * [Issue #35](https://github.com/Boiann/cvek-art-gallery/issues/35) I can modify my shopping bag so that I can adjust my purchase.
+ * [Issue #37](https://github.com/Boiann/cvek-art-gallery/issues/37) I can see a notification upon successful modifying/removing so that I can know I'm doing things right.
+ * [Issue #53](https://github.com/Boiann/cvek-art-gallery/issues/53) I can connect with the store/business on Facebook so I can follow on any news/updates/special offers.
 
 #### **Returning Customer**
- * I want to be able to register and log in/out without issues.
- * I want to get an email notification so that my registration is confirmed.
- * I can search or sort by category of paintings so that I can select one or more to purchase.
- * I can see if there is anything on special offer so that I can save some money.
- * I can remove paintings from my shopping bag so that I can adjust my purchase.
- * I can have personalized user profile so I can view my order history.
- * I can subscribe to the store newsletter so I can know about any news/updates/special offers.
+ * [Issue #19](https://github.com/Boiann/cvek-art-gallery/issues/19) I want to be able to register and log in/out without issues.
+ * [Issue #20](https://github.com/Boiann/cvek-art-gallery/issues/20) I want to get an email notification so that my registration is confirmed.
+ * [Issue #30](https://github.com/Boiann/cvek-art-gallery/issues/30) I can search or sort by category of paintings so that I can select one or more to purchase.
+ * [Issue #31](https://github.com/Boiann/cvek-art-gallery/issues/31) I can see if there is anything on special offer so that I can save some money.
+ * [Issue #36](https://github.com/Boiann/cvek-art-gallery/issues/36) I can remove paintings from my shopping bag so that I can adjust my purchase.
+ * [Issue #46](https://github.com/Boiann/cvek-art-gallery/issues/46) I can have personalized user profile so I can view my order history.
+ * [Issue #54](https://github.com/Boiann/cvek-art-gallery/issues/54) I can subscribe to the store newsletter so I can know about any news/updates/special offers.
 
 #### **Website Admin/Owner**
-* I can add/remove paintings from the store so I can remove sold out paintings and add new ones.
-* I can modify paintings in the store so I can update them with the right details.
-* I can see what the customer ordered, how much was paid, and was the discount applied.
+* [Issue #48](https://github.com/Boiann/cvek-art-gallery/issues/48) I can add/remove paintings from the store so I can remove sold out paintings and add new ones.
+* [Issue #49](https://github.com/Boiann/cvek-art-gallery/issues/49) I can modify paintings in the store so I can update them with the right details.
+* [Issue #18](https://github.com/Boiann/cvek-art-gallery/issues/18) I can see what the customer ordered, how much was paid, and was the discount applied.
 
 [Back to top ⇧](#cvek-art-gallery)
 
