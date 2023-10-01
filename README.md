@@ -20,8 +20,9 @@ Visit the live site - [Cvek Art Gallery](https://cvek-art-gallery-d4a224801c39.h
   * [User Expectations](#user-expectations)
   * [User Stories](#user-stories)
 
-* [Business model](#business-model)
-  * [Marketing](#marketing)
+* [E-Commerce Business model](#e-commerce-business-model)
+  * [Facebook Marketing](#facebook-marketing)
+  * [SEO](#seo)
 
 * [Design](#design)
   * [Color Scheme](#color-scheme)
@@ -125,11 +126,13 @@ Many user stories were developed for the project using Agile development methodo
 
 ---
 
-## **Business Model**
+## **E-Commerce Business Model**
 
 This site follows a B2C (business-to-consumer) model, selling paintings with or without added extras (frames) directly to the customer. The customer can quickly make a purchase, there is no registration mandatory for checkout. There are multiple tiers of discounts available, for delivery, and for amount of paintings in the cart (buy 3, get €50 off, buy 6 get €100 off). The business is advertised on Facebook, where a real-life site can quickly gain traction and customer base. Primary target audience are customers looking for unique and homemade oil on canvas paintings. The site uses simple and intuitive design, good ux, sign-ups to the newsletter and contact through the site itself, potential deals and more to attract and expand its audience.
 
-### **Marketing**
+The owner of the business can establish a successful eCommerce platform for selling homemade oil on canvas paintings. The aim is to expand the customer base by offering a visually appealing website with a seamless and secure payment system. The owner also must be able to manage the inventory and make updates/changes through a secure and interactive front-end interface.
+
+### **Facebook Marketing**
 
 The site is connected to Facebook where business page was made. The [Facebook link](https://www.facebook.com/people/Cvek-Art-Gallery/61551953037626/) is not guaranteed to not be removed by the time this project is reviewed, and for that reason it is not included in the site footer FB link. FB page was captured in GIF format as proof:
 
@@ -139,7 +142,9 @@ The site is connected to Facebook where business page was made. The [Facebook li
 ![Facebook GIF](readme_assets/gifs/general/fb-recording.gif)
 </details>
 
-### **Marketing**
+Further marketing strategies include sending newsletters as soon a new subscriber joins, implementing voucher discounts, possible online painting workshops and much more. As the business grows so does the need for upgrading and maintaining a level of excellence to be competitive.
+
+### **SEO**
 
 The project includes descriptive meta tags in base.html head, sitemap.xm and robots.txt to optimize SEO. Newsletter subscription is also supported via MailChimp. For better SEO all of the paintings added have normal and descriptive names instead of num/char mix, example; "springtime-waterfall-in-forest-painting.webp".
 
