@@ -926,6 +926,18 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 <!-- GIF --> 
 </details>
 
+<details>
+<summary>Error 400 page</summary>
+
+<!-- GIF --> 
+</details>
+
+<details>
+<summary>Error 500 page</summary>
+
+<!-- GIF --> 
+</details>
+
 ### **Admin page**
 
 <details>
