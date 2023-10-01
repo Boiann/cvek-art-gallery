@@ -656,37 +656,37 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 <details>
 <summary>Index page image carousel and shop now button opening paintings for sale, animated marquee, logo and title return to index</summary>
 
-<!-- GIF --> 
+![Index page image carousel](readme_assets/gifs/features/index-carousel.gif) 
 </details>
 
 <details>
 <summary>Index page dropdown menus opening respective pages/selections</summary>
 
-<!-- GIF --> 
+![Index page dropdown menus](readme_assets/gifs/features/index-menus.gif)
 </details>
 
 <details>
-<summary>Search funtion returning relevant paintings, returning category/subcategory, nothing found result</summary>
+<summary>Search function returning relevant paintings, returning category/subcategory, nothing found result</summary>
 
-<!-- GIF --> 
+![Search function returning relevant paintings](readme_assets/gifs/features/index-search-function.gif)
 </details>
 
 <details>
 <summary>Subscription button opening subscription page</summary>
 
-<!-- GIF --> 
+![Subscription button opening subscription page](readme_assets/gifs/features/index-subscription.gif)
 </details>
 
 <details>
 <summary>Footer nav links opening new page</summary>
 
-<!-- GIF --> 
+![Footer nav links opening new page](readme_assets/gifs/features/index-footer-links.gif)
 </details>
 
 <details>
 <summary>Footer social media links open in a new tab</summary>
 
-<!-- GIF --> 
+![Footer social media links open in a new tab](readme_assets/gifs/features/index-social-links.gif)
 </details>
 
 ### **Account**
@@ -694,49 +694,49 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 <details>
 <summary>My Account dropdown links, register and log in pages with reverse links</summary>
 
-<!-- GIF --> 
+![My Account dropdown links](readme_assets/gifs/features/account-login-register.gif) 
 </details>
 
 <details>
 <summary>Register page email required warning, password not matching warning, user already registered warning</summary>
 
-<!-- GIF --> 
+![Register page email required warning](readme_assets/gifs/features/account-user-already-registered.gif)
 </details>
 
 <details>
 <summary>Register page check email and validation</summary>
 
-<!-- GIF --> 
+![Register page check email and validation](readme_assets/gifs/features/account-email-verification.gif) 
 </details>
 
 <details>
 <summary>Successful sign-in success toast message, 3 sec delay before disappearing</summary>
 
-<!-- GIF --> 
+![Successful sign-in success toast message](readme_assets/gifs/features/account-success-toast.gif) 
 </details>
 
 <details>
 <summary>Logging out 'are you sure' check and success toast message</summary>
 
-<!-- GIF --> 
+![Logging out](readme_assets/gifs/features/account-logout.gif) 
 </details>
 
 <details>
 <summary>Password reset functionality, email check</summary>
 
-<!-- GIF --> 
+![Password reset](readme_assets/gifs/features/account-password-change.gif) 
 </details>
 
 <details>
 <summary>My Account page for details after user is logged in</summary>
 
-<!-- GIF --> 
+![My Account page for details after user is logged in](readme_assets/gifs/features/account-my-profile.gif)
 </details>
 
 <details>
 <summary>Admin links in 'My Account'</summary>
 
-<!-- GIF --> 
+![Admin links](readme_assets/gifs/features/account-admin.gif) 
 </details>
 
 ### **Paintings**
@@ -744,61 +744,61 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 <details>
 <summary>All Paintings dropdown returns selected sorting</summary>
 
-<!-- GIF --> 
+![All Paintings dropdown](readme_assets/gifs/features/paintings-sorting-from-navbar.gif)
 </details>
 
 <details>
 <summary>Paintings paginated view, sorting options and smooth return to top button</summary>
 
-<!-- GIF --> 
+![Paintings paginated view, sorting options](readme_assets/gifs/features/paintings-sorting-types.gif)
 </details>
 
 <details>
-<summary>Paintings having in a category can have subcategory and return in the selected category</summary>
+<summary>Paintings having a category can have subcategory and return in the selected category</summary>
 
-<!-- GIF --> 
+![Paintings having a category can have subcategory](readme_assets/gifs/features/paintings-cat-subcat.gif)
 </details>
 
 <details>
 <summary>Painting detail view, info and frame selector</summary>
 
-<!-- GIF --> 
+![Painting detail view](readme_assets/gifs/features/painting-detailed.gif)
 </details>
 
 <details>
 <summary>Painting in 'Clearance' subcat has no frames available, 20% discount</summary>
 
-<!-- GIF --> 
+![Painting in 'Clearance' subcat](readme_assets/gifs/features/paintings-clearance.gif)
 </details>
 
 <details>
 <summary>Admin painting detail view, edit and delete buttons visible, warning modals</summary>
 
-<!-- GIF --> 
+![Admin painting detail view](readme_assets/gifs/features/paintings-admin-options.gif)
 </details>
 
 <details>
 <summary>Admin 'Product Management' link and adding new painting, no image</summary>
 
-<!-- GIF --> 
+![Admin 'Product Management' link](readme_assets/gifs/features/paintings-add-noimage.gif)
 </details>
 
 <details>
 <summary>Admin 'Product Management' link and adding new painting, with image</summary>
 
-<!-- GIF --> 
+![Admin 'Product Management' link](readme_assets/gifs/features/paintings-add-image.gif)
 </details>
 
 <details>
 <summary>Admin edit painting page modal and success message/s</summary>
 
-<!-- GIF --> 
+![Admin edit painting](readme_assets/gifs/features/paintings-update-painting.gif)
 </details>
 
 <details>
 <summary>Admin delete painting page modal and success message</summary>
 
-<!-- GIF --> 
+![Admin edit painting](readme_assets/gifs/features/paintings-delete-painting.gif)
 </details>
 
 ### **Cart**
@@ -806,55 +806,55 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 <details>
 <summary>Add to cart success message and basket total updating, mini-view of cart with delivery warning and cart info</summary>
 
-<!-- GIF --> 
+![Add to cart success message](readme_assets/gifs/features/cart-add-message-minicart.gif)
 </details>
 
 <details>
 <summary>Add to cart success message and mini-view of cart with frame info and over 3 paintings in the cart message</summary>
 
-<!-- GIF --> 
+![>Add to cart success message and mini-view of cart with frame info](readme_assets/gifs/features/cart-discount-msg-minicart.gif) 
 </details>
 
 <details>
 <summary>Add to cart button with different frame selected updates the basket total</summary>
 
-<!-- GIF --> 
+![Add to cart button with different frame selected](readme_assets/gifs/features/cart-frame-updating-minicart.gif) 
 </details>
 
 <details>
 <summary>Cart page with paintings info, grand total calculation with delivery</summary>
 
-<!-- GIF --> 
+![Cart page with paintings info](readme_assets/gifs/features/cart-delivery-info.gif)
 </details>
 
 <details>
 <summary>Cart page with paintings info, grand total calculation with 3 paintings discount</summary>
 
-<!-- GIF --> 
+![Cart page with paintings info, grand total calculation with 3 paintings discount](readme_assets/gifs/features/cart-3-paint-discount.gif)
 </details>
 
 <details>
 <summary>Cart page with paintings info, grand total calculation with 6 paintings discount</summary>
 
-<!-- GIF --> 
+![Cart page with paintings info, grand total calculation with 6 paintings discount](readme_assets/gifs/features/cart-6-paint-discount.gif)
 </details>
 
 <details>
 <summary>Cart page with paintings info, update/change frame option, delete painting from cart</summary>
 
-<!-- GIF --> 
+![Cart page with paintings info, update/change frame option](readme_assets/gifs/features/cart-update-frame-delete.gif)
 </details>
 
 <details>
 <summary>Cart page with paintings info, 'clearance' painting info and no frames options</summary>
 
-<!-- GIF --> 
+![Cart page with paintings info, 'clearance' painting info](readme_assets/gifs/features/cart-clearance-painting.gif) 
 </details>
 
 <details>
 <summary>Keep shopping button lists all paintings</summary>
 
-<!-- GIF --> 
+![Keep shopping button lists all paintings](readme_assets/gifs/features/cart-keep-shopping.gif)
 </details>
 
 ### **Checkout**
@@ -862,87 +862,81 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 <details>
 <summary>Checkout page and order summary with relevant info about paintings to be purchased, discount visible</summary>
 
-<!-- GIF --> 
+![Checkout page and order summary](readme_assets/gifs/features/checkout-info.gif) 
 </details>
 
 <details>
 <summary>Adjust cart button returns to current cart</summary>
 
-<!-- GIF --> 
+![Adjust cart button returns to current cart](readme_assets/gifs/features/checkout-adjust-cart.gif)
 </details>
 
 <details>
 <summary>Order form not working without inputs</summary>
 
-<!-- GIF --> 
+![Order form not working without inputs](readme_assets/gifs/features/checkout-form-check.gif) 
 </details>
 
 <details>
 <summary>Successful purchase of unregistered user, email check</summary>
 
-<!-- GIF --> 
-</details>
-
-<details>
-<summary>Successful purchase of registered user, email check</summary>
-
-<!-- GIF --> 
+![Successful purchase of unregistered user, email check](readme_assets/gifs/features/checkout-unregistered-email.gif) 
 </details>
 
 <details>
 <summary>Successful purchase of registered user, order and details saved to 'My Profile' page</summary>
 
-<!-- GIF --> 
+![Successful purchase of registered user](readme_assets/gifs/features/checkout-registered-user.gif) 
 </details>
 
 <details>
 <summary>Successful purchase positive results from Stripe webhooks</summary>
 
-<!-- GIF --> 
+![Successful purchase positive results from Stripe webhooks](readme_assets/gifs/features/checkout-stripe-webhooks.gif)
 </details>
 
 ### **Other**
 
 <details>
-<summary>Newsletter link opening subscribe page, thank you msg, already subscribed msg </summary>
+<summary>Newsletter link opening subscribe page, thank you msg, already subscribed msg</summary>
 
-<!-- GIF --> 
+![Newsletter link opening subscribe page, thank you msg, already subscribed msg](readme_assets/gifs/features/other-newsletter.gif)
 </details>
 
 <details>
 <summary>About the Artist page</summary>
 
-<!-- GIF --> 
+![About the Artist page](readme_assets/gifs/features/other-about.gif) 
 </details>
 
 <details>
 <summary>T&C's page</summary>
 
-<!-- GIF --> 
+![T&C's page](readme_assets/gifs/features/other-t&c.gif)
 </details>
 
 <details>
 <summary>Privacy page</summary>
 
-<!-- GIF --> 
+![Privacy page](readme_assets/gifs/features/other-privacy.gif) 
 </details>
 
 <details>
 <summary>Contact us page, form inputs required, success redirect to index and email check</summary>
 
-<!-- GIF --> 
+![Contact us page](readme_assets/gifs/features/other-contact.gif) 
 </details>
 
 <details>
 <summary>Error 400 page</summary>
 
-<!-- GIF --> 
+![Error 400 page](readme_assets/gifs/features/other-error-400.gif)
 </details>
 
 <details>
 <summary>Error 500 page</summary>
 
-<!-- GIF --> 
+![Error 500 page](readme_assets/gifs/features/other-error-500.gif) 
 </details>
 
 ### **Admin page**
@@ -950,19 +944,19 @@ Please refer to [TESTING.md](/TESTING.md) for more information about responsiven
 <details>
 <summary>Admin can view details of orders</summary>
 
-<!-- GIF --> 
+![Admin can view details of orders](readme_assets/gifs/features/admin-order-view.gif) 
 </details>
 
 <details>
 <summary>Admin can edit/delete details of orders and users</summary>
 
-<!-- GIF --> 
+![Admin can edit/delete details of orders and users](readme_assets/gifs/features/admin-adjust-order-user.gif) 
 </details>
 
 <details>
 <summary>Admin can create new painting for sale on admin page</summary>
 
-<!-- GIF --> 
+![Admin can create new painting for sale on admin page](readme_assets/gifs/features/admin-create-delete.gif)
 </details>
 
 ## **Future Implementations**
