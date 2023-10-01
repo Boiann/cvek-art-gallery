@@ -255,10 +255,8 @@ html {
 }
 
 .about-pad {
-    padding-top: 200px;
     background: url('/media/red-sunset-painting.webp') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
 }
 
 a.category-badge>span.badge:hover {
@@ -451,6 +449,12 @@ input[name='q']::placeholder {
     }
 }
 
+@media (max-width: 1186px) {
+    .main-logo-link h2 {
+        font-size: 155%;
+    }
+}
+
 @media (max-width: 400px) {
     .intro-items h1{
         font-size: 280%;
@@ -470,7 +474,6 @@ input[name='q']::placeholder {
 
     .about-pad {
         padding-top: 10vh;
-        height: calc(60vh - 164px);
     }
 
     .img-fluid-adjusted {
@@ -479,13 +482,6 @@ input[name='q']::placeholder {
 
     h2 {
         padding-top: 10px;
-    }
-}
-
-@media (max-height: 720px),
-        (max-width: 400px) {
-    .about-pad{
-        height: calc(85vh - 164px);
     }
 }
 
