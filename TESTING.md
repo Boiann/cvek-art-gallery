@@ -44,257 +44,283 @@ The [HTML W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_opt
  - Index
  <br>
 
- <!-- img -->
+![Index](readme_assets/images/tests/html/html-index.png)
 
  - Paintings
  <br>
 
- <!-- img -->
+![Paintings](readme_assets/images/tests/html/html-paintings.png)
 
  - Painting detail
  <br>
 
- <!-- img -->
+![Painting detail](readme_assets/images/tests/html/html-painting-detail.png)
 
  - Cart
  <br>
 
- <!-- img -->
+![Cart](readme_assets/images/tests/html/html-cart.png)
 
  - Checkout
  <br>
 
- <!-- img -->
+![Checkout](readme_assets/images/tests/html/html-checkout.png)
 
  - Checkout success
  <br>
 
- <!-- img -->
+![Checkout success](readme_assets/images/tests/html/html-checkout-success.png)
 
   - Newsletter
  <br>
 
- <!-- img -->
+![Newsletter](readme_assets/images/tests/html/html-newsletter.png)
 
   - About the Artist
  <br>
 
- <!-- img -->
+![About the Artist](readme_assets/images/tests/html/html-about.png)
 
   - Contact Us
  <br>
 
- <!-- img -->
+![Contact Us](readme_assets/images/tests/html/html-contact.png)
 
   - T&C's
  <br>
 
- <!-- img -->
+![T&C's](readme_assets/images/tests/html/html-t&c.png)
 
  - Privacy
  <br>
 
- <!-- img -->
+![Privacy](readme_assets/images/tests/html/html-privacy.png)
 
  - Log in
  <br>
 
- <!-- img -->
+![Log in](readme_assets/images/tests/html/html-login.png)
 
  - Log out
  <br>
 
- <!-- img -->
+![Log out](readme_assets/images/tests/html/html-logout.png)
 
  - Register
  <br>
 
- <!-- img -->
+![Register](readme_assets/images/tests/html/html-register.png)
 
  - My Account
  <br>
 
- <!-- img -->
+![My Account](readme_assets/images/tests/html/html-profile.png)
 
  - Add Painting
  <br>
 
- <!-- img -->
+![Add Painting](readme_assets/images/tests/html/html-add-painting.png)
+
+---
 
 ### **W3C CSS Validator**
 
 The [CSS Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS code used, showing no errors.
 
-<!-- img -->
+<br>
+
+![CSS Validator](readme_assets/images/tests/rest/css.png)
+
+---
 
 ### **JSHINT Javascript Validator**
 
 The [JsHint](https://jshint.com/) was used to validate the Javascript code used, showing no errors.
 
-<!-- img -->
+<br>
+
+![Javascript Validator](readme_assets/gifs/general/js-validation.gif)
+
+---
 
 ### **CI Python Linter**
 
 The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the Python code used, showing no errors.
+
+---
 
 #### Cart App
 
  - contexts.py
  <br>
 
- <!-- img -->
+![contexts](readme_assets/images/tests/python/cart/contexts.png)
 
  - urls.py
  <br>
 
- <!-- img -->
+![urls](readme_assets/images/tests/python/cart/urls.png)
 
  - views.py
  <br>
 
- <!-- img -->
+![views](readme_assets/images/tests/python/cart/views.png)
+
+---
 
 #### Checkout App
 
  - admin.py
  <br>
 
- <!-- img -->
+![admin](readme_assets/images/tests/python/checkout/admin.png)
 
  - forms.py
  <br>
 
- <!-- img -->
+![forms](readme_assets/images/tests/python/checkout/forms.png)
 
  - models.py
  <br>
 
- <!-- img -->
+![models](readme_assets/images/tests/python/checkout/models.png)
 
  - signals.py
  <br>
 
- <!-- img -->
+![signals](readme_assets/images/tests/python/checkout/signals.png)
 
  - urls.py
  <br>
 
- <!-- img -->
+![urls](readme_assets/images/tests/python/checkout/urls.png)
 
  - views.py
  <br>
 
- <!-- img -->
+![views](readme_assets/images/tests/python/checkout/views.png)
 
  - webhook_handler.py
  <br>
 
- <!-- img -->
+![webhook_handler](readme_assets/images/tests/python/checkout/wh-handler.png)
 
  - webhooks.py
  <br>
 
- <!-- img -->
+![webhooks](readme_assets/images/tests/python/checkout/webhooks.png)
+
+---
 
 #### Root App - cvek_art_gallery
 
  - urls.py
  <br>
 
- <!-- img -->
+![urls](readme_assets/images/tests/python/root/urls.png)
 
  - views.py
  <br>
 
- <!-- img -->
+![views](readme_assets/images/tests/python/root/views.png)
+
+---
 
 #### Home App
 
  - urls.py
  <br>
 
- <!-- img -->
+![urls](readme_assets/images/tests/python/home/urls.png)
 
  - views.py
  <br>
 
- <!-- img -->
+![views](readme_assets/images/tests/python/home/views.png)
+
+---
 
 #### Paintings App
 
  - admin.py
  <br>
 
- <!-- img -->
+![admin](readme_assets/images/tests/python/paintings/admin.png)
 
  - forms.py
  <br>
 
- <!-- img -->
+![forms](readme_assets/images/tests/python/paintings/forms.png)
 
  - models.py
  <br>
 
- <!-- img -->
+![models](readme_assets/images/tests/python/paintings/models.png)
 
  - urls.py
  <br>
 
- <!-- img -->
+![urls](readme_assets/images/tests/python/paintings/urls.png)
 
  - views.py
  <br>
 
- <!-- img -->
+![views](readme_assets/images/tests/python/paintings/views.png)
 
  - widgets.py
  <br>
 
- <!-- img -->
+![widgets](readme_assets/images/tests/python/paintings/widgets.png)
+
+---
 
 #### Profiles App
 
  - forms.py
  <br>
 
- <!-- img -->
+![forms](readme_assets/images/tests/python/profiles/forms.png)
 
  - models.py
  <br>
 
- <!-- img -->
+![models](readme_assets/images/tests/python/profiles/models.png)
 
  - urls.py
  <br>
 
- <!-- img -->
+![urls](readme_assets/images/tests/python/profiles/urls.png)
 
  - views.py
  <br>
 
- <!-- img -->
+![views](readme_assets/images/tests/python/profiles/views.png)
+
+---
 
 #### Support App
 
  - forms.py
  <br>
 
- <!-- img -->
+![forms](readme_assets/images/tests/python/support/forms.png)
 
  - models.py
  <br>
 
- <!-- img -->
+![models](readme_assets/images/tests/python/support/models.png)
 
  - urls.py
  <br>
 
- <!-- img -->
+![urls](readme_assets/images/tests/python/support/urls.png)
 
  - views.py
  <br>
 
- <!-- img -->
+![views](readme_assets/images/tests/python/support/views.png)
+
+---
 
 ### **Lighthouse**
 
@@ -305,174 +331,176 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
  - Index
  <br>
 
- <!-- img -->
+![Index](readme_assets/images/tests/lighthouse/desktop/index.png)
 
  - Paintings
  <br>
 
- <!-- img -->
+![Paintings](readme_assets/images/tests/lighthouse/desktop/paintings.png)
 
  - Painting detail
  <br>
 
- <!-- img -->
+![Painting detail](readme_assets/images/tests/lighthouse/desktop/painting-detail.png)
 
  - Cart
  <br>
 
- <!-- img -->
+![Cart](readme_assets/images/tests/lighthouse/desktop/cart.png)
 
  - Checkout
  <br>
 
- <!-- img -->
+![Checkout](readme_assets/images/tests/lighthouse/desktop/checkout.png)
 
  - Checkout success
  <br>
 
- <!-- img -->
+![Checkout success](readme_assets/images/tests/lighthouse/desktop/checkout-success.png)
 
   - Newsletter
  <br>
 
- <!-- img -->
+![Newsletter](readme_assets/images/tests/lighthouse/desktop/newsletter.png)
 
   - About the Artist
  <br>
 
- <!-- img -->
+![About the Artist](readme_assets/images/tests/lighthouse/desktop/about.png)
 
   - Contact Us
  <br>
 
- <!-- img -->
+![Contact Us](readme_assets/images/tests/lighthouse/desktop/contact.png)
 
   - T&C's
  <br>
 
- <!-- img -->
+![T&C's](readme_assets/images/tests/lighthouse/desktop/t&c.png)
 
  - Privacy
  <br>
 
- <!-- img -->
+![Privacy](readme_assets/images/tests/lighthouse/desktop/privacy.png)
 
  - Log in
  <br>
 
- <!-- img -->
+![Log in](readme_assets/images/tests/lighthouse/desktop/login.png)
 
  - Log out
  <br>
 
- <!-- img -->
+![Log out](readme_assets/images/tests/lighthouse/desktop/logout.png)
 
  - Register
  <br>
 
- <!-- img -->
+![Register](readme_assets/images/tests/lighthouse/desktop/register.png)
 
  - My Account
  <br>
 
- <!-- img -->
+![My Account](readme_assets/images/tests/lighthouse/desktop/my-account.png)
 
  - Add Painting
  <br>
 
- <!-- img -->
+![Add Painting](readme_assets/images/tests/lighthouse/desktop/add-painting.png)
 
  - Edit Painting
  <br>
 
- <!-- img -->
+![Edit Painting](readme_assets/images/tests/lighthouse/desktop/edit-painting.png)
+
+---
 
 #### Mobile:
 
  - Index
  <br>
 
- <!-- img -->
+![Index](readme_assets/images/tests/lighthouse/mobile/index.png)
 
  - Paintings
  <br>
 
- <!-- img -->
+![Paintings](readme_assets/images/tests/lighthouse/mobile/paintings.png)
 
  - Painting detail
  <br>
 
- <!-- img -->
+![Painting detail](readme_assets/images/tests/lighthouse/mobile/painting-detail.png)
 
  - Cart
  <br>
 
- <!-- img -->
+![Cart](readme_assets/images/tests/lighthouse/mobile/cart.png)
 
  - Checkout
  <br>
 
- <!-- img -->
+![Checkout](readme_assets/images/tests/lighthouse/mobile/checkout.png)
 
  - Checkout success
  <br>
 
- <!-- img -->
+![Checkout success](readme_assets/images/tests/lighthouse/mobile/checkout-success.png)
 
   - Newsletter
  <br>
 
- <!-- img -->
+![Newsletter](readme_assets/images/tests/lighthouse/mobile/newsletter.png)
 
   - About the Artist
  <br>
 
- <!-- img -->
+![About the Artist](readme_assets/images/tests/lighthouse/mobile/about.png)
 
   - Contact Us
  <br>
 
- <!-- img -->
+![Contact Us](readme_assets/images/tests/lighthouse/mobile/contact.png)
 
   - T&C's
  <br>
 
- <!-- img -->
+![T&C's](readme_assets/images/tests/lighthouse/mobile/t&c.png)
 
  - Privacy
  <br>
 
- <!-- img -->
+![Privacy](readme_assets/images/tests/lighthouse/mobile/privacy.png)
 
  - Log in
  <br>
 
- <!-- img -->
+![Log in](readme_assets/images/tests/lighthouse/mobile/login.png)
 
  - Log out
  <br>
 
- <!-- img -->
+![Log out](readme_assets/images/tests/lighthouse/mobile/logout.png)
 
  - Register
  <br>
 
- <!-- img -->
+![Register](readme_assets/images/tests/lighthouse/mobile/register.png)
 
  - My Account
  <br>
 
- <!-- img -->
+![My Account](readme_assets/images/tests/lighthouse/mobile/my-account.png)
 
  - Add Painting
  <br>
 
- <!-- img -->
+![Add Painting](readme_assets/images/tests/lighthouse/mobile/add-painting.png)
 
  - Edit Painting
  <br>
 
- <!-- img -->
+![Edit Painting](readme_assets/images/tests/lighthouse/mobile/edit-painting.png)
 
 
 [Back to top ⇧](#cvek-art-gallery---testing)
@@ -488,47 +516,47 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
  - Index
  <br>
 
- <!-- img -->
+![Index](readme_assets/images/tests/wave/index.png)
 
  - Paintings
  <br>
 
- <!-- img -->
+![Paintings](readme_assets/images/tests/wave/paintings.png)
 
  - Painting detail
  <br>
 
- <!-- img -->
+![Painting detail](readme_assets/images/tests/wave/painting-detail.png)
 
   - About the Artist
  <br>
 
- <!-- img -->
+![About the Artist](readme_assets/images/tests/wave/about.png)
 
   - Contact Us
  <br>
 
- <!-- img -->
+![Contact](readme_assets/images/tests/wave/contact.png)
 
   - T&C's
  <br>
 
- <!-- img -->
+![T&C's](readme_assets/images/tests/wave/t&c.png)
 
  - Privacy
  <br>
 
- <!-- img -->
+![Privacy](readme_assets/images/tests/wave/privacy.png)
 
  - Log in
  <br>
 
- <!-- img -->
+![Log in](readme_assets/images/tests/wave/login.png)
 
  - Register
  <br>
 
- <!-- img -->
+![Register](readme_assets/images/tests/wave/register.png)
 
 
 [Back to top ⇧](#cvek-art-gallery---testing)
@@ -897,7 +925,12 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the P
 
 Responsiveness for the website was thoroughly tested for devices up to 320px wide using [Chrome Del Tools](https://developer.chrome.com/docs/devtools/).
 
-<!-- GIF -->
+<details>
+<summary>Responsiveness test</summary>
+
+![Responsiveness test](readme_assets/gifs/general/responsive-test.gif)
+</details>
+
 
 [Back to top ⇧](#cvek-art-gallery---testing)
 
@@ -945,10 +978,10 @@ Two of the biggest bugs were with Stripe webhooks and in later development, conn
 
 The website was tested on the following browsers with no issues found: Google Chrome, Mozilla Firefox, Microsoft Edge and Opera Browser.
 
- - Browser Compatibility
+ - Browser Compatibility image:
  <br>
 
-<!-- img -->
+ ![Browser Compatibility](readme_assets/images/general/browser-compatibility.png)
 
 ---
 
