@@ -28,8 +28,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY_CAG', '')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-boiann-cvekartgallery-hmompk0hxtl.ws-eu105.gitpod.io', 'localhost',
-    'cvek-art-gallery-d4a224801c39.herokuapp.com']
+    'cvek-art-gallery.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
